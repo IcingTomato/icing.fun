@@ -534,17 +534,18 @@ jekyll build -d /var/www/html/
 ```shell
 #!/bin/bash
 
-cd icing.fun
-git pull origin master
+cd /var/www/html/
 rm -rf /var/www/html/blog/
-mkdir /var/www/html/blog/
-jekyll build -d /var/www/html/blog/
+cd /root/icing.fun
+git pull origin master
+jekyll build -s /root/icing.fun -d /var/www/html/blog/
 ```
 
 然后
 
 ```shell
 chmod +x deploy.sh
+rvm cron setup
 ```
 
 ```shell

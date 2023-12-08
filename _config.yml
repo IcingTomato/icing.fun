@@ -6,7 +6,7 @@ url:                 http://icing.fun
 baseurl:             ''
 paginate:            1
 permalink:           pretty
-github.repo:         https://github.com/IcingTomato
+github:         https://github.com/IcingTomato
 twitter:             https://twitter.com/IcingTomato
 
 # About/contact

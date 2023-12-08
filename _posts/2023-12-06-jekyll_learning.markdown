@@ -536,6 +536,7 @@ $ jekyll build -d /var/www/html/
 cd icing.fun
 git pull origin master
 rm -rf /var/www/html/blog/
+mkdir /var/www/html/blog/
 jekyll build -d /var/www/html/blog/
 ```
 

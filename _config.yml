@@ -4,7 +4,7 @@ tagline:             'A Very Simple Blog'
 description:         'A Cyber Worker. '
 url:                 http://icing.fun
 baseurl:             ''
-paginate:            5
+paginate:            1
 permalink:           pretty
 
 # About/contact

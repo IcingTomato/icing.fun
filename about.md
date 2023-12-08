@@ -60,7 +60,8 @@ title: About
         <li><a href="http://7400.me/">EE Archeology 电子考古学</a></li>
         <li><a href="https://blog.lkzstudio.com/">烂裤子小站</a></li>
         <li><a href="http://150.158.159.239/">有点暖的凍雨 | Freezing Rain Blog</a></li>
-        <li><a href="https://jsutite.github.io/">江苏理工 ITE 协会</a></li>
+        <li><a href="https://steward-fu.github.io/website/index.htm">司徒的教學網站</a></li>
+        <li><a href="https://jsutite.github.io/">江苏理工网络协会</a></li>
     </ul>
     <p>
         Here is my education experience.

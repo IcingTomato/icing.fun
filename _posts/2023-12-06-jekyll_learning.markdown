@@ -359,7 +359,9 @@ Displaying a post's word count is rather common when creating a blog, but usuall
 
 Luckily Jekyll provides a handy liquid filter called `number_of_words`. So displaying the actual word count is as simple as that:
 
-<code class="language-liquid">{{ page.content <span class="token operator">|</span> number_of_words }}</code>
+{% raw %}
+{{ page.content | number_of_words }}
+{% endraw %}
 
 While this works just nicely it's not very solid. You might want to hide word counts on shorter posts, for example as they're of little value in such posts. This is a little more complex as you can not directly use Liquid filters in a conditional block.
 

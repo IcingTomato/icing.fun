@@ -230,7 +230,7 @@ featured-condition-size: 1     # A tag will be featured if the size of it is mor
 
 唯一需要注意的是`featured-condition-size`: 如果一个标签的 SIZE，也就是使用该标签的文章数大于上面设定的条件值，这个标签就会在首页上被推荐。
  
-内部有一个条件模板 `{% if tag[1].size > {{site.featured-condition-size}} %}` 是用来做筛选过滤的.
+内部有一个条件模板 `｛% if tag[1].size > ｛｛ site.featured-condition-size｝｝ %｝` 是用来做筛选过滤的.
 
 ## Social-media Account
 
@@ -367,57 +367,57 @@ While this works just nicely it's not very solid. You might want to hide word co
 
 ### Variables in Liquid
 
-In Liquid there are two ways to create variables. You can `{% assign %}` a variable and you can `{% capture %}` a variable. The difference might not be obvious, but it's simple once you get it.
+In Liquid there are two ways to create variables. You can `｛% assign %｝` a variable and you can `｛% capture %｝` a variable. The difference might not be obvious, but it's simple once you get it.
 
 Assigning a value to a variable means that you take any kind of data (e.g. a string, a number, a boolean) and Liquid knows that you want to access that exact data when you refer to this variable. An assigned variable is fixed, that means you can not use the value returned from other Liquid tags.
 
 ```yml
-{% assign awesome = true %}
+｛% assign awesome = true %｝
 
-{% if awesome %}
+｛% if awesome %｝
   <p>Yay, awesome!</p>
-{% endif %}
+｛% endif %｝
 ```
 
-But what if you want to store a Liquid tags's return value in a variable? That's exactly what the `{% capture %}` block is for. Unlike assigned variables, captured variables can only hold strings — which will cause us some trouble later on. This is simply because Liquid tags return strings by default.
+But what if you want to store a Liquid tags's return value in a variable? That's exactly what the `｛% capture %｝` block is for. Unlike assigned variables, captured variables can only hold strings — which will cause us some trouble later on. This is simply because Liquid tags return strings by default.
 
 ```yml
-{% capture value %}
-  {{ page.title | upcase }} from {{ page.date | date: "%b %d, %y" }}
-{% endcapture %}
+｛% capture value %｝
+  ｛｛ page.title | upcase ｝｝ from ｛｛ page.date | date: "%b %d, %y" ｝｝
+｛% endcapture %｝
 ```
 
 As you can see in the above example, you can capture any number of strings into a variable, be it strings returned from a Liquid tag or fixed strings.
 
 ### Making the word count conditional
 
-Now that you know about `{% assign %}` and `{% capture %}` we can move on to store our word count in a variable. The question remains, do we assign the variable or do we capture it?
+Now that you know about `｛% assign %｝` and `｛% capture %｝` we can move on to store our word count in a variable. The question remains, do we assign the variable or do we capture it?
 
 It should be clear by now that we'll have to capture the value as it's returned from a Liquid tag. That gives us something like this:
 
 ```yml
-{% capture words %}
-  {{ page.content | number_of_words }}
-{% endcapture %}
+｛% capture words %｝
+  ｛｛ page.content | number_of_words ｝｝
+｛% endcapture %｝
 ```
 
 Let's say we considered posts that are shorter than 250 words not worthy of getting the word count. A good example for this would be 'link list'-style post that consist of mostly a quote from the original article and a comment spanning a sentence or two. Ideally, this would be taken care of using a simple conditional block.
 
 ```yml
-{% if words > 250 %}
-  {{ words }}
-{% endif %}
+｛% if words > 250 %｝
+  ｛｛ words ｝｝
+｛% endif %｝
 ```
 
 But you'll soon see that this won't work as intended as Jekyll will throw you this error an error saying you've attempted to compare a string (the words) with a number (250), which is entirely true, and also, sadly, entirely not possible. There is, however, a simple workaround.
 
 ```yml
-{% capture words %}
-  {{ page.content | number_of_words | minus: 250 }}
-{% endcapture %}
-{% unless words contains "-" %}
-  {{ words | plus: 250 }}
-{% endunless %}
+｛% capture words %｝
+  ｛｛  page.content | number_of_words | minus: 250 ｝｝
+｛% endcapture %｝
+｛% unless words contains "-" %｝
+  ｛｛  words | plus: 250 ｝｝
+｛% endunless %｝
 ```
 
 You can use Liquid filters to substract your minimum number from the word count to see if it falls below 0. If it does it will contain a '-' at the beginning, which means the post is too short and won't get the word number displayed. If our variable doesn't contain a '-' we can simply add our minimum number back to the word count and display it. Quite simple, right?
@@ -427,7 +427,7 @@ You can use Liquid filters to substract your minimum number from the word count 
 Now that we finally have our word number along with the conditional to hide it from short posts we can move on to make the output a bit nicer. You do this using Liquid filters like `append` or `prepend`. For a complete list of available filters you can check Shopify's [Liquid for Designers guide](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters).
 
 ```yml
-{{ words | plus: 250 | append: " words" }}
+｛｛  words | plus: 250 | append: " words" ｝｝
 ```
 
 The above snippet results in something like 'There are 250 words in this post'. You can go crazy with filters, they offer lots of possibilities.
@@ -437,27 +437,27 @@ The above snippet results in something like 'There are 250 words in this post'. 
 You might have noticed that I display an estimated reading time on this blog instead of just a word count. Personally, I just think this is a more useful guideline. Doing this is as easy as putting the `divided_by` filter into our final word count construct. The number to divide by is arbitrary, but 180 is the avarage number of words a person reads per minute.
 
 ```yml
-{{ words | plus: 250 | divided_by: 180 | append: " minutes to read" }}
+｛｛  words | plus: 250 | divided_by: 180 | append: " minutes to read" ｝｝
 ```
 
 ### Summing it up
 
 ```yml
-{% capture words %}
-  {{ page.content | number_of_words | minus: 250 }}
-{% endcapture %}
-{% unless words contains "-" %}
-  {{ words | plus: 250 | append: " words" }}
-{% endunless %}
+｛% capture words %｝
+  ｛｛  page.content | number_of_words | minus: 250 ｝｝
+｛% endcapture %｝
+｛% unless words contains "-" %｝
+  ｛｛  words | plus: 250 | append: " words" ｝｝
+｛% endunless %｝
 ```
 
 ```yml
-{% capture words %}
-  {{ page.content | number_of_words | minus: 250 }}
-{% endcapture %}
-{% unless words contains "-" %}
-  {{ words | plus: 250 | divided_by: 180 | append: " minute read" }}
-{% endunless %}
+｛% capture words %｝
+  ｛｛  page.content | number_of_words | minus: 250 ｝｝
+｛% endcapture %｝
+｛% unless words contains "-" %｝
+  ｛｛  words | plus: 250 | divided_by: 180 | append: " minute read" ｝｝
+｛% endunless %｝
 ```
 
 ### 这是我用的参数
@@ -466,22 +466,22 @@ You might have noticed that I display an estimated reading time on this blog ins
 
 ```yml
 <!-- Add Read Time and word count, by chiya 2021.02.06-->
-{% capture words %}
-{{ content | number_of_words | minus: 0 }}
-{% endcapture %}
-{% unless words contains '-' %}
-{{ words | plus: 200 | divided_by: 100 | append: ' minute(s)' }}
-{% endunless %}
+｛% capture words %｝
+｛｛  content | number_of_words | minus: 0 ｝｝
+｛% endcapture %｝
+｛% unless words contains '-' %｝
+｛｛  words | plus: 200 | divided_by: 100 | append: ' minute(s)' ｝｝
+｛% endunless %｝
 ```
 
 ```yml
 <!-- Add Read Time and word count, chiya 2021.02.06-->
-{% capture words %}
-  {{ page.content | number_of_words | minus: 10 }}
-{% endcapture %}
-{% unless words contains "-" %}
-  {{ words | plus: 10 | append: " words" }}
-{% endunless %}
+｛% capture words %｝
+  ｛｛  page.content | number_of_words | minus: 10 ｝｝
+｛% endcapture %｝
+｛% unless words contains "-" %｝
+  ｛｛  words | plus: 10 | append: " words" ｝｝
+｛% endunless %｝
 ```
 
 然后编辑`./_layouts/post.html`，大概在43行处。
@@ -494,21 +494,21 @@ You might have noticed that I display an estimated reading time on this blog ins
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
                     <div class="tags">
-                        {% for tag in page.tags %}
-                        <a class="tag" href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
-                        {% endfor %}
+                        ｛% for tag in page.tags %｝
+                        <a class="tag" href="｛｛  site.baseurl ｝｝/tags/#｛｛  tag ｝｝" title="｛｛  tag ｝｝">｛｛  tag ｝｝</a>
+                        ｛% endfor %｝
                     </div>
-                    <h1>{{ page.title }}</h1>
-                    {% comment %}
+                    <h1>｛｛  page.title ｝｝</h1>
+                    ｛% comment %｝
                         always create a h2 for keeping the margin , Hux
-                    {% endcomment %}
-                    {% comment %} if page.subtitle {% endcomment %}
-                    <h2 class="subheading">{{ page.subtitle }}</h2>
-                    {% comment %} endif {% endcomment %}
+                    ｛% endcomment %｝
+                    ｛% comment %｝ if page.subtitle ｛% endcomment %｝
+                    <h2 class="subheading">｛｛  page.subtitle ｝｝</h2>
+                    ｛% comment %｝ endif ｛% endcomment %｝
                     <!-- Add Read Time and word count, by chiya 2021.02.06-->
                     <p class="meta">
-                        <span>Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
-                        <span>- {% include word_count.html %}, {% include read_time.html %} to read</span>
+                        <span>Posted by ｛% if page.author %｝｛｛  page.author ｝｝｛% else %｝｛｛  site.title ｝｝｛% endif %｝ on ｛｛  page.date | date: "%B %-d, %Y" ｝｝</span>
+                        <span>- ｛% include word_count.html %｝, ｛% include read_time.html %｝ to read</span>
                     </p>
                 </div>
             </div>

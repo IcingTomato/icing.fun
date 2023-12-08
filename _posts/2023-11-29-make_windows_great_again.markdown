@@ -32,11 +32,11 @@ wsl --install
 
 默认情况下，安装的 Linux 分发版为 Ubuntu。 可以使用 -d 标志进行更改。
 
-- 若要更改安装的发行版，请输入：`wsl --install -d <Distribution Name>`。 将 `<Distribution Name>`` 替换为要安装的发行版的名称。
+- 若要更改安装的发行版，请输入：`wsl --install -d <Distribution Name>`。 将 `<Distribution Name>` 替换为要安装的发行版的名称。
 - 若要查看可通过在线商店下载的可用 Linux 发行版列表，请输入：`wsl --list --online` 或 `wsl -l -o`。
 - 若要在初始安装后安装其他 Linux 发行版，还可使用命令：`wsl --install -d <Distribution Name>`。
 
-> 如果要通过 Linux/Bash 命令行（而不是通过 PowerShell 或命令提示符）安装其他发行版，必须在命令中使用 .exe：`wsl.exe --install -d <Distribution Name> 或若要列出可用发行版，则使用：`wsl.exe -l -o`。
+> 如果要通过 Linux/Bash 命令行（而不是通过 PowerShell 或命令提示符）安装其他发行版，必须在命令中使用 .exe：`wsl.exe --install -d <Distribution Name>` 或若要列出可用发行版，则使用：`wsl.exe -l -o`。
 
 <s>Ubuntu 不够你用是吧？</s>
 
@@ -48,7 +48,7 @@ wsl --install
 
 要查看 Linux 发行版是设置为 WSL 1 还是 WSL 2，请使用命令 `wsl -l -v`。
 
-要更改版本，请使用 `wsl --set-version <distro name> 2` 命令将 `<distro name>`` 替换为要更新的 Linux 发行版的名称。 例如，`wsl --set-version Ubuntu-20.04 2` 会将 Ubuntu 20.04 发行版设置为使用 WSL 2。
+要更改版本，请使用 `wsl --set-version <distro name> 2` 命令将 `<distro name>` 替换为要更新的 Linux 发行版的名称。 例如，`wsl --set-version Ubuntu-20.04 2` 会将 Ubuntu 20.04 发行版设置为使用 WSL 2。
 
 如果在 `wsl --install` 命令可用之前手动安装了 WSL，则可能还需要启用 WSL 2 所使用的虚拟机可选组件并安装内核包（如果尚未这样做）。
 

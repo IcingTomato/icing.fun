@@ -353,6 +353,8 @@ ga_domain: 			# 默认的是 auto, 这里我是自定义了的域名，你如果
 
 ## 增加阅读时间和字数统计
 
+> 注意：以下代码中出现的全角花括号要改成半角花括号。不要问我为什么，问就是这个影响我全局代码编译。
+
 Displaying a post's word count is rather common when creating a blog, but usually those techniques rely on JavaScript to work. The script reads the post's text, counts the words and displays the result accordingly. That was the way I did things on this blog first as well, but then I set out to find a better way.
 
 ### Showing the word count

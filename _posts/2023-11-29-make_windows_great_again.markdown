@@ -4,7 +4,7 @@ title:  "Make Windows Great Again"
 tags: windows git zh-cn
 ---
 
-# 让 Windows 伟大起来
+如何优雅地使用 `Windows` 作为开发环境。
 
 ## 如何使用 WSL 在 Windows 上优雅地安装 Linux
 

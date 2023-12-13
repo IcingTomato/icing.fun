@@ -4,5 +4,5 @@ title:  "LinkIt Smart 7688/Duo Tutorial"
 tags: mips all_sort_of_embedded_linux zh-cn
 ---
 
-# 【阅板无数】LinkIt™ Smart 7688/Duo 使用手册
+【阅板无数】LinkIt™ Smart 7688/Duo 使用手册
 

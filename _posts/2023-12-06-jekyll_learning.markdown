@@ -4,7 +4,7 @@ title:  "Jekyll Learning"
 tags: linux jekyll zh-cn
 ---
 
-**Jekyll 博客学习记录**
+Jekyll/Liquid 博客学习记录
 
 # Jekyll博客配置教程
 

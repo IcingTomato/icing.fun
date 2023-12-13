@@ -4,6 +4,8 @@ title:  "RaspberryPi 启动流程探究"
 tags: linux raspberrypi zh-cn
 ---
 
+树莓派学习第一步，探究树莓派的启动流程。
+
 # 树莓派的启动流程
 
 相较于一般/通常的 ARM SoC 来说，树莓派1/2/3/Zero的启动流程有些不同，这里简单的记录一下。

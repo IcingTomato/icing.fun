@@ -4,7 +4,7 @@ title:  "What is LVM?"
 tags: linux zh-cn
 ---
 
-# 深入浅出讲述 Linux 上的 LVM (Logical Volume Manager 逻辑卷管理)
+深入浅出讲述 Linux 上的 LVM (Logical Volume Manager 逻辑卷管理)
 
 想象一个情况，我在网上买了个新电脑，自带 Windows 10 操作系统。512GiB 的硬盘我不想分区直接用，过了三个月：
 

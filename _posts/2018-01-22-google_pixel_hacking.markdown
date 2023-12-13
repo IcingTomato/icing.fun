@@ -4,6 +4,8 @@ title:  "Google Pixel XL 折腾记"
 tags: android zh-cn
 ---
 
+我在18年的时候，攒了好久的一笔钱，买了 Pixel XL，换掉了可怜的 iPhone5s，然后就开始了我的折腾之路。
+
 # 前言
 
 手机摔个稀碎，没法拍图了

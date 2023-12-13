@@ -4,6 +4,8 @@ title:  "Amazon Alexa on M5Core2"
 tags: esp32 embedded en-us
 ---
 
+如何用 ESP32 制作一个语音助手
+
 Amazon Alexa for M5Stack M5Core2(ESP32)
 
 ## 0. Briefing of Alexa

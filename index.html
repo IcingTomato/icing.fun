@@ -18,7 +18,7 @@ title: Home
     <!-- {{ post.content | truncatewords: 100, "..." }} -->
     <!-- 灰色小字显示摘要 -->
     <p class="post-excerpt" style="color: grey; font-size: small;">
-        {{ post.excerpt }}
+        {{ post.excerpt | truncatewords: 20, "..." }}
     </p>
   </div>
   {% endfor %}

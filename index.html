@@ -11,14 +11,15 @@ title: Home
         {{ post.title }}
       </a>
     </h1>
-
     <span class="post-date">{{ post.date | date_to_string }}</span>
-
     <!-- 显示全文 -->
     <!-- {{ post.content }} -->
     <!-- 显示全文前100字符 -->
     <!-- {{ post.content | truncatewords: 100, "..." }} -->
-    
+    <!-- 灰色小字显示摘要 -->
+    <p class="post-excerpt" style="color: grey; font-size: small;">
+        {{ post.excerpt }}
+    </p>
   </div>
   {% endfor %}
 </div>

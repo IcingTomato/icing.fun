@@ -19,6 +19,35 @@ title: Home
     <!-- 显示第一段 -->
     {{ post.excerpt }}
   </div>
+  <head>
+    <style>
+      .custom-separator {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .custom-separator:before,
+      .custom-separator:after {
+        content: '';
+        display: inline-block;
+        width: 40%; /* 控制横线的长度 */
+        border-top: 1px solid grey; /* 横线的样式 */
+        vertical-align: middle;
+        margin-right: 5px; /* 点与横线之间的间距 */
+        margin-left: 5px;  /* 点与横线之间的间距 */
+      }
+      .custom-separator:after {
+        margin-left: 0;
+      }
+      .custom-separator span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: grey;
+        border-radius: 50%; /* 使点变成圆形 */
+        vertical-align: middle;
+      }
+    </style>
+  </head>  
   {% endfor %}
 </div>
 

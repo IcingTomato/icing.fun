@@ -16,27 +16,12 @@ title: Home
     <!-- {{ post.content }} -->
     <!-- 显示全文前100字符 -->
     <!-- {{ post.content | truncatewords: 100, "..." }} -->
-    <!-- 灰色小字显示摘要，与下方呼应，在客户端直接做字符截断 -->
-    <p class="post-excerpt" style="color: grey; font-size: small;">
+    <!-- 灰色小字显示摘要 -->
+    <p class="post-excerpt" style="color: grey; font-size: 50%; font-style: italic;">
         {{ post.excerpt }}
     </p>
   </div>
   {% endfor %}
-  <script>
-    function truncateText(selector, maxLength) {
-      var elements = document.querySelectorAll(selector);
-      elements.forEach(function(element) {
-        var text = element.textContent;
-        if (text.length > maxLength) {
-          text = text.substring(0, maxLength) + '...';
-          element.textContent = text;
-        }
-      });
-    }
-    document.addEventListener("DOMContentLoaded", function() {
-      truncateText('.post-excerpt', 20); // 在这里设置字符限制
-    });
-  </script>
 </div>
 
 <div class="pagination">

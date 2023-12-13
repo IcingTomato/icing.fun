@@ -4,7 +4,7 @@ tagline:             'A Very Simple Blog'
 description:         'A Cyber Worker. '
 url:                 http://icing.fun
 baseurl:             ''
-paginate:            1
+paginate:            5
 permalink:           pretty
 github:         https://github.com/IcingTomato
 twitter:             https://twitter.com/IcingTomato

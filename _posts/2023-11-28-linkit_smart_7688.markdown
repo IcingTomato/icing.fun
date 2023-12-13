@@ -6,3 +6,5 @@ tags: mips all_sort_of_embedded_linux zh-cn
 
 【阅板无数】LinkIt™ Smart 7688/Duo 使用手册
 
+MT7688 是一个由联发科技（MediaTek）开发的高性能无线SoC（System on Chip）。它主要用于驱动智能家居和物联网（IoT）设备。MT7688 芯片支持 802.11n Wi-Fi 标准，能够提供高速的无线连接。此外，它通常包括多种接口和功能，比如 USB、GPIO、以太网接口，以及内存和存储接口，这使得它能够灵活地应用于各种设备和应用场景中。
+

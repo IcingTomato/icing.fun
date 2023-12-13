@@ -12,14 +12,14 @@ title: Home
       </a>
     </h1>
     <span class="post-date">{{ post.date | date_to_string }}</span>
-    <!-- 显示全文 -->
-    <!-- {{ post.content }} -->
-    <!-- 显示全文前100字符，对非ASCII字符无效 -->
-    <!-- {{ post.content | truncatewords: 100, "..." }} -->
-    <!-- 显示第一段 -->
-    <i>
-        {{ post.excerpt }}
-    </i>
+    <small>
+        <!-- 显示全文 -->
+        <!-- {{ post.content }} -->
+        <!-- 显示全文前100字符，对非ASCII字符无效 -->
+        {{ post.content | truncatewords: 100, "..." }}
+        <!-- 显示第一段 -->
+        <!-- {{ post.excerpt }} -->
+    </small>
   </div>
   {% endfor %}
 </div>

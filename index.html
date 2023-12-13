@@ -12,13 +12,17 @@ title: Home
       </a>
     </h1>
     <span class="post-date">{{ post.date | date_to_string }}</span>
-    <small>
+    <!-- <small>  -->
         <!-- 显示全文 -->
         <!-- {{ post.content }} -->
         <!-- 显示全文前15字符，对不以空格断开字词意群的语言无效 -->
-        {{ post.content | strip_html | truncatewords:15 }}
+        <!-- {{ post.content | strip_html | truncatewords:15 }} -->
         <!-- 显示第一段 -->
         <!-- {{ post.excerpt }} -->
+        <!-- 自定义 -->
+    <!-- </small> -->
+    <small class="post-content" id="content-{{ forloop.index }}">
+            {{ post.content | strip_html }}
     </small>
   </div>
   {% endfor %}
@@ -40,3 +44,18 @@ title: Home
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div> 
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var posts = document.querySelectorAll('.post-content');
+      var maxLength = 50; // 设置截断长度
+      posts.forEach(function(post) {
+        var text = post.textContent;
+        if (text.length > maxLength) {
+          text = text.substring(0, maxLength) + '...';
+          post.textContent = text;
+        }
+      });
+    });
+</script>
+  

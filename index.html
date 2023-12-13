@@ -15,8 +15,8 @@ title: Home
     <small>
         <!-- 显示全文 -->
         <!-- {{ post.content }} -->
-        <!-- 显示全文前100字符，对不以空格断开字词意群的语言无效 -->
-        {{ post.content | strip_html | truncatewords:75 }}
+        <!-- 显示全文前15字符，对不以空格断开字词意群的语言无效 -->
+        {{ post.content | strip_html | truncatewords:15 }}
         <!-- 显示第一段 -->
         <!-- {{ post.excerpt }} -->
     </small>

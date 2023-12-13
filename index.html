@@ -17,9 +17,12 @@ title: Home
     <!-- 显示全文前100字符，对非ASCII字符无效 -->
     <!-- {{ post.content | truncatewords: 100, "..." }} -->
     <!-- 显示第一段 -->
-    {{ post.excerpt }}
+    <!-- {{ post.excerpt }} -->
+    <!-- 自定义 -->
+    <p class="post-excerpt" style="color: grey; font-size: small; font-style: italic;">
+        {{ post.excerpt }}
+    </p>
   </div>
-  <div class="custom-separator"></div>
   {% endfor %}
 </div>
 
@@ -41,31 +44,20 @@ title: Home
 </div>
 
 <head>
-    <style>
-      .custom-separator {
-        text-align: center;
-        margin: 20px 0;
-      }
-      .custom-separator:before,
-      .custom-separator:after {
-        content: '';
-        display: inline-block;
-        width: 40%; /* 控制横线的长度 */
-        border-top: 1px solid grey; /* 横线的样式 */
-        vertical-align: middle;
-        margin-right: 5px; /* 点与横线之间的间距 */
-        margin-left: 5px;  /* 点与横线之间的间距 */
-      }
-      .custom-separator:after {
-        margin-left: 0;
-      }
-      .custom-separator span {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background-color: grey;
-        border-radius: 50%; /* 使点变成圆形 */
-        vertical-align: middle;
-      }
-    </style>
+    <script>
+        function truncateText(selector, maxLength) {
+          var elements = document.querySelectorAll(selector);
+          elements.forEach(function(element) {
+            var text = element.textContent;
+            if (text.length > maxLength) {
+              text = text.substring(0, maxLength) + '...';
+              element.textContent = text;
+            }
+          });
+        }
+      
+        document.addEventListener("DOMContentLoaded", function() {
+          truncateText('.post-excerpt', 20); // 在这里设置字符限制
+        });
+    </script>
 </head>  

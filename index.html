@@ -48,7 +48,7 @@ title: Home
 <script>
     document.addEventListener("DOMContentLoaded", function() {
       var posts = document.querySelectorAll('.post-content');
-      var maxLength = 50; // 设置截断长度
+      var maxLength = 200; // 设置截断长度
       posts.forEach(function(post) {
         var text = post.textContent;
         if (text.length > maxLength) {

@@ -16,12 +16,25 @@ title: Home
     <!-- {{ post.content }} -->
     <!-- 显示全文前100字符 -->
     <!-- {{ post.content | truncatewords: 100, "..." }} -->
-    <!-- 灰色小字显示摘要 -->
+    <!-- 灰色小字显示摘要，与下方 DOMContentLoaded 呼应-->
     <p class="post-excerpt" style="color: grey; font-size: small;">
-        {{ post.excerpt | truncatewords: 20, "..." }}
+        {{ post.excerpt }}
     </p>
   </div>
   {% endfor %}
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var excerpts = document.querySelectorAll('.post-excerpt');
+      var charLimit = 20; // Set the character limit here
+      excerpts.forEach(function(excerpt) {
+        var text = excerpt.textContent;
+        if (text.length > charLimit) {
+          text = text.substring(0, charLimit) + '...';
+          excerpt.textContent = text;
+        }
+      });
+    });
+  </script>
 </div>
 
 <div class="pagination">

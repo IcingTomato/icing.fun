@@ -80,10 +80,17 @@ tags: linux raspberrypi zh-cn
 > When the Raspberry Pi 4 is powered on, the BCM2711 VPU core 0 gets started. The program counter is set to 0x60000000. This address maps to the on-chip boot ROM. Note that the VPU frequency is set to the oscillator (54.0 MHz on RPi4), so it's not very fast, but it does not do a lot of things either:
 >
 > Read boot-related OTP registers (17/18, 66 and 67). Note that these registers have a different meaning than on Raspberry Pi 3. More information can be found [here](https://github.com/raspberrypi/firmware/issues/1169).
+>
 > If a “boot indication pin” is configured, it is activated for some milliseconds.
+>
 > If USB device-mode recovery force boot pin is configured and active, steps 4 and 5 are skipped.
+>
 > If SD card boot pin is either active or not configured, the boot ROM tries to load recovery.bin from the first FAT partition. This provides a mechanism to unbrick your board if the EEPROM gets corrupted. More details can be found [here](https://www.raspberrypi.org/documentation/hardware/raspberrypi/booteeprom.md).
+>
 > Next, the boot ROM tries to load firmware from the EEPROM chip. This is a standard Winbond W25X40 chip, access through SPI0 on GPIO 40–43.
+>
 > If everything else fails, the chip enters USB device mode (on the Type-C connector) and waits to get the recovery image from the USB host. You need an updated usbboot on the host to use this method. See also this pull request.
+>
 > The VPU frequency is increased to 100 MHz for the USB device mode.
+>
 > Note that a 20-byte signature must be appended to the firmware image. It is an HMAC-SHA1 hash of the image using a universal key that is also stored in the OTP, but not accessible using the Foundation firmware APIs. A similar mechanism was available as an optional feature on Raspberry Pi3. I originally assumed that the key is unique for each Raspberry Pi, but since there is one universal recovery.bin image that works for all, there must be only one key. Given that it provides no security, I'm not sure why this hash is now mandatory.

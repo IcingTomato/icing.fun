@@ -22,17 +22,17 @@ title: Friends
     </p>
     <ul>
         <li><a href="https://tuna.moe/">清华大学 TUNA 协会</a></li>
-        <li><a href="http://www.pengzhihui.xyz/">稚晖的个人站</a></li>
-        <li><a href="https://blogs.oopswow.com/">IAMLIUBO</a></li>
+        <li><s><a href="http://www.pengzhihui.xyz/">稚晖的个人站</a></li></s>
+        <li><s><a href="https://blogs.oopswow.com/">IAMLIUBO</a></li></s>
         <li><a href="https://www.yhi.moe/">Hello from Junde Yhi</a></li>
         <li><a href="http://www.haoqiabin.cn/">好奇吖斌</a></li>
-        <li><a href="http://www.it1995.cn/">IT1995</a></li>
+        <li><s><a href="http://www.it1995.cn/">IT1995</a></li></s>
         <li><a href="https://zephray.me/">module ZephRay;</a></li>
         <li><a href="https://boluochuixue.top/">菠萝吹雪's Studio.</a></li>
-        <li><a href="http://www.guzhimian.fun/">谷治眠's code World</a></li>
+        <li><s><a href="http://www.guzhimian.fun/">谷治眠's code World</a></li></s>
         <li><a href="http://7400.me/">EE Archeology 电子考古学</a></li>
-        <li><a href="https://blog.lkzstudio.com/">烂裤子小站</a></li>
-        <li><a href="http://150.158.159.239/">有点暖的凍雨 | Freezing Rain Blog</a></li>
+        <li><s><a href="https://blog.lkzstudio.com/">烂裤子小站</a></li></s>
+        <li><s><a href="http://150.158.159.239/">有点暖的凍雨 | Freezing Rain Blog</a></li></s>
         <li><a href="https://steward-fu.github.io/website/index.htm">司徒的教學網站</a></li>
         <li><a href="https://jsutite.github.io/">江苏理工网络协会</a></li>
     </ul>

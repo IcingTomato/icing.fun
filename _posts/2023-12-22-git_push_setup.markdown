@@ -31,7 +31,7 @@ git push
 
 # `Git` 不公开邮箱账户
 
-之前貌似更新了什么，好像是将保密你的邮箱地址，并在执行基于 Web | WebIDE 的 Git 操作中，使用 xxxx@user.noreply.xxx.com 作为你的邮箱地址。如果你希望命令行 Git 操作使用你的私人邮箱地址，你必须在 Git 中设置你的邮箱地址。
+之前貌似更新了什么，好像是将保密你的邮箱地址，并在执行基于 Web WebIDE 的 Git 操作中，使用 xxxx@user.noreply.xxx.com 作为你的邮箱地址。如果你希望命令行 Git 操作使用你的私人邮箱地址，你必须在 Git 中设置你的邮箱地址。
 
 ```powershell
 # 我经常用 GitHub 的邮箱，全局就设置成这个了

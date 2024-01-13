@@ -34,7 +34,7 @@ title: Friends
         <li><a href="https://boluochuixue.top/">菠萝吹雪's Studio.</a></li>
         <li><s><a href="http://www.guzhimian.fun/">谷治眠's code World</a></s> <a href="https://web.archive.org/web/20220127153740/http://guzhimian.fun/src/documents.html">谷治眠's code World-Internet Archive</a></li>
         <li><a href="http://7400.me/">EE Archeology 电子考古学</a></li>
-        <li><s><a href="https://blog.lkzstudio.com/">烂裤子小站</a></s> <a href="https://web.archive.org/web/20210919190229/https://blog.lkzstudio.com/">烂裤子小站-Internet Archive</a></li>
+        <li><s><a href="https://blog.lkzstudio.com/">烂裤子小站</a></s> <a href="https://rotcool.me/">烂裤子小站</a></li>
         <li><s><a href="http://150.158.159.239/">有点暖的凍雨 | Freezing Rain Blog</a></s></li>
         <li><a href="https://steward-fu.github.io/website/index.htm">司徒的教學網站</a></li>
         <li><a href="https://jsutite.github.io/">江苏理工学院网络协会-GitHub托管</a></li>

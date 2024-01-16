@@ -1,7 +1,7 @@
 # Setup
-title:               IcingTomato's Site
-tagline:             'A Very Simple Blog'
-description:         'A Cyber Worker in @Microsoft Shanghai.'
+title:               IcingTomato's Archive
+tagline:             'A Very Simple Knowledge Archive'
+description:         'A Cyber Critter in @Microsoft Shanghai.'
 url:                 http://icing.fun
 baseurl:             ''
 paginate:            5

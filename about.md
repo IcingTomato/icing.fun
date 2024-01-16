@@ -15,20 +15,22 @@ title: About
         <li>Linux User (Debian/Ubuntu/RHel/CentOS/Fedora...)</li>
         <li>Networking/Electronic Engineering</li>
         <li>Embedded Enthusiast (FPGA/MPU/MCU/DSP/SoC...)</li>
-        <li>Display Collector</li>
+        <li>Display and Dev Board Collector</li>
         <li>Radio Amateur</li>
-        <li>C/C++/Python/Assembly/HTML/CSS/JavaScript/Ruby/MySQL...</li>
-        <li>Cantonese/English/日本語/Français/Deutsch/Русская</li>
+        <li>C/C++/Python/Rust/Assembly/HTML/CSS/JavaScript/Ruby/MySQL...</li>
+        <li>Cantonese/Wu/Mandarin Speaker</li>
+        <li>English/日本語/Français/Deutsch/Русская Learner</li>
         <li><s> Bugs Creater </s></li>
         <li><s> Хорошо ハラショー </s></li>
+        <li>...</li>
     </ul>
     <h4>About this Blog</h4>
     <p>This pages made by <a href="https://pages.github.com/">GitHub Pages</a> and <a href="http://jekyll.com.cn/">Jekyll</a>. </p>
-    <p>Now the website is deployed on <a href="https://www.aliyun.com/">Alibaba Cloud</a>.</p>
-    <!--<img src="/assets/images/atb.png"/>-->
+    <p>Now the website is deployed on <a href="https://www.aliyun.com/">Alibaba Cloud China</a>.</p>
     <h4>Career</h4>
     <ul>
-        <li>2021-2022 <a href="https://www.seeed.cc/">Seeed Studio</a>/<a href="https://www.chaihuo.org/">Chaihuo Maker</a> Products Application Engineer</li>
-        <li>2022-2023 <a href="https://m5stack.com/">M5Stack</a> Linux/Raspberry Pi Embedded Software Engineer & ESP32 Machine Learning Engineer</li>
+        <li>2021 - 2022 <a href="https://www.seeed.cc/">Seeed Studio</a>/<a href="https://www.chaihuo.org/">Chaihuo Maker</a> Products Application Engineer</li>
+        <li>2022 - 2023 <a href="https://m5stack.com/">M5Stack</a> Embedded Software Engineer</li>
+        <li>2024 - Now <a href="https://m5stack.com/">Microsoft Shanghai</a> Windows Technical Support Engineer</li>
     </ul>
 </div>

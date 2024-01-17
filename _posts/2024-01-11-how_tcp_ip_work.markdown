@@ -161,7 +161,7 @@ Internet Control Message Protocol (ICMP) provides troubleshooting facilities and
 | Echo Request            | Troubleshooting message used to check IP connectivity to a desired host. The ping utility sends ICMP Echo Request messages. |
 | Echo Reply              | Response to an ICMP Echo Request.                            |
 | Redirect                | Sent by a router to inform a sending host of a better route to a destination IP address. |
-| Source Quench           | Sent by a router to inform a sending host that its IP datagrams are being dropped due to congestion at the router. The sending host then lowers its transmission rate. Source Quench is an elective ICMP message and is not commonly implemented. |
+| Source Quench(源站抑制)           | Sent by a router to inform a sending host that its IP datagrams are being dropped due to congestion at the router. The sending host then lowers its transmission rate. Source Quench is an elective ICMP message and is not commonly implemented. |
 | Destination Unreachable | Sent by a router or the destination host to inform the sending host that the datagram cannot be delivered. |
 
 

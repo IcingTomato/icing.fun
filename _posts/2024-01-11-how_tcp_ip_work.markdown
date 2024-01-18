@@ -127,7 +127,7 @@ An IP packet consists of an IP header and an IP payload. The following table des
 
 
 
-##### Fragmentation and reassembly
+##### Fragmentation and reassembly(数据报分片和重组)
 
 If a router receives an IP packet that is too large for the network to which the packet is being forwarded, IP fragments the original packet into smaller packets that fit on the downstream network. When the packets arrive at their final destination, IP on the destination host reassembles the fragments into the original payload. This process is referred to as fragmentation and reassembly. Fragmentation can occur in environments that have a mix of networking media, such as Ethernet and Token Ring.
 
@@ -204,9 +204,9 @@ The protocol to register host group information is IGMP, which is required on al
 
 IGMP messages take three forms.
 
-- **Host Membership Report**. When a host joins a host group, it sends an IGMP Host Membership Report message to the all-hosts IP multicast address (224.0.0.1) or to the specified IP multicast address declaring its membership in a specific host group by referencing the IP multicast address. A host can also specify the specific sources from which multicast traffic is needed.
-- **Host Membership Query**. When a router polls a network to ensure that there are members of a specific host group, it sends an IGMP Host Membership Query message to the all-hosts IP multicast address. If no responses to the poll are received after several polls, the router assumes no membership in that group for that network and stops advertising that multicast group information to other routers.
-- **Group Leave**. When a host is no longer interested in receiving multicast traffic sent to a specific IP multicast address and it sent the last IGMP Host Membership Report message in response to an IGMP Host Membership Query, it sends an IGMP Group Leave message to the specific IP multicast address. Local routers verify that the host sending the IGMP Group Leave message is the last group member for that multicast address on that subnet. If no responses to the poll are received after several polls, the router assumes no membership in that group for that subnet and stops advertising that multicast group information to other routers.
+- **Host Membership Report(成员报告)**. When a host joins a host group, it sends an IGMP Host Membership Report message to the all-hosts IP multicast address (224.0.0.1) or to the specified IP multicast address declaring its membership in a specific host group by referencing the IP multicast address. A host can also specify the specific sources from which multicast traffic is needed.
+- **Host Membership Query(成员查询)**. When a router polls a network to ensure that there are members of a specific host group, it sends an IGMP Host Membership Query message to the all-hosts IP multicast address. If no responses to the poll are received after several polls, the router assumes no membership in that group for that network and stops advertising that multicast group information to other routers.
+- **Group Leave(“离开组”消息)**. When a host is no longer interested in receiving multicast traffic sent to a specific IP multicast address and it sent the last IGMP Host Membership Report message in response to an IGMP Host Membership Query, it sends an IGMP Group Leave message to the specific IP multicast address. Local routers verify that the host sending the IGMP Group Leave message is the last group member for that multicast address on that subnet. If no responses to the poll are received after several polls, the router assumes no membership in that group for that subnet and stops advertising that multicast group information to other routers.
 
 For IP multicasting to span routers across an internetwork, multicast routing protocols are used by routers to communicate host group information so that each router supporting multicast forwarding is aware of which networks contain members of which host groups. IGMP is defined in RFCs 1112 and 2236.
 

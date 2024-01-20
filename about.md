@@ -28,6 +28,7 @@ title: About
     <p>This pages made by <a href="https://pages.github.com/">GitHub Pages</a> and <a href="http://jekyll.com.cn/">Jekyll</a>. </p>
     <p>Now the website is deployed on <a href="https://www.aliyun.com/">Alibaba Cloud China</a>.</p>
     <h4>Career</h4>
+    <p><i>坎坷的工作经历</i></p>
     <ul>
         <li>2021 - 2022 <a href="https://www.seeed.cc/">Seeed Studio</a>/<a href="https://www.chaihuo.org/">Chaihuo Maker</a> Products Application Engineer</li>
         <li>2022 - 2023 <a href="https://m5stack.com/">M5Stack</a> Embedded Software Engineer</li>
@@ -36,7 +37,7 @@ title: About
     <h4>Some Pages...</h4>
     <p>
         Here is some pages I designed. In pursuit of absolute simplicity.
-        <p><i>很简单的网页，仅此而已。</i></p>
+        <p><i>很简单的网页，仅此而已</i></p>
     </p>
     <ul>
         <li><a href="http://icing.fun/img/post/">403 page</a></li>

@@ -1,0 +1,5 @@
+---
+layout: post
+title:  "【Intel x86 IoT系列】宏图壮志 时运不济——Intel Quark D2000 完全开发指南"
+tags: intel x86 zh-cn
+---

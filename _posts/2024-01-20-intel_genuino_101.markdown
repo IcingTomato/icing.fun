@@ -12,6 +12,9 @@ tags: intel x86 zh-cn
 
 2015年10月16日[<sup>1</sup>](#jump1)，距离世界上第一台商用可编程计算器 Olivetti Programma 101[<sup>2</sup>](#jump2) 问世过去了整整50年。为了致敬这个伟大的项目，英特尔和 Massimo Banzi[<sup>3</sup>](#jump3)（Arduino项目的联合创始人）在 Maker Faire 宣布推出一款新的开发板，名为Arduino/Genuino 101 —— 一款专为教育用途、创客世界和首次接触编程的人设计的开发板。
 
+![](http://icing.fun/img/post/2024/01/20/2.jpg)
+*Olivetti Programma 101*
+
 # Arduino/Genuino 101 的硬件和软件
 
 Arduino 101是一款学习和开发板，以入门级价格提供英特尔® Curie™ 模块的性能和低功耗以及 Arduino 的简单性。它保留了与 UNO 相同的强大外形和外设列表，并增加了板载低功耗蓝牙®功能和 6 轴加速度计/陀螺仪。

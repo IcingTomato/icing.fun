@@ -6,13 +6,14 @@ tags: intel x86 zh-cn
 
 *注：下文中 Intel Arduino/Genuino 101 简称为 Arduino 101*
 
-![](http://icing.fun/img/post/2024/01/20/1.jpg)
+<img src="http://icing.fun/img/post/2024/01/20/1.jpg" alt= “Arduino 101”>
+*Arduino 101*
 
 # Arduino/Genuino 101 的由来
 
 2015年10月16日[<sup>1</sup>](#jump1)，距离世界上第一台商用可编程计算器 Olivetti Programma 101[<sup>2</sup>](#jump2) 问世过去了整整50年。为了致敬这个伟大的项目，英特尔和 Massimo Banzi[<sup>3</sup>](#jump3)（Arduino项目的联合创始人）在 Maker Faire 宣布推出一款新的开发板，名为Arduino/Genuino 101 —— 一款专为教育用途、创客世界和首次接触编程的人设计的开发板。
 
-![](http://icing.fun/img/post/2024/01/20/2.jpg)
+<img src="http://icing.fun/img/post/2024/01/20/2.jpg" alt= “Olivetti Programma 101”>
 *Olivetti Programma 101*
 
 # Arduino/Genuino 101 的硬件和软件
@@ -209,7 +210,7 @@ void loop()
 }
 ```
 
-![](http://icing.fun/img/post/2024/01/20/3.gif)
+<img src="http://icing.fun/img/post/2024/01/20/3.gif" alt= “手机端设置” width="200">
 
 # 引用
 

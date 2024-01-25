@@ -236,7 +236,7 @@ void loop()
 
 # 后记
 
-Arduino 101 于 2016年 Q1 季度发布。仅仅过去一年有余，在英特尔宣布 Galileo，Edison 和 Joule 模块停产一个月后，也草草停产 Curie 模块（07/17/2017）[<sup>6</sup>](#jump6)，只能说是非常可惜，英特尔宏图壮志准备在 IoT 领域大展拳脚，但是却因为种种原因，最终只能黯然收场。
+Arduino 101 于 2016年 Q1 季度发布。仅仅过去一年有余，在英特尔宣布 Galileo，Edison 和 Joule 模块停产一个月后，也草草停产 Curie 模块（07/17/2017）[<sup>6</sup>](#jump6)，只能说是非常可惜，英特尔宏图壮志准备在 IoT 领域大展拳脚，但是却因为种种原因，最终只能黯然收场。也导致诸多使用 Curie 模块的企业被迫更换产品线，比如[小米智能跑鞋](https://www.cnx-software.com/2017/03/29/100-xiaomi-90-minutes-ultra-smart-running-shoes-are-equipped-with-intel-curie-module/)。
 
 <img src="http://icing.fun/img/post/2024/01/20/Intel-Curie-Arduino-101-Discontinued.webp" width="200">
 *图片源自[Intel Curie Module, Arduino 101 Board Are Being Discontinued (Too) - CNX Software](https://www.cnx-software.com/2017/07/26/intel-curie-module-arduino-101-boards-are-being-discontinued-too/)*

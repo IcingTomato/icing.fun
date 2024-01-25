@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "【Intel x86 IoT系列】Intel Edison 体验指南"
+title:  "【Intel x86 IoT系列】Intel Edison 简单测评"
 tags: intel x86 zh-cn
 ---
 

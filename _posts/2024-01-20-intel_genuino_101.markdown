@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "【Intel x86 IoT系列】Intel Arduino/Genuino 101 体验指南"
+title:  "【Intel x86 IoT系列】Intel Arduino/Genuino 101 简单测评"
 tags: intel x86 zh-cn
 ---
 

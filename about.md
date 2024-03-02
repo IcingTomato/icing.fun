@@ -32,7 +32,7 @@ title: About
     <ul>
         <li>2021 - 2022 <a href="https://www.seeed.cc/">Seeed Studio</a>/<a href="https://www.chaihuo.org/">Chaihuo Maker</a> Products Application Engineer</li>
         <li>2022 - 2023 <a href="https://m5stack.com/">M5Stack</a> Embedded Software Engineer</li>
-        <li>2024 - Now <a href="https://www.microsoftstore.com.cn/">Microsoft Wuxi Center</a> Windows Technical Support Engineer</li>
+        <li>2024 - Now <a href="https://www.microsoftstore.com.cn/">Microsoft Wuxi Branch</a> Windows Technical Support Engineer</li>
     </ul>
     <h4>Some Pages...</h4>
     <p>

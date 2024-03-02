@@ -14,6 +14,8 @@ BBC Micro:bit 是一款由英国广播公司（BBC）发起的教育计划，旨
 
 # Micro:bit 的硬件规格
 
+笔者手头的 Micro:bit 有两个版本，分别是 V1.5 和 V2。两个版本的硬件规格基本一致，主要区别在于 V2 版本增加了蜂鸣器。
+
 ```c++
 // GPIO引脚定义
 const int rowPins[3] = {26, 27, 28}; // ROW1, ROW2, ROW3

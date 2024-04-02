@@ -4,6 +4,16 @@ title:  "Make Windows Great Again"
 tags: windows git zh-cn
 ---
 
+## 补记
+
+电源计划 卓越性能，启动！
+
+```
+powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+```
+
+====================================
+
 如何优雅地使用 `Windows` 作为开发环境。
 
 ## 如何使用 WSL 在 Windows 上优雅地安装 Linux

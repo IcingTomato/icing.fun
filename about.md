@@ -34,19 +34,4 @@ title: About
         <li>2022 - 2023 <a href="https://m5stack.com/">M5Stack</a> Embedded Software Engineer</li>
         <li>2024 - Now <a href="https://www.microsoftstore.com.cn/">Microsoft Premier Division Wuxi Branch</a> Windows Technical Support Engineer</li>
     </ul>
-    <h4>Some Pages...</h4>
-    <p>
-        Here is some pages I designed. In pursuit of absolute simplicity.
-        <p><i>很简单的网页，仅此而已</i></p>
-    </p>
-    <ul>
-        <li><a href="http://icing.fun/img/post/">403 page</a></li>
-        <li><a href="http://icing.fun/500.html">404 page</a></li>
-        <li><a href="https://icingtomato.gitee.io/chp/index.html">Rainbow Fart Generater</a></li>
-        <!--<li><a href="http://icingtomato.gitee.io/simple-tool-pages/bilibili-fans/#15261940">Bilibili Fans Counter</a></li>-->
-        <li><a href="http://icingtomato.gitee.io/simple-tool-pages/flip-clock/">Flip Clock</a></li>
-        <!--<li><a href="http://icingtomato.gitee.io/sosdan/index.html">SOS団</a></li>-->
-        <li><a href="http://icingtomato.gitee.io/simple-tool-pages/shutdown.html">Shutdown</a></li>
-        <li><a href="http://icingtomato.gitee.io/simple-tool-pages/ip_calc/index.html">IP Address Calculator</a></li>
-    </ul>
 </div>

@@ -8,6 +8,7 @@ paginate:            10
 permalink:           pretty
 github:         https://github.com/IcingTomato
 twitter:             https://twitter.com/IcingTomato
+pages:                /pages/
 rss:                 /atom.xml
 
 # About/contact

@@ -11,6 +11,7 @@ title: Friends
     </p>
     <ul>
         <li><a href="https://www.marxists.org/chinese/index.html">中文马克思主义文库</a></li>
+        <li><a href="https://nice-shit.vercel.app/">Forairaaaaa 的 shit</a></li>
         <li><a href="https://tuna.moe/">清华大学 TUNA 协会</a></li>
         <li><s><a href="http://www.pengzhihui.xyz/">稚晖的个人站</a></s> <a href="https://web.archive.org/web/20211011044319/http://www.pengzhihui.xyz/">稚晖的个人站-Internet Archive</a></li>
         <li><s><a href="https://blogs.oopswow.com/">IAMLIUBO</a></s> <a href="https://web.archive.org/web/20230505041100/https://blogs.oopswow.com/">IAMLIUBO-Internet Archive</a></li>

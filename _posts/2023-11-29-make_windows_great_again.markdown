@@ -12,6 +12,16 @@ tags: windows git zh-cn
 powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 ```
 
+显示成功。但在电源计划里依然没有显示卓越性能。
+
+此时需要修改注册表的CSEnabled值，但CSEnabled不见了(之前有的)，所以应该在管理员模式下的 cmdlet 敲
+
+```powershell
+reg add HKLM\System\CurrentControlSet\Control\Power /v PlatformAoAcOverride /t REG_DWORD /d 0
+```
+
+问了一下 Premier 事业部的同事，他们说目前据了解20H2取消了csenable更改来设置高性能，需要指令调用。
+
 ====================================
 
 如何优雅地使用 `Windows` 作为开发环境。

@@ -4,13 +4,13 @@ title:  "【壁纸】是的 我是神"
 tags: wallpaper zh-cn
 ---
 
-Deftly，I travel. 我随影而来，随影而去。
+Deftly, I travel. 我随影而来，随影而去。
 
 Follow my blade. 随心而动，随刃而行。
 
-It’s all smoke and mirrors. 只不过是镜花水月而已。
+It's all smoke and mirrors. 只不过是镜花水月而已。
 
-Death is like the wind；always by my side. 死亡如风，常伴吾身。
+Death is like the wind, always by my side. 死亡如风，常伴吾身。
 
 A sword's poor company for a long road. 长路漫漫，惟剑作伴。
 

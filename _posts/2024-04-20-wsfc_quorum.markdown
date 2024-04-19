@@ -41,17 +41,17 @@ tags: wsfc windows server zh-cn
 
 | Mode | Description |
 | ---- | ----------- |
-| Node majority (no witness) <b>节点多数</b> | Only nodes have votes. No quorum witness is configured. The cluster quorum is the majority of voting nodes in the active cluster membership. |
-| Node majority with witness (disk or file share) <b>节点多数+见证</b> | Nodes have votes. In addition, a quorum witness has a vote. The cluster quorum is the majority of voting nodes in the active cluster membership plus a witness vote. A quorum witness can be a designated disk witness or a designated file share witness. |
-| No majority (disk witness only) <b>仅磁盘见证</b> | No nodes have votes. Only a disk witness has a vote. <br> The cluster quorum is determined by the state of the disk witness. Generally, this mode is not recommended, and it should not be selected because it creates a single point of failure for the cluster. |
+| Node majority (no witness) <br> <b>节点多数</b> | Only nodes have votes. No quorum witness is configured. The cluster quorum is the majority of voting nodes in the active cluster membership. |
+| Node majority with witness (disk or file share) <br> <b>节点多数+见证</b> | Nodes have votes. In addition, a quorum witness has a vote. The cluster quorum is the majority of voting nodes in the active cluster membership plus a witness vote. A quorum witness can be a designated disk witness or a designated file share witness. |
+| No majority (disk witness only) <br> <b>仅磁盘见证</b> | No nodes have votes. Only a disk witness has a vote. <br> The cluster quorum is determined by the state of the disk witness. Generally, this mode is not recommended, and it should not be selected because it creates a single point of failure for the cluster. |
 
 我们可以这样理解：
 
 | 仲裁模型 | 描述 |
 | ---- | ----------- |
-| 男生女生二人决定晚餐 <b>节点多数</b> | 【双节点】男生让渡（即其中一节点下线，有一票投票权但动态见证干预其不投票），让女生（主节点/服务器/虚拟机 Owner Node）来选择点什么外卖或者出去吃什么餐馆。<s>你就负责买单就行。</s> <br> 【三节点及以上】女生带闺蜜来了，女生和闺蜜手拉手胳膊挽胳膊掌握晚餐选择主动权（即具有集群的控制权，在一个三节点集群中，通常需要至少两个节点在线并相互通信，以维持集群的正常操作）。象征性问你一下想吃什么。<s>所以你还是负责买单的小丑。</s> |
-| 核心家庭（三口之家）或扩展家庭（爸妈或者和爷爷奶奶外公外婆一起为节点，孩子为见证） <b>节点多数+见证</b> | <s>爸妈想吃啥就做啥，你的意见仅供参考</s> <br> 因为爷爷奶奶外公外婆说孩子想吃这个那个，所以爸妈做饭就做了大家都爱吃的东西。（换句话说见证也参与，而不仅仅是节点多数） |
-| 你过生日那天 <b>仅磁盘见证</b> | <s>“妈，我生日想吃开封菜。” “不行，油炸食品不健康。”</s> （别看上面的见证是你，但是这一条就不是你了） |
+| 男生女生二人决定晚餐 <br> <b>节点多数</b> | 【双节点】男生让渡（即其中一节点下线，有一票投票权但动态见证干预其不投票），让女生（主节点/服务器/虚拟机 Owner Node）来选择点什么外卖或者出去吃什么餐馆。<s>你就负责买单就行。</s> <br> 【三节点及以上】女生带闺蜜来了，女生和闺蜜手拉手胳膊挽胳膊掌握晚餐选择主动权（即具有集群的控制权，在一个三节点集群中，通常需要至少两个节点在线并相互通信，以维持集群的正常操作）。象征性问你一下想吃什么。<s>所以你还是负责买单的小丑。</s> |
+| 核心家庭（三口之家）或扩展家庭（爸妈或者和爷爷奶奶外公外婆一起为节点，孩子为见证）<br> <b>节点多数+见证</b> | <s>爸妈想吃啥就做啥，你的意见仅供参考</s> <br> 因为爷爷奶奶外公外婆说孩子想吃这个那个，所以爸妈做饭就做了大家都爱吃的东西。（换句话说见证也参与，而不仅仅是节点多数） |
+| 你过生日那天 <br> <b>仅磁盘见证</b> | <s>“妈，我生日想吃开封菜。” “不行，油炸食品不健康。”</s> （别看上面的见证是你，但是这一条就不是你了） |
 
 <img src="http://icing.fun/img/post/2024/04/20/1.png">
 

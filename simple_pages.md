@@ -12,11 +12,11 @@ title: Simple Pages
         <ul>
             <li><a href="http://icing.fun/img/post/">403 page</a></li>
             <li><a href="http://icing.fun/500.html">404 page</a></li>
-            <li><a href="https://icingtomato.gitee.io/chp/index.html">Rainbow Fart Generater</a></li>
-            <!--<li><a href="http://icingtomato.gitee.io/simple-tool-pages/bilibili-fans/#15261940">Bilibili Fans Counter</a></li>-->
-            <li><a href="http://icingtomato.gitee.io/simple_html_pages/flip-clock/">Flip Clock</a></li>
-            <!--<li><a href="http://icingtomato.gitee.io/sosdan/index.html">SOS団</a></li>-->
-            <li><a href="http://icingtomato.gitee.io/simple_html_pages/shutdown.html">Shutdown</a></li>
-            <li><a href="http://icingtomato.gitee.io/simple_html_pages/ip_calc/index.html">IP Address Calculator</a></li>
+            <li><a href="https://icingtomato.github.io/simple_html_pages/rainbowfart/index.html">Rainbow Fart Generater</a></li>
+            <!--<li><a href="http://icingtomato.github.io/simple-tool-pages/bilibili-fans/#15261940">Bilibili Fans Counter</a></li>-->
+            <li><a href="http://icingtomato.github.io/simple_html_pages/flip-clock/index.html">Flip Clock</a></li>
+            <!--<li><a href="http://icingtomato.github.io/sosdan/index.html">SOS団</a></li>-->
+            <li><a href="http://icingtomato.github.io/simple_html_pages/shutdown.html">Shutdown</a></li>
+            <li><a href="http://icingtomato.github.io/simple_html_pages/ip_calc/index.html">IP Address Calculator</a></li>
         </ul>
 </div>

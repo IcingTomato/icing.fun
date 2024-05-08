@@ -19,7 +19,7 @@ title: About
         <li>Radio Amateur</li>
         <li>C/C++/Python/Rust/Assembly/HTML/CSS/JavaScript/Ruby/MySQL...</li>
         <li>Cantonese/Wu/Mandarin Speaker</li>
-        <li>English/日本語/Français/Deutsch/Русская Learner</li>
+        <li>English/日本語/Deutsch/Русская Learner</li>
         <li><s> Bugs Creater </s></li>
         <li><s> Хорошо ハラショー </s></li>
         <li>...</li>

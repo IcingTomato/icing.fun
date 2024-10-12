@@ -2,6 +2,7 @@
 layout: post
 title:  "【航拍•山河湖海】独山子大峡谷&赛里木湖——新疆"
 tags: travel aerial uav xinjiang zh-cn
+published: false
 ---
 
 设备：DJI Mini 3 Pro + ND镜 ND256 

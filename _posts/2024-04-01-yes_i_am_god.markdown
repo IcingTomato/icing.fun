@@ -2,6 +2,7 @@
 layout: post
 title:  "【壁纸】是的 我是神"
 tags: wallpaper zh-cn
+published: false
 ---
 
 Deftly, I travel. 我随影而来，随影而去。

@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "【联想服务器学习笔记】如何使用 IPMI Tool 远程管理服务器"
+tags: ipmi linux windows server zh-cn
+published: false
+---
+
+# 前言
+

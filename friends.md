@@ -26,6 +26,7 @@ title: Friends
         <li><s><a href="http://150.158.159.239/">有点暖的凍雨 | Freezing Rain Blog</a></s></li>
         <li><a href="https://steward-fu.github.io/website/index.htm">司徒的教學網站</a></li>
         <li><a href="https://jsutite.github.io/">江苏理工学院网络协会-GitHub托管</a></li>
+        <li><a href="https://guokm.cn/">懒猫爱伸腰</a></li><!--郭克明-->
     </ul>
     <p>
         Here is some excellent pages.

@@ -6,6 +6,13 @@ tags: git github zh-cn
 
 `Git` 是个很神奇的东西，发掘的越深，好玩的越多。
 
+## `Git` 代理设置
+
+```shell
+git config --global http.proxy http://proxyUsername:proxyPassword@proxy.server.com:port
+git config --global https.proxy http://proxyUsername:proxyPassword@proxy.server.com:port
+```
+
 ## `git push` 到两个地址的仓库
 
 好比我这个博客仓库，在国内因为某些不可抗力，`github` 无法访问，所以我在 `gitee` 上也有一个仓库，这样就可以在国内访问了。但是我每次都要推送两次，很麻烦。或者要登陆 `gitee` 的仓库，然后按一下同步按钮，也很麻烦。

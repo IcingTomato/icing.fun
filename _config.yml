@@ -1,21 +1,21 @@
 # Setup
 title:               IcingTomato's Archive
-tagline:             'A Very Simple Knowledge Archive'
-description:         'Lenovo Server Engineer.'
+tagline:             'Enjoy it while it lasts, because it never does.'
+description:         'A human being.'
 url:                 http://icing.fun
 baseurl:             ''
 paginate:            10
 permalink:           pretty
-github:         https://github.com/IcingTomato
+github:              https://github.com/IcingTomato
 twitter:             https://twitter.com/IcingTomato
-simple_pages:                /simple_pages
+simple_pages:        /simple_pages
 rss:                 /atom.xml
 
 # About/contact
 author:
   name:              IcingTomato
   url:               https://twitter.com/IcingTomato
-  email:             peter@icing.fun
+  email:             null@icing.fun
 
 # Gems
 plugins:

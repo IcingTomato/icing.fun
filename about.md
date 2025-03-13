@@ -29,4 +29,4 @@ To ensure the quality of reading, all images on this site are watermark-free and
 
 ## Contact
 
-- Email: [{{ site.email }}](mailto:{{ site.email }})
+- Email: [{{ site.author.email }}](mailto:{{ site.author.email }})

@@ -3,36 +3,30 @@ layout: page
 title: About
 ---
 
-<p class="message">
-    人生苦短，及时行乐。<br>
-    Enjoy it while it lasts, because it never does.<br>
-    夜は短し、遊びよ少年。<br>
-</p>
+## 关于我
 
-<div class="me">
-    <h4>Properties</h4>
-    <ul>
-        <li>Linux User (Debian/Ubuntu/RHel/CentOS/Fedora...)</li>
-        <li>Networking/Electronic Engineering</li>
-        <li>Embedded Enthusiast (FPGA/MPU/MCU/DSP/SoC...)</li>
-        <li>Display and Dev Board Collector</li>
-        <li>Radio Amateur</li>
-        <li>C/C++/Python/Rust/Assembly/HTML/CSS/JavaScript/Ruby/MySQL...</li>
-        <li>Cantonese/Wu/Mandarin Speaker</li>
-        <li>English/日本語/Deutsch/Русская Learner</li>
-        <li><s> Bugs Creater </s></li>
-        <li><s> Хорошо ハラショー </s></li>
-        <li>...</li>
-    </ul>
-    <h4>About this Blog</h4>
-    <p>This pages made by <a href="https://pages.github.com/">GitHub Pages</a> and <a href="http://jekyll.com.cn/">Jekyll</a>. </p>
-    <p>Now the website is deployed on <a href="https://www.aliyun.com/">Alibaba Cloud China</a>.</p>
-    <h4>Career</h4>
-    <p><i>坎坷的工作经历</i></p>
-    <ul>
-        <li>2021 - 2022 <a href="https://www.seeed.cc/">Seeed Studio</a>/<a href="https://www.chaihuo.org/">Chaihuo Maker</a> Products Application Engineer</li>
-        <li>2022 - 2023 <a href="https://m5stack.com/">M5Stack</a> Embedded Software Engineer</li>
-        <li>2024 - 2024 <a href="https://www.microsoftstore.com.cn/">Microsoft Premier Division Wuxi Branch</a> Windows Technical Support Engineer</li>
-        <li>2024 - Now <a href="https://www.lenovo.com/">Lenovo Product Online Support ISG CC</a> Remote Technical Support Engineer</li>
-    </ul>
-</div>
+一无名小卒，本科毕业{{ site.time | date: '%Y' | minus: 2024 }}年不到，闲赋在家时喜欢折腾赛博垃圾，遂建次博客，记录点滴心得。
+
+## 关于本站
+
+内容随机，无定向，以技术为主，用大白话记录所学所思，以便日后查阅。
+
+为保证阅读质量，本站所有图片均无水印，可随意用于非商业场合，转载请注明出处。
+
+---
+
+## About Me
+
+A nobody, graduated from college less than {{ site.time | date: '%Y' | minus: 2024 }} years ago, likes to tinker with cyber trash when idle at home, so I built this blog to record bits and pieces of my experience.
+
+## About This Site
+
+Content is random, undirected, mainly technical, using plain language to record what I have learned and thought, for future reference.
+
+To ensure the quality of reading, all images on this site are watermark-free and can be used freely for non-commercial purposes. Please indicate the source when reprinting.
+
+---
+
+## Contact
+
+- Email: [{{ site.email }}](mailto:{{ site.email }})

@@ -15,7 +15,7 @@ rss:                 /atom.xml
 author:
   name:              IcingTomato
   url:               https://twitter.com/IcingTomato
-  email:             null@icing.fun
+  email:             blog@icing.fun
 
 # Gems
 plugins:

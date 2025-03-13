@@ -2,6 +2,7 @@
 layout: post
 title:  "Interpreter Vs Compiler : Differences Between Interpreter and Compiler"
 tags: programme c-language en-us
+published: false
 ---
 
 In this article, you will learn the differences between interpreters and compilers.

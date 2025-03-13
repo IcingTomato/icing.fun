@@ -2,6 +2,7 @@
 layout: post
 title: "The Tutorial for FPGA Player - Episode 5: Verilog - Part Two"
 tags: embedded fpga zh-cn
+published: false
 ---
 
 本期，我们将继续讲解之前没有讲完的Verilog代码。上一期的教程已经介绍了Verilog最核心的一些操作，本期则将介绍一些有用的其它操作，他们最终也可以用核心的操作代码表示出来，但是通常而言编写起来更为简便。本期同样会介绍仿真工具的使用，在开发过程中非常有用。不过在开始新的内容之前，先来讲讲上一次留的作业。

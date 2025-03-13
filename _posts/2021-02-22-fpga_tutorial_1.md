@@ -2,6 +2,7 @@
 layout: post
 title: "The Tutorial for FPGA Player - Episode 1: Logic Gate, FPGA, Development Board, Game Console"
 tags: embedded fpga zh-cn
+published: false
 ---
 
 相信通过上一期的文章，大家已经对逻辑电路和单片机的区别有了一些了解，也看到了一些其它爱好者使用逻辑电路（FPGA）做的一些制作。今天要讲的则是一些更加实际的东西，关于相关芯片、开发板的购买，以及本系列实现教程的目标——游戏机——的过程概览。

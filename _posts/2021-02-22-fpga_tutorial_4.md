@@ -2,6 +2,7 @@
 layout: post
 title: "The Tutorial for FPGA Player - Episode 4: State Machine"
 tags: embedded fpga zh-cn
+published: false
 ---
 
 大家好，欢迎回到FPGA教程的第四期。说是FPGA教程，结果一直在和大家讲数字电路的事情，但是毕竟数字电路是一切的基础，如果不理解数字电路，也许一开始玩FPGA不会有太大问题，但是越到后面就会觉得越玄。所以拥有良好的基础还是相当必要的。不过好消息是，本期就是数字电路基础的最后一期了。下一期开始就可以开始写Verilog玩FPGA了。

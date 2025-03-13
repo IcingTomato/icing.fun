@@ -2,6 +2,7 @@
 layout: post
 title: "The Tutorial for FPGA Player - Episode 3: Sequential Logic"
 tags: embedded fpga zh-cn
+published: false
 ---
 
 

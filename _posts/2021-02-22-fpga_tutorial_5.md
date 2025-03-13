@@ -2,6 +2,7 @@
 layout: post
 title: "The Tutorial for FPGA Player - Episode 5: Verilog - Part One"
 tags: embedded fpga zh-cn
+published: false
 ---
 
 首先，恭喜大家，一直跟到了这个教程的第五期。如之前所说，从本期开始，我们将正式开始使用Verilog给FPGA写代码。而要写的东西，这是第2-4期里面介绍过的组合逻辑，时序逻辑和状态机。而Verilog也将会是在这之后用于描述各种硬件的语言。

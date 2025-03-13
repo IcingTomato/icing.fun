@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Make Windows Great Again"
+title:  "【新品开箱】Make Windows Great Again"
 tags: windows git zh-cn
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "通过 adb 侧载低版本 SDK 的安卓应用"
+title:  "【安卓搞机记】通过 adb 侧载低版本 SDK 的安卓应用"
 tags: adb android zh-cn
 ---
 

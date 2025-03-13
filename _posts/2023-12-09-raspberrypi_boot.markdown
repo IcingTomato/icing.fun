@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "RaspberryPi 启动流程探究"
+title:  "【阅板无数】RaspberryPi 启动流程探究"
 tags: linux raspberrypi zh-cn
 ---
 

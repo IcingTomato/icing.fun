@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Amazon Alexa on M5Core2"
+title:  "【嵌入式实践】Amazon Alexa on M5Core2"
 tags: esp32 embedded en-us
 ---
 

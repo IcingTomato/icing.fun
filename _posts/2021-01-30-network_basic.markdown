@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Basic Knowledge of Networking"
+title:  "【运维实践】网络基础知识"
 tags: networking zh-cn
 ---
 

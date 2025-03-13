@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Jekyll Learning"
+title:  "【博客搭建】Jekyll Learning"
 tags: linux jekyll zh-cn
 ---
 

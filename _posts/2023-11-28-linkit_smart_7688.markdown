@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LinkIt Smart 7688/Duo Tutorial"
+title:  "【阅板无数】LinkIt Smart 7688/Duo 考古"
 tags: mips all_sort_of_embedded_linux zh-cn
 ---
 

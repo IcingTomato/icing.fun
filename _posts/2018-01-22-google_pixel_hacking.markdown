@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Google Pixel XL 折腾记"
+title:  "【安卓搞机记】Google Pixel XL 折腾记"
 tags: android zh-cn
 ---
 

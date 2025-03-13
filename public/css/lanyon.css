@@ -51,6 +51,15 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -.025rem;
 }
 
+/* 修改全局中文字体 */
+html:lang(zh) {
+    font-family: "Noto Sans SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  }
+  
+  /* 修改标题中文字体 */
+  h1:lang(zh), h2:lang(zh), h3:lang(zh), h4:lang(zh), h5:lang(zh), h6:lang(zh) {
+    font-family: "Noto Sans SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  }
 
 /*
  * Wrapper

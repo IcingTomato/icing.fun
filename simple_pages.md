@@ -10,11 +10,12 @@ title: Simple Pages
     <ul>
         <!--<li><a href="http://icing.fun/img/post/">403 page</a></li>-->
         <!--<li><a href="http://icing.fun/500.html">404 page</a></li>-->
-        <li><a href="https://icingtomato.github.io/simple_html_pages/rainbowfart/index.html">彩虹屁生成器</a></li>
+        <li><a href="https://icingtomato.github.io/simple_html_pages/rainbowfart/index.html">彩虹屁生成器 Glowing Terms Generator</a></li>
         <!--<li><a href="http://icingtomato.github.io/simple-tool-pages/bilibili-fans/#15261940">Bilibili Fans Counter</a></li>--><!--由于B站API更新，此页面已失效-->
-        <li><a href="http://icingtomato.github.io/simple_html_pages/flip-clock/index.html">翻页钟</a></li>
+        <li><a href="http://icingtomato.github.io/simple_html_pages/flip-clock/index.html">翻页钟 Split-flap Clock</a></li>
+        <li><a href="https://icingtomato.github.io/simple_html_pages/time_progress.html">时间进程 Time Progress</a></li>
         <!--<li><a href="http://icingtomato.github.io/sosdan/index.html">SOS団</a></li>-->
         <li><a href="http://icingtomato.github.io/simple_html_pages/shutdown.html">Fake Linux Shutdown</a></li>
-        <li><a href="http://icingtomato.github.io/simple_html_pages/ip_calc/index.html">IP地址计算器</a></li>
+        <li><a href="http://icingtomato.github.io/simple_html_pages/ip_calc/index.html">IP地址计算器 IP Address Calculator</a></li>
     </ul>
 </div>

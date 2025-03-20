@@ -4,8 +4,6 @@ title:  "【Git Push】Git 推送的配置"
 tags: git github zh-cn
 ---
 
-`Git` 是个很神奇的东西，发掘的越深，好玩的越多。
-
 ## `Git` 代理设置
 
 ```shell

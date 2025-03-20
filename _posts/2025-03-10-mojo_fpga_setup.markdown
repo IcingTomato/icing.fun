@@ -136,3 +136,119 @@ sudo chmod +x /opt/start_mojo_ide.sh
 
 <img src="http://icing.fun/img/post/2025/03/10/3.png" alt="Mojo IDE">
 <i>Mojo IDE</i>
+
+## 补充记录
+
+针对 ISE 和 Mojo IDE/Loader 在开始菜单的显示问题，我在后续使用的时候琢磨出来了，找到一个相对比较好的解决方案：
+
+### ISE 配置
+
+先安装完 ISE WebPACK，打开终端，输入：
+
+```shell
+cd /usr/share/applications/
+```
+
+然后创建一个 `ise.desktop` 文件：
+
+```shell
+sudo vim ise.desktop
+```
+
+然后输入以下内容：
+
+```shell
+[Desktop Entry] 
+Version=1.0 
+Name=ISE 
+Exec=bash -c "unset LANG && unset QT_PLUGIN_PATH && source /opt/Xilinx/14.7/ISE_DS/settings64.sh && ise" 
+Icon=/opt/Xilinx/14.7/ISE_DS/ISE/data/images/pn-ise.png
+Terminal=false 
+Type=Application
+Categories=Development;
+```
+
+保存退出。
+
+### Mojo IDE 配置
+
+同样的，打开终端，输入：
+
+```shell
+cd /opt/MojoFPGA/mojo-ide-B1.3.6/
+sudo vim mojo-ide.sh
+``` 
+
+然后输入以下内容：
+
+```shell
+#!/bin/bash
+# Xilinx ISE WebPACK
+. /opt/Xilinx/14.7/ISE_DS/settings64.sh >/dev/null 2>&1
+exec /opt/mojo-ide-B1.3.6/mojo-ide & >/dev/null 2>&1
+```
+
+保存退出。
+
+然后给这个脚本添加执行权限：
+
+```shell
+sudo chmod +x /opt/MojoFPGA/mojo-ide-B1.3.6/mojo-ide.sh
+```
+
+然后添加软链接：
+
+```shell
+sudo ln -s /opt/MojoFPGA/mojo-ide-B1.3.6/mojo-ide.sh /usr/sbin/mojo-ide
+```
+
+再回到 `/usr/share/applications/` 目录，创建一个 `mojo-ide.desktop` 文件：
+
+```shell
+sudo vim mojo-ide.desktop
+```
+
+然后输入以下内容：
+
+```shell
+[Desktop Entry] 
+Version=1.0 
+Name=Mojo IDE 
+Exec=/usr/sbin/mojo-ide
+Icon=/opt/mojo-ide-B1.3.6/icon.png
+Terminal=false
+Type=Application
+Categories=Development;
+```
+
+保存退出。
+
+这样就可以在开始菜单中找到 ISE 和 Mojo IDE 了。
+
+### Mojo Loader 配置
+
+同样的，打开终端，输入：
+
+```shell
+cd /usr/share/applications/
+```
+
+然后创建一个 `mojo-loader.desktop` 文件：
+
+```shell
+[Desktop Entry] 
+Version=1.0 
+Name=Mojo Loader 
+Exec=/usr/sbin/mojo-loader
+Icon=/opt/mojo-loader-1.3.0/icon.png
+Terminal=false
+Type=Application
+Categories=Development;
+```
+
+保存退出。
+
+这样就可以在开始菜单中找到 Mojo Loader 了。
+
+<img src="http://icing.fun/img/post/2025/03/10/4.png" alt="Desktop Shortcut">
+<i>Desktop Shortcut</i>

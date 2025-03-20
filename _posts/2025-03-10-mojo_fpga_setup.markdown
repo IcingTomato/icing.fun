@@ -185,7 +185,7 @@ sudo vim mojo-ide.sh
 #!/bin/bash
 # Xilinx ISE WebPACK
 . /opt/Xilinx/14.7/ISE_DS/settings64.sh >/dev/null 2>&1
-exec /opt/mojo-ide-B1.3.6/mojo-ide & >/dev/null 2>&1
+exec /opt/MojoFPGA/mojo-ide-B1.3.6/mojo-ide & >/dev/null 2>&1
 ```
 
 保存退出。
@@ -215,7 +215,7 @@ sudo vim mojo-ide.desktop
 Version=1.0 
 Name=Mojo IDE 
 Exec=/usr/sbin/mojo-ide
-Icon=/opt/mojo-ide-B1.3.6/icon.png
+Icon=/opt/MojoFPGA/mojo-ide-B1.3.6/icon.png
 Terminal=false
 Type=Application
 Categories=Development;
@@ -226,6 +226,12 @@ Categories=Development;
 这样就可以在开始菜单中找到 ISE 和 Mojo IDE 了。
 
 ### Mojo Loader 配置
+
+先创建软链接：
+
+```shell
+sudo ln -s /opt/MojoFPGA/mojo-loader-1.3.0/mojo-loader /usr/sbin/mojo-loader
+```
 
 同样的，打开终端，输入：
 
@@ -240,7 +246,7 @@ cd /usr/share/applications/
 Version=1.0 
 Name=Mojo Loader 
 Exec=/usr/sbin/mojo-loader
-Icon=/opt/mojo-loader-1.3.0/icon.png
+Icon=/opt/MojoFPGA/mojo-loader-1.3.0/icon.png
 Terminal=false
 Type=Application
 Categories=Development;

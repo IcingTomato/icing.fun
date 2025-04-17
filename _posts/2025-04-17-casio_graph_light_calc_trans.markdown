@@ -82,6 +82,67 @@ published: true
     - Manuel  手动
 - Vérification  检查
 
+*Catalog  目录*
+- Analyse fonction  解析函数
+    - Nb dérivé(d/dx) 导数
+    - Intégrale  积分
+    - Somme  求和
+    - Reste  余数
+    - Simplification  简化
+    - Logarithme base a  对数
+    - Logarithme(log)  对数
+    - Logarithme(ln)  自然对数
+- Probabilité  概率
+    - %
+    - Factorielle  阶乘
+    - Permutation  排列
+    - Combinaison  组合
+    - Nombre aléatoire  随机数
+    - Entier aléatoire  随机整数
+- Calcul numérique  数值计算
+    - PGCD  最大公约数
+    - PPCM  最小公倍数
+    - Valeur absolue  绝对值
+    - Tronc. à l'unité  截断到整数
+    - Arrondi  到整数
+    - Partie entière  整数部分
+    - Arrondi(,)  四舍五入
+- Angl/Coord/Sexag  角度/坐标/六十进制
+    - Degrés  度
+    - Radians  弧度
+    - Gradians  渐度
+    - Cartésien. à pol.  笛卡尔坐标系
+    - Pol. à cartésien.  极坐标系
+    - Degrés min sec  度分秒
+- Trigonmétrique  三角函数
+    - sin  正弦
+    - cos  余弦
+    - tan  正切
+    - sin⁻¹  反正弦
+    - cos⁻¹  反余弦
+    - tan⁻¹  反正切
+- Conversion unité  单位转换
+    - Vitesse  速度
+        - km/h→m/s  km/h→m/s
+        - m/s→km/h  m/s→km/h
+    - Température  温度
+        - Celsius→Fahrenheit  摄氏→华氏
+        - Fahrenheit→Celsius  华氏→摄氏
+- Autre  其他
+    - Rép  重复
+    - Pré-Rép  预设重复
+    - pi  圆周率
+    - e  自然对数底
+    - e^  自然对数底的幂
+    - √  平方根
+    - 𝒙√  𝒙次方根
+    - ^-1  反函数
+    - ^2  平方
+    - ^()  幂
+    - -  负号
+    - ,  小数点
+    - ()  括号
+
 ## Stats  统计
 
 - 1 variable  一个变量

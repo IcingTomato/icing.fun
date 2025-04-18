@@ -369,8 +369,8 @@ published: true
         - #1  #1
         - #2  #2
     - Exécuter  执行
-- Droite grad.  斜率
-    - A:  点A
+- Droite grad.  不等式区间
+    - A:  区间A
         - 𝒙＜𝒂
         - 𝒙≤𝒂
         - 𝒙=𝒂
@@ -380,8 +380,8 @@ published: true
         - 𝒂≤𝒙＜𝒃
         - 𝒂＜𝒙≤𝒃
         - 𝒂≤𝒙≤𝒃
-    - B:  点B
-    - C:  点C
+    - B:  区间B
+    - C:  区间C
     - Exécuter  执行
 - Cercle  圆
     - Type: CercleTrigo  三角函数圆

@@ -25,5 +25,6 @@ title: Friends & Links
         <li><a href="https://steward-fu.github.io/website/index.htm">司徒的教學網站</a></li>
         <li><a href="https://jsutite.github.io/">江苏理工学院网络协会-GitHub托管</a></li>
         <li><a href="https://guokm.cn/">懒猫爱伸腰</a></li><!--郭克明-->
+        <li><a href="https://www.cncalc.org/">cnCalc计算器论坛</a></li>
     </ul>
 </div>

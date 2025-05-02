@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "【Git Push】Git 推送的配置"
+title:  "【Git】Git 推送的配置"
 tags: git github zh-cn
 ---
 

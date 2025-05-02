@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "【Git Push】GitHub 的三种 Pull Request"
+title:  "【Git】GitHub 的三种 Pull Request"
 tags: git github zh-cn
 ---
 

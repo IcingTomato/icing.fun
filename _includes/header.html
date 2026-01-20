@@ -1,0 +1,44 @@
+  <header class="container mb4">
+    <div class="columns mb2 mt1">
+      <div class="column col-12 col-md-12 col-sm-12 mt1 logo">
+        <div class="logo-logotype">
+          <a class="black" href="/">
+            <h1 class="text-condensed mb1">U.S. Graphics Company</h1>
+          </a>
+        </div>
+        <div class="logo-colorscale">
+          <img src="https://usgraphics.com/static/core/logo/colorscale/usgraphics-colorscale.955194642d2e.svg" alt="U.S. Graphics Company Logo"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <ul class="columns mt0 mb0 pt0 pb0">
+        <li class="column col-2 col-sm-4 col-md-4 p-centered mb1">
+          <a class="btn-nav black bg-white w100" href="/">
+          {% if page.url == "/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Office</a>
+        </li>
+        <li class="column col-2 col-sm-4 col-md-4 p-centered mb1">
+          <a class="btn-nav black bg-white w100" href="/products">
+          {% if page.url contains "/products/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Products</a>
+        </li>
+        <li class="column col-2 col-sm-4 col-md-4 p-centered mb1">
+          <a class="btn-nav black bg-white w100" href="/catalog">
+          {% if page.url contains "/catalog/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Catalog</a>
+        </li>
+        <li class="column col-2 col-sm-4 col-md-4 p-centered mb1">
+          <a class="btn-nav black bg-white w100" href="/extras">
+          {% if page.url contains "/extras/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Extras!</a>
+        </li>
+        <li class="column col-2 col-sm-4 col-md-4 p-centered mb1">
+          <a class="btn-nav black bg-white w100" href="/sitemap">
+          {% if page.url contains "/sitemap/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Sitemap</a>
+        </li>
+        <li class="column col-2 col-sm-4 col-md-4 p-centered mb1">
+          <a class="btn-nav black bg-white w100" href="/auth/login">
+          {% if page.url contains "/auth/login/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Login</a>
+        </li>
+      </ul>
+    </nav>
+  </header>

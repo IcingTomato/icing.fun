@@ -1,0 +1,263 @@
+/* Base Styles using Variables */
+:root {
+  --bg-color: #f1f1f1;
+  --text-color: #111;
+  --border-color: #ccc;
+  --border-dark: #000;
+  --font-mono: 'Fragment Mono', 'Courier New', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --container-width: 900px;
+}
+
+/* Reset box-sizing */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 13px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.site-container {
+  width: 100%;
+  max-width: var(--container-width);
+  background: white;
+  border: 1px solid #ddd;
+  padding: 30px; 
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p { margin: 0 0 15px; }
+
+/* Header */
+header { margin-bottom: 20px; }
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 13px; /* Smaller font match */
+}
+
+.company-name {
+    font-weight: 700;
+}
+
+.color-bar-container {
+    display: flex;
+    gap: 8px; /* Gap between segments */
+}
+
+.color-segment {
+    height: 12px;
+    display: inline-block;
+    border: 1px solid #000;
+}
+
+.segment-1 {
+    width: 100px;
+    background: linear-gradient(to right, 
+        #ff0000 12.5%, #ff8000 12.5% 25%, 
+        #ffff00 25% 37.5%, #00ff00 37.5% 50%, 
+        #00ffff 50% 62.5%, #0000ff 62.5% 75%, 
+        #8000ff 75% 87.5%, #ff00ff 87.5%);
+}
+
+.segment-2 {
+    width: 100px;
+    background: linear-gradient(to right, 
+        #ffffff 12.5%, #dddddd 12.5% 25%, 
+        #bbbbbb 25% 37.5%, #999999 37.5% 50%, 
+        #777777 50% 62.5%, #555555 62.5% 75%, 
+        #333333 75% 87.5%, #000000 87.5%);
+}
+
+.segment-3 {
+    width: 100px;
+    background: linear-gradient(to right, 
+        #004d40 12.5%, #00695c 12.5% 25%, 
+        #00796b 25% 37.5%, #00897b 37.5% 50%, 
+        #009688 50% 62.5%, #26a69a 62.5% 75%, 
+        #4db6ac 75% 87.5%, #80cbc4 87.5%); /* Generic teal/green variant for 3rd segment */
+}
+
+
+.header-nav {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.nav-item {
+  border: 1px solid #000;
+  padding: 4px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 11px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize; /* "Office" not OFFICE */
+  color: #000;
+  box-shadow: 2px 2px 0 #000; /* Hard shadow */
+  height: 28px;
+  position: relative;
+}
+
+.nav-item:hover {
+  background: #fdfdfd;
+  cursor: pointer;
+}
+
+/* Specific fix for Office active state */
+.nav-item.office-active {
+    /* No bg change, just the dot */
+}
+
+/* Red Dot Fix */
+.nav-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #ff3333;
+  border-radius: 50%;
+  margin-right: 6px;
+  border: 0.5px solid rgba(0,0,0,0.1); /* Subtle border for crispness */
+}
+
+
+/* Common Section Styles */
+section { margin-bottom: 50px; }
+
+/* The complex dotted line separator */
+.dotted-separator {
+  height: 4px;
+  background-image: radial-gradient(#999 1px, transparent 0);
+  background-size: 3px 3px; /* Dense pattern */
+  background-position: 0 0;
+  margin-bottom: 20px;
+  width: 100%;
+  border: none; /* No border, just the pattern */
+  display: block;
+}
+
+.section-title {
+  font-size: 13px; /* Slightly larger */
+  font-weight: 700;
+  margin: 0 0 2px 0; /* Tight with the separator */
+  color: #000;
+  /* Remove border here, use the separator element instead */
+  border: none;
+  padding: 0;
+  text-transform: none; /* Reset uppercase */
+}
+
+
+/* Office Section */
+.section-office-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.office-left { font-size: 13px; }
+
+.office-quote-box {
+  background: #f9f9f9;
+  border: 1px dashed #ccc;
+  padding: 15px;
+  margin: 20px 0;
+  font-style: italic;
+  font-family: serif; /* Screenshot looks slightly serif-y or just italic sans */
+}
+
+.inquiry-btn {
+  background: #ffcc00;
+  color: black;
+  padding: 6px 12px;
+  border: 1px solid #000;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 10px;
+  box-shadow: 2px 2px 0 #000; /* Hard shadow */
+}
+
+/* ... existing code ... */
+
+.btn-green {
+    background: #008f4c; /* Specific green from screenshot/site */
+    color: white;
+    padding: 6px 12px;
+    display: inline-block;
+    border: 1px solid #004d26; /* Darker border */
+    font-weight: bold;
+    font-size: 11px;
+    border-radius: 0; /* No radius */
+    box-shadow: 2px 2px 0 #000; /* Hard shadow */
+}
+
+/* ... existing code ... */
+
+/* Imprint */
+.section-imprint {
+    border-top: 1px dotted #ccc; /* Fine dotted line */
+    padding-top: 15px;
+    margin-top: 50px;
+}
+
+.imprint-content {
+    font-size: 10px; /* Small font */
+    color: #444;
+    line-height: 1.5;
+}
+
+.imprint-logos {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.version-badge {
+    background: #008f4c; /* Green bg */
+    color: #fff;
+    font-family: var(--font-mono);
+    padding: 2px 6px;
+    font-size: 10px;
+    margin-left: 10px;
+    border: 1px solid #004d26;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Copyright specific styling */
+.copyright {
+    font-size: 9px;
+    text-transform: uppercase;
+    color: #888;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin-top: 10px;
+    width: 100%;
+}

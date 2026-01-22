@@ -25,5 +25,5 @@ title: About
 
 <h2>Contact</h2>
 <ul>
-    <li>Email: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+    <li>Email: <a class="btn-classic mb-2 white bg-dark-blue" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
 </ul>

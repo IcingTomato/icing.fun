@@ -12,10 +12,10 @@ permalink: /posts/
       <ul>
       {% assign year = current_year %}
     {% endif %}
-    <li>
-      <span class="sku">{{ post.date | date: "%m-%d" }}</span>
-      &raquo;
-      <a class="btn-classic white bg-dark-green" href="{{ post.url | relative_url }}">{{ post.title }} →</a>
+    <li class="d-flex" style="align-items: center">
+      <span class="sku" style="flex-shrink: 0">{{ post.date | date: "%m-%d" }}</span>
+      <span class="mx-1">&raquo;</span>
+      <a class="btn-classic white bg-dark-green text-ellipsis" style="min-width: 0" href="{{ post.url | relative_url }}">{{ post.title }} →</a>
     </li>
     {% if forloop.last %}</ul>{% endif %}
   {% endfor %}

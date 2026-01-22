@@ -1,0 +1,92 @@
+---
+layout: default
+title:  "【Git】Git 取消文件跟踪"
+tags: git github zh-cn
+published: true
+---
+
+前两天在写小程序的时候，没注意把 `.vscode` 文件夹给上传上去了。就在想怎么把它删掉。
+
+## 明确目标
+
+首先，我们要知道，`.vscode` 是存放 VS Code 的配置文件的。里面有我们的配置文件，像是 `settings.json`、`launch.json`、`tasks.json` 等等。这些删除之后，VS Code 每次都会自动生成新的配置文件。
+
+所以我们要保证的是，`.vscode` 文件夹在本地是存在的，但是在远程仓库中是不存在的。
+
+当我尝试使用 `.gitignore` 的时候，发现 `.gitignore` 文件并没有生效。
+因为 `.gitignore` 只会忽略那些没有被 Git 跟踪的文件。也就是说，如果你已经将 `.vscode` 文件夹添加到 Git 中，那么即使你在 `.gitignore` 中添加了它，它也不会被忽略。
+
+在实际操作之前，我们先来理解下 Git 工作区、暂存区和版本库概念：
+
+- 工作区：就是你在电脑里能看到的目录。
+- 暂存区：英文叫 stage 或 index。一般存放在 `.git` 目录下的 index 文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。
+- 版本库：工作区有一个隐藏目录 `.git`，这个不算工作区，而是 Git 的版本库。
+
+## 工作区、暂存区和版本库之间的关系
+
+### 工作区 -> 暂存区
+
+使用 git add 命令将工作区中的修改添加到暂存区。
+
+```bash
+git add <filename>
+```
+
+### 暂存区 -> 版本库
+
+使用 git commit 命令将暂存区中的修改提交到版本库。
+
+```bash
+git commit -m "Commit message"
+```
+
+### 版本库 -> 远程仓库
+
+使用 git push 命令将本地版本库的提交推送到远程仓库。
+
+```bash
+git push origin <branch-name>
+```
+
+### 远程仓库 -> 本地版本库
+
+使用 git pull 或 git fetch 命令从远程仓库获取更新。
+
+```bash
+git pull origin <branch-name>
+# 或者
+git fetch origin <branch-name>
+git merge origin/<branch-name>
+```
+
+## `git rm` 操作步骤
+
+git rm 命令用于删除文件。
+
+如果只是简单地从工作目录中手工删除文件，运行 git status 时就会在 Changes not staged for commit 的提示。
+
+git rm 删除文件有以下几种形式：
+
+### 将文件从暂存区和工作区中删除：
+
+```bash
+git rm <file>
+```
+
+### 强行从暂存区和工作区中删除修改后的文件：
+
+```bash
+git rm -f <file> 
+```
+
+*如果删除之前修改过并且已经放到暂存区域的话，则必须要用强制删除选项 -f。*
+
+### 从暂存区中删除，但是保留工作区文件：
+
+如果想把文件从暂存区域移除，但仍然希望保留在当前工作目录中，换句话说，仅是从跟踪清单中删除，使用 --cached 选项即可：
+
+```bash
+git rm --cached <file>
+# 删除目录需要带递归选项 -r
+git rm -r --cached <dir>
+```

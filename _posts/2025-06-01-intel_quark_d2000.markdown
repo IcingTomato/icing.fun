@@ -1,0 +1,478 @@
+---
+layout: default
+title:  "【阅板无数】（Intel x86 IoT系列）Intel Quark D2000 复活记"
+tags: intel x86 zh-cn
+---
+
+<img src="http://icing.fun/img/post/2025/06/01/intel-quark-microcontroller-dev-kit-d2000-development-kit-with-intel-quark-d2000-microcontroller.png" alt="d2000" width="50%">
+
+书接上回[【阅板无数】（Intel x86 IoT系列）Intel Arduino/Genuino 101 简单测评](https://icing.fun/2024/01/20/intel_genuino_101/)，我们讲到在2015年1月的时候，Intel “积极”拥抱开源硬件，推出了基于 Quark SoC 的 Arduino/Genuino 101 开发板。（其实英特尔在2013年就在英特尔论坛上推出了 Quark 系列的 32 位 x86 架构微控制器，很可惜在2019年1月英特尔宣布停止Quark系列产品的生产。）
+
+## 前言
+
+站在后人的角度看待英特尔在 IoT 领域的尝试，英特尔的确是有点“心有余而力不足”，倒也不至于全产品线沦落到“出师未捷身先死”的地步。其第一款产品是单核心 32 纳米 [X1000](https://www.intel.com/content/www/us/en/products/sku/79084/intel-quark-soc-x1000-16k-cache-400-mhz/specifications.html) SoC，应用在 Intel Galileo 开发板上。Intel Galileo 是基于 Intel x86 架构的 Arduino 认证开发板系列中的第一款，专为创客和教育社区而设计。
+
+单凭这第一款产品可以看出来英特尔是想要积极拥抱开源硬件吗？如拥，用过这玩意儿的都知道，这个还要单独供电，核心非常烫手。（关于这款板子后续会有文章介绍，今天我们着重介绍 Quark D2000。）
+
+这款代号为“薄荷峡谷（Mint Valley）”的 Intel Quark D2000 SoC 是英特尔在2015年Q3季度推出的产品，应用在 Intel Quark Microcontroller D2000 开发板上。它是英特尔在 IoT 领域的又一次尝试，旨在提供一个低功耗、低成本的解决方案，适用于物联网设备和嵌入式应用。
+
+同时，Quark 系列也补全了英特尔在嵌入式微控制器领域的产品线。商用的 Xeon，消费级的 Core/Pentium/Celeron 系列，移动端的 Atom 系列，嵌入式的 Quark 系列。自此，英特尔补完了在微电子领域的产品线。<s>EE补完计划</s>
+
+## 规格
+
+| 产品名称 | Intel Quark D2000 Series |
+| --- | --- |
+| 代号 | Mint Valley |
+| 垂直细分产线 | 嵌入式微控制器 |
+| 核心架构 | 32 位 i586 |
+| 核心数量 | 单核心 |
+| 主频 | 32 MHz |
+| L1 Cache | 0 KB |
+| GPIO | SPI, I2C, GPIO, SPI, Comparators, ADC, PWM, DMA |
+| UART | 2 个 UART |
+| 封装 | LQFN40 |
+| 描述 | 32位，单核单线程，Pentium ISA 兼容微控制器 |
+
+详细规格可以参考[此处](https://www.intel.com/content/www/us/en/products/sku/91947/intel-quark-microcontroller-d2000/specifications.html)[<sup>1</sup>](#jump1)。
+
+有意思的是，虽然写的是 Pentium ISA 兼容微控制器，但是它不支持 SIMD 或 x87 浮点。（玩过 8087 的都知道，8087 是 Intel 的第一个浮点协处理器。这玩意儿运行起来十分烫手，估计是因为功耗原因没加入 x87 浮点指令集。）
+
+<img src="http://icing.fun/img/post/2025/06/01/IntelQuarkD2000-Fig1.webp" alt="d2000 fig" width="50%">
+
+## 结语
+
+不过这款产品还是非常能打的，站在软件开发的角度来看，英特尔其实是想把在 CPU 端的开发经验带到嵌入式领域。毕竟到了2015年，英特尔在 CPU 领域已经有了几十年的积累，x86 架构的微控制器可以让开发者更容易地使用现有的 x86 工具链和软件库，从而降低了开发门槛。
+
+但是这样也有缺点，英特尔历史包袱太重，放不下庞大的PC/商用市场，或者说英特尔只是想在 Maker 社区和开源硬件社区赚一波快钱。这款产品从发布到生命周期结束，英特尔都没有好好对待。首先就是开发平台就只能使用 Intel System Studio for Microcontrollers，完全看不出英特尔拥抱开源硬件的诚意（特别是 Arduino 授权，用 Arduino Uno 的 Pinout 但是不支持 Arduino IDE）。
+
+反观 Nordic 和 Espressif 的产品，Nordic 的 nRF 系列和 Espressif 的 ESP 系列都提供了丰富的开源支持和社区资源，尤其是 Arduino，开发者可以轻松上手（Arduino 确实是为打破壁垒做出巨大贡献，让很多非电子专业的人们可以快速开发自己想要的东西）。而英特尔的 Quark D2000 开发板在这方面就显得将这些需求置若罔闻。
+
+很重要的一点就是拥抱开源社区其实是在培养用户粘性，就好比 Espressif 的 ESP 系列产品，提供了丰富的开源支持和社区资源，尤其是 Arduino 生态系统。开发者可以轻松上手，快速开发出各种物联网应用。如果需要开发更复杂的应用，还可以使用 ESP-IDF（Espressif IoT Development Framework）进行更底层的开发。
+
+也可能是因为时任英特尔 CEO 的布莱恩·科再奇（Brian Krzanich） <s>对下属十分热情</s> 对开源硬件的热情不够，导致英特尔在这方面的投入和支持力度不足。也可能是他在任期间，因为其战略决定，导致英特尔在研发10纳米制程芯片的进度上相比台积电及三星都要缓慢，导致市场占有率被竞争对手超微所蚕食。[<sup>2</sup>](#jump2) 
+
+The Verge 还提到，英特尔虽然以 PC 和服务器而闻名，但其业务已被智能手机和云颠覆，而该公司似乎对人工智能和自动驾驶汽车的兴起毫无察觉。英特尔承诺推出智能耳机、英特尔驱动的智能手表、智能眼镜、英特尔电视服务、搭载英特尔芯片的无人机和自动驾驶汽车，但英特尔大约 85% 的收入仍然来自其服务器和 PC 工作。近年来，英特尔曾多次试图在 CES 上通过华丽的主题演讲重新定位自己，但这些努力没有说服力，也缺乏重点。
+
+站在开源硬件的角度，英特尔同样不受待见。Arduino 社区从未接受 Curie，随着 Linux 驱动的 Raspberry Pi 越来越主导低端黑客板卡领域，Arduino 兼容性变得不再是必备功能。对于英特尔试图通过其 Curie 吸引的豪华智能手表供应商来说，这当然没有多大意义。
+
+x86 社区也没有太多考虑 Quark。由于 Quark 最初仅宣布与 Pentium ISA 兼容，因此它的进展最初放缓了。当 Intel 添加 x86 兼容性时，为时已晚[<sup>3</sup>](#jump3)。
+
+时任 LinkedIn 半导体销售和营销小组的主持人 Bill Giovino[<sup>4</sup>](#jump4) 评价 Intel Quark D2000 的文章中提到：*如今，似乎每家半导体公司都有用于物联网 （IoT） 的微控制器解决方案。我们看到了来自通常内核供应商的低功耗、高性能和高集成度微控制器的规格。但是，当英特尔宣布将重新进入微控制器业务，推出用于物联网的 32 位 x86 MCU 时，就像雷神拿起锤子再次参加比赛一样。*
+
+> 注：英特尔最早的产品是3101 SRAM，英特尔第一款微控制器是基于哈佛架构的 Intel 8048/MCS-48（1976年），其衍生版本就有著名的 8051，也就是51单片机。
+
+只可惜，在死神面前，雷神的锤子不堪一击，甚至连锤子都被捏的粉碎。
+
+## <s>复活雷神的锤子</s> 
+
+上面提到了，这款产品没有适配 Arduino IDE，所以我们需要使用 Intel System Studio for Microcontrollers 来编译和烧录程序。
+
+可笑的是，英特尔在2019年1月宣布停止Quark系列产品的生产和支持，这意味着 Intel System Studio for Microcontrollers 也不再更新了。甚至 Intel System Studio for Microcontrollers 的下载链接都失效了。英特尔只保留了 Quark D2000 的数据手册、规格说明书和一些指南。
+
+Quark D2000 Dev Platform的一些官方和三方链接我贴在此处：
+
+1. [Intel® Quark™ Microcontroller Developer Kit D2000 – Getting Started for Windows* - Intel](https://www.intel.com/content/www/us/en/developer/articles/guide/intel-quark-microcontroller-developer-kit-d2000-getting-started-for-windows.html)
+2. [Add a Button and LED to Your Intel® Quark™ Microcontroller Developer Kit D2000 - Intel](https://www.intel.com/content/www/us/en/developer/articles/technical/d2000-button-and-led.html#_Toc453769087)
+3. [The QMSI Pin Name and Pin Map of Intel® Quark™ Microcontroller D2000 CRB - Intel](https://www.intel.cn/content/www/cn/zh/developer/articles/technical/the-qmsi-pin-name-and-pin-map-of-intel-quark-microcontroller-d2000-crb.html)
+4. [Blink LED Test on Intel Quark D2000 Development Board - Autodesk Instructables](https://www.instructables.com/Blink-LED-Test-on-Intel-Quark-D2000-Development-Bo/)
+5. [【X86 MCU】安裝Quark D2000開發環境 作者：何信昱 - MakerPro](https://web.archive.org/web/20170521234453/http://makerpro.cc/2017/05/the-introduction-of-quark-d2000/)
+6. [Embedded System - Intel Quark - ShareTechnote](https://www.sharetechnote.com/html/Intel_Quark_SoftwareInstallation.html)
+7. [The Quark D2000 Development Board: Moving Beyond “Hello World” - All About Circuits](https://www.allaboutcircuits.com/projects/the-quark-d2000-development-board-moving-beyond-hello-world/)
+
+上面难得有点用的应该也就是第 3 个链接了。防止英特尔下架，我贴在我这里：
+
+#### Pin Map 
+
+<img src="http://icing.fun/img/post/2025/06/01/d2000-pinmap-681526.png" alt="pinmap" width="50%">
+
+#### Pin Name
+
+```c
+/**
+    * External Pad pin identifiers
+   **/ 
+
+    QM_PIN_ID_0,  /**< Pin id 0. */
+    QM_PIN_ID_1,  /**< Pin id 1. */
+    QM_PIN_ID_2,  /**< Pin id 2. */
+    QM_PIN_ID_3,  /**< Pin id 3. */
+    QM_PIN_ID_4,  /**< Pin id 4. */
+    QM_PIN_ID_5,  /**< Pin id 5. */
+    QM_PIN_ID_6,  /**< Pin id 6. */
+    QM_PIN_ID_7,  /**< Pin id 7. */
+    QM_PIN_ID_8,  /**< Pin id 8. */
+    QM_PIN_ID_9,  /**< Pin id 9. */
+    QM_PIN_ID_10, /**< Pin id 10. */
+    QM_PIN_ID_11, /**< Pin id 11. */
+    QM_PIN_ID_12, /**< Pin id 12. */
+    QM_PIN_ID_13, /**< Pin id 13. */
+    QM_PIN_ID_14, /**< Pin id 14. */
+    QM_PIN_ID_15, /**< Pin id 15. */
+    QM_PIN_ID_16, /**< Pin id 16. */
+    QM_PIN_ID_17, /**< Pin id 17. */
+    QM_PIN_ID_18, /**< Pin id 18. */
+    QM_PIN_ID_19, /**< Pin id 19. */
+    QM_PIN_ID_20, /**< Pin id 20. */
+    QM_PIN_ID_21, /**< Pin id 21. */
+    QM_PIN_ID_22, /**< Pin id 22. */
+    QM_PIN_ID_23, /**< Pin id 23. */
+    QM_PIN_ID_24, /**< Pin id 24. */
+
+/**
+ * Pin function type. (Mode 0 ~ Mode 3)
+ */
+    QM_PMUX_FN_0, /* Mode 0 */
+    QM_PMUX_FN_1, /* Mode 1 */
+    QM_PMUX_FN_2, /* Mode 2 */
+    QM_PMUX_FN_3, /* Mode 3 */
+```
+
+#### Example
+
+```c
+/* Mux out STDOUT_UART tx/rx pins and enable input for rx. */
+     qm_pmux_select(QM_PIN_ID_12, QM_PMUX_FN_2);
+     qm_pmux_select(QM_PIN_ID_13, QM_PMUX_FN_2);
+     qm_pmux_input_en(QM_PIN_ID_13, true);
+```
+
+<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0006.jpg" alt="pinmap" width="50%">
+<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0007.jpg" alt="pinmap" width="50%">
+<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0008.jpg" alt="pinmap" width="50%">
+<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0009.jpg" alt="pinmap" width="50%">
+<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0010.jpg" alt="pinmap" width="50%">
+<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0011.jpg" alt="pinmap" width="50%">
+<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0012.jpg" alt="pinmap" width="50%">
+
+那么你现在可能有疑问：IDE 都没有了，还有编译环境吗？有的，兄弟，有的。我们自己手动编译 IAMCU i586 的工具链。
+
+### 手动编译 IAMCU i586 的工具链
+
+英特尔十分难得地提供了 [The Intel Quark MCUs Software Stack](https://github.com/quark-mcu)。在 QMSI（Quark Microcontroller Software Interface）中，英特尔提供了一个名为 `qmsi` 的目录，其中包含了 Quark D2000 和 SE C1000 的驱动和库。具体参照[此链接](https://github.com/quark-mcu/qmsi/tree/d311fd6d16d8385c67b9e5a3310ed6f4f098b023)。在自述文件中提到：
+
+*您必须首先设置 `IAMCU_TOOLCHAIN_DIR` 环境变量。 假设工具链被解压为 `$HOME/issm_2016/` 并且 您可以在 `$HOME/issm_2016/tools/compiler/gcc-ia/5.2.1/bin` 中找到 `i586-intel-elfiamcu-gcc` ……*
+
+<s>这不禁让人兴奋起来</s> 敢情英特尔还是定制了一个 i586 的交叉编译工具链。理得佢咁多，先搞一个试试。
+
+#### 环境
+
+我用的是 [Ubuntu Server 18.04.6 LTS](https://releases.ubuntu.com/18.04/ubuntu-18.04.6-live-server-amd64.iso)，安装了以下依赖：
+
+```bash
+sudo apt update
+sudo apt install build-essential git cmake gcc-multilib g++-multilib python3-pip
+```
+
+这环境属实是东雪莲它妈给东雪莲开门——罕见到家了。
+
+接着需要获取 QMSI，这是 Intel 官方早期为 Quark D2000 提供的裸机驱动层，包含 GPIO、UART、RTC、I2C 等外设支持：
+
+```bash
+git clone https://github.com/quark-mcu/qmsi.git
+cd qmsi
+```
+
+接着是编译和安装交叉编译工具链。Intel 官方推荐的工具链是 `i586-intel-elfiamcu-gcc`，不过因为你完全不可能下到原始安装包，所以我们需要手动编译。
+
+```bash
+export TARGET=i586-elf
+export PREFIX=/opt/cross
+
+# 下载 Binutils 和 GCC 源码
+mkdir -p ~/quark-toolchain && cd ~/quark-toolchain
+wget https://ftp.gnu.org/gnu/binutils/binutils-2.36.tar.gz
+wget https://ftp.gnu.org/gnu/gcc/gcc-10.2.0/gcc-10.2.0.tar.gz
+
+tar -xvf binutils-2.36.tar.gz
+tar -xvf gcc-10.2.0.tar.gz
+cd gcc-10.2.0
+./contrib/download_prerequisites
+cd ..
+
+# 构建 binutils
+mkdir build-binutils && cd build-binutils
+../binutils-2.36/configure --target=$TARGET --prefix=$PREFIX --disable-nls
+make -j$(nproc)
+sudo make install
+cd ..
+
+# 构建 gcc（只要 C）
+mkdir build-gcc && cd build-gcc
+../gcc-10.2.0/configure --target=$TARGET --prefix=$PREFIX --disable-nls --enable-languages=c --without-headers
+make all-gcc -j$(nproc)
+make all-target-libgcc -j$(nproc)
+sudo make install-gcc
+sudo make install-target-libgcc
+```
+
+添加交叉编译工具链到 PATH：
+
+```bash
+export PATH=/opt/cross/bin:$PATH
+```
+
+检查是否安装成功：
+
+```bash
+i586-elf-gcc --version
+```
+
+现在环境才搭一半，工具链是“裸机”版本（newlib 或 newlib-nano 未安装或未连接），无法找到标准 C 头文件，如 `stdio.h`、`stdlib.h` 等。我们需要安装 newlib。
+
+首先下载 newlib 源码：
+
+```bash
+git clone https://sourceware.org/git/newlib-cygwin.git
+cd newlib-cygwin
+```
+
+构建并安装 newlib：
+
+```bash
+mkdir build && cd build
+../configure --target=i586-elf --prefix=/opt/cross
+make all -j$(nproc)
+make install
+# 如果安装失败，请尝试
+sudo env "PATH=$PATH" make install
+```
+
+接着就是魔改 QMSI 的文件。定位到 `qmsi` 根目录下的 `base.mk` ，修改以下内容：
+
+```makefile
+### Tools
+#PREFIX ?= arc-elf32
+#TOOLCHAIN_DIR=$(ARCMCU_TOOLCHAIN_DIR)
+#else
+#PREFIX ?= i586-intel-elfiamcu
+#TOOLCHAIN_DIR=$(IAMCU_TOOLCHAIN_DIR)
+#endif
+
+TOOLCHAIN_DIR := $(dir $(CROSS_COMPILE))
+PREFIX := $(notdir $(CROSS_COMPILE))
+CFLAGS += -Wno-error=implicit-fallthrough
+
+.
+.
+.
+
+ifeq ($(TARGET), sensor)
+CFLAGS += -DQM_SENSOR
+CFLAGS += -ffreestanding
+CFLAGS += -mARCv2EM -mav2em -mno-sdata
+LDFLAGS += -nostartfiles
+LDLIBS += -lc -lgcc
+else
+#LDLIBS += -lc -lnosys -lsoftfp -lgcc
+LDLIBS += -lc -lgcc
+```
+
+最后是编译，我们尝试编译一个 `blinky`：
+
+```bash
+unset IAMCU_TOOLCHAIN_DIR
+cd ~/qmsi/examples/blinky
+export CROSS_COMPILE=/opt/cross/bin/i586-elf
+make TARGET=x86 SOC=quark_d2000 V=1
+``` 
+
+编译成功后会在 `release/quark_d2000/x86/bin/blinky.bin`。
+
+> 注意：如果编译时候遇到编译器抛出 switch-case 函数错误 `error: this statement may fall through [-Werror=implicit-fallthrough=]` 的时候，请定位到报错行下方添加 `__attribute__((fallthrough));`。
+
+#### 烧录
+
+非常幸运的是，这个板子自带 `FTDI FT232HL` USB 转串口芯片，所以我们可以直接使用 `OpenOCD` 来烧录。
+
+首先，如果你用的是 `Windows` 系统，需要下载 [Zadig](https://zadig.akeo.ie/) 工具，将 `FT232HL` 的驱动安装为 `WinUSB`。如果你用的是 `Linux` 系统，通常不需要额外安装驱动。
+
+我们需要下载英特尔提供的 `OpenOCD` 副本。点击[此处](https://github.com/intel/OpenOCD/releases/tag/0.9-0.1)下载对应操作系统的版本。解压后，进入 `scripts` 目录。
+
+接着从 [Intel/OpenOCD](https://github.com/intel/OpenOCD) 仓库中，定位到 [`tcl/board/`](https://github.com/intel/OpenOCD/tree/master/tcl/board) 目录，找到 [`quark_d2000.cfg`](https://github.com/intel/OpenOCD/blob/master/tcl/board/quark_d2000.cfg) 和 [`quark_d2000_onboard.cfg`](https://github.com/intel/OpenOCD/blob/master/tcl/board/quark_d2000_onboard.cfg) 两个文件，下载到 `$Intel_OpenOCD/scripts/board/` 目录下。然后定位到 [`tcl/target/`](https://github.com/intel/OpenOCD/tree/master/tcl/target) 目录，找到 [`quark_d2000.cfg`](https://github.com/intel/OpenOCD/blob/master/tcl/target/quark_d2000.cfg) 文件，下载到 `$Intel_OpenOCD/scripts/target/` 目录下。
+
+现在我们通过命令行/终端进入到 OpenOCD 的 `bin` 目录下。
+
+我们还需要下载 Quark D2000 的 Bootloader。点击[此处](https://github.com/quark-mcu/qm-bootloader/releases/tag/v1.3.0)下载 1.3.0 版本的 Bootloader。
+
+因为我准备在 Windows 上刷板子，所以还需要使用 `scp` 命令将 `blinky.bin` 复制到 OpenOCD 的 `bin` 目录下。
+
+```powershell
+scp.exe tomato@192.168.56.108:/home/tomato/qmsi/examples/blink/release/quark_d2000/x86/bin/blinky.bin ./blinky.bin
+```
+
+我们现在就可以通过 OpenOCD 来烧录了。
+
+```powershell
+.\openocd.exe -f ..\scripts\board\quark_d2000_onboard.cfg -c "flash_rom quark_d2000_rom.bin 0"
+.\openocd.exe -f ..\scripts\board\quark_d2000_onboard.cfg -c "flash_rom blinky.bin 0x00180000"
+```
+
+如果是 Linux 系统，可以参考[此处](https://www.mouser.com/pdfdocs/system-studio-getting-started-guide.pdf)第24页，命令类似：
+
+```bash
+./openocd -f ../scripts/board/quark_d2000_onboard.cfg -c "init" -c "flash_rom quark_d2000_rom.bin" -c "shutdown"
+```
+
+在看到 `All done`的时候按下复位键，蓝色的 `USR` LED 会每隔 0.25s 闪烁一下，表示烧录成功。
+
+或者是配合 `gdb` 调试。先在 OpenOCD 的 `bin` 目录下执行：
+
+```powershell
+.\openocd.exe -f ..\scripts\board\quark_d2000_onboard.cfg
+```
+
+就会显示如下信息：
+
+```powershell
+Open On-Chip Debugger 0.8.0-dev-ga422c7e (2016-05-23-16:57)
+Licensed under GNU GPL v2
+For bug reports, read
+        http://openocd.sourceforge.net/doc/doxygen/bugs.html
+Info : only one transport option; autoselect 'jtag'
+adapter speed: 1000 kHz
+trst_only separate trst_push_pull
+adapter speed: 1000 kHz
+trst_only separate trst_push_pull
+Info : clock speed 1000 kHz
+Info : JTAG tap: quark_d2000.cltap tap/device found: 0x0e786013 (mfg: 0x009, part: 0xe786, ver: 0x0)
+Enabling lmt core tap
+Info : JTAG tap: quark_d2000.lmt enabled
+```
+
+接着打开另一个终端，执行：
+
+```powershell
+gbd
+```
+
+如果在 Windows 上运行前提是你得安装好 `MSYS2`。
+
+然后在 `gdb` 中输入：
+
+```powershell
+(gdb) target remote :3333
+```
+
+接着输入以下命令来烧录程序：
+
+```powershell
+(gdb) monitor reset halt
+(gdb) monitor load_image blinky.bin 0x00180000
+(gdb) monitor reset
+```
+
+<img src="http://icing.fun/img/post/2025/06/01/quark_d2000.gif" alt="d2000" width="50%">
+
+### 配置 Zephyr RTOS
+
+(2025-06-02 更新)
+
+Zephyr RTOS 是一个开源的实时操作系统，支持多种硬件平台，包括 Intel Quark D2000。我们可以使用 Zephyr 来开发更复杂的应用。
+
+但是我们不能用最新的 Zephyr 版本，因为 Quark D2000 的支持在 Zephyr 2.0 之后被移除。我们需要使用 Zephyr 1.14.0 版本 和 SDK 0.10.0 版本。
+
+#### 环境准备
+
+回到 Ubuntu Server 18.04.6 LTS 环境，安装 Zephyr 所需的依赖：
+
+```bash
+sudo apt-get update
+sudo apt-get install --no-install-recommends git cmake ninja-build gperf \
+  ccache dfu-util device-tree-compiler wget \
+  python3-pip python3-setuptools python3-wheel xz-utils file make gcc \
+  gcc-multilib
+```
+
+Zephyr 需要CMake 版本 3.13.1 或更高版本。但是 Ubuntu 18.04 默认的 CMake 版本是 `3.10.2`，我们需要手动安装最新版本的 CMake：
+
+```bash
+sudo apt purge cmake
+python3 -m pip install --upgrade pip
+python3 -m pip install scikit-build==0.14.0
+python3 -m pip install cmake
+```
+
+安装完之后可能会遇到 `WARNING: The scripts cmake, cpack and ctest are installed in '/home/tomato/.local/bin' which is not on PATH.` 的警告。我们需要将其添加到 PATH 中：
+
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+最后我们需要安装 安装 Zephyr 软件开发工具包 （SDK）：
+
+```bash
+wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.10.0/zephyr-sdk-0.10.0-setup.run
+cd <sdk download directory>
+sh zephyr-sdk-0.10.0-setup.run
+```
+
+导出 Zephyr SDK 的环境变量，默认位置在 `/opt/zephyr-sdk/`：
+
+```bash
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=<sdk installation directory>
+```
+
+#### 下载 Zephyr 源码
+
+使用 Bootstrap West 工具来下载 Zephyr 源码：
+
+```bash
+python3 -m pip install west
+```
+
+我们需要指定 Zephyr 的版本为 1.14.0：
+
+```bash
+west init zephyrproject --mr v1.14.0
+cd zephyrproject
+west update
+```
+
+#### 安装 Python 依赖项
+
+Zephyr 需要一些 Python 依赖项，我们可以使用 `pip` 来安装：
+
+```bash
+python3 -m pip install -r zephyr/scripts/requirements.txt
+```
+
+如果你在安装过程中遇到依赖项问题，可以把 `zephyr/scripts/requirements.txt` 中 `hub==2.0` 改成 `hub==2.0.9`。
+
+#### 构建应用程序
+
+导航到主项目目录：
+
+```bash
+cd zephyrproject/zephyr
+```
+
+设置环境：
+
+```bash
+source zephyr-env.sh
+```
+
+构建 `blinky` 示例应用程序：
+
+```bash
+cd samples/basic/blinky
+west build -b quark_d2000_crb .
+```
+
+构建完成后会在 `build/zephyr/zephyr.bin` 生成二进制文件。烧录方式和上面类似。烧录成功后按下复位键，蓝色的 `USR` LED 会每隔 1s 闪烁一下，表示烧录成功。
+
+可以参照[Zephyr 1.14.0 官方文档](https://docs.zephyrproject.org/1.14.0/getting_started/index.html#)来了解更多关于 Zephyr 的信息。
+
+## 完成
+
+至此，我们在失去官方工具链的情况下成功复活了这个板子。
+
+## 引用
+
+1. <span id="jump1"><a href="https://www.intel.com/content/www/us/en/products/sku/91947/intel-quark-microcontroller-d2000/specifications.html">Intel® Quark™ Microcontroller D2000 - Intel</a></span>
+2. <span id="jump2"><a href="https://web.archive.org/web/20201205135803/https://www.theverge.com/2018/6/22/17492184/intel-future-ceo-brian-krzanich-resignation-2018">Warren, Tom. Intel now faces a fight for its future. The Verge. 2018-06-22 [2020-11-26]. （原始内容存档于2020-12-05） </a></span>
+3. <span id="jump3"><a href="https://linuxgizmos.com/who-killed-the-quark/">Who killed the Quark? by Eric Brown - LinuxGizmos.com</a></span>
+4. <span id="jump4"><a href="https://www.mouser.com/applications/Intel-Quark-Internet-of-Things-MCU/">The Intel Quark®™ Microcontroller: Why an x86 MCU is The Right Stuff for The Internet of Things, By Bill Giovino - Mouser Electornics</a></span>

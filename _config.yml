@@ -2,7 +2,7 @@ name: IcingTomato's Archive
 description: 'Enjoy it while it lasts, because it never does.'
 url: https://icing.fun # 需要在添加SSL证书后修改为 https
 baseurl: ''
-permalink:           pretty
+permalink:           posts/:title.html
 github:              https://github.com/IcingTomato
 twitter:             https://twitter.com/IcingTomato
 rss:                 /rss/atom.xml

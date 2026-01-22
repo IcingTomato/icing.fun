@@ -2,9 +2,7 @@
 layout: default
 title: Login
 ---
-<div class="container">
-  <h2 class="mb2">Login</h2>
-  <hr class="solid-header bdp-gray mh1 mb4">
+
   <div class="columns">
     <div class="column col-6 col-mx-auto">
       <form>
@@ -22,4 +20,3 @@ title: Login
       </form>
     </div>
   </div>
-</div>

@@ -2,11 +2,8 @@
 layout: default
 title: Engineering Information
 ---
-<div class="container">
-  <h2 class="mb2">Engineering Information</h2>
-  <hr class="solid-header bdp-gray mh1 mb4">
-  <p>The technology that powers this website.</p>
-</div>
+
+<p>The technology that powers this website.</p>
 
 <div class="columns mb3">
     <div class="column col-6 col-sm-12 col-md-12 mb3">
@@ -48,4 +45,3 @@ title: Engineering Information
         </tbody>
     </table>
     </div>
-</div>

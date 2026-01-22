@@ -1,0 +1,22 @@
+---
+layout: default
+title: Posts
+permalink: /posts/
+---
+
+  {% for post in site.posts %}
+    {% capture current_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% if current_year != year %}
+      {% unless forloop.first %}</ul>{% endunless %}
+      <h2 class="mb2">{{ current_year }}</h2>
+      <ul>
+      {% assign year = current_year %}
+    {% endif %}
+    <li>
+      <span class="sku">{{ post.date | date: "%m-%d" }}</span>
+      &raquo;
+      <a class="btn-classic white bg-dark-green" href="{{ post.url | relative_url }}">{{ post.title }} →</a>
+    </li>
+    {% if forloop.last %}</ul>{% endif %}
+  {% endfor %}
+

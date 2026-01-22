@@ -3,11 +3,16 @@
 {% include head.html %}
 <body class="measure-60 responsive-30-phone p-centered">
   {% include header.html %}
+  <div class="container">
+  <h2 class="mb2">{{ page.title }}</h2>
+  <hr class="solid-header bdp-gray mh1 mb4">
   <main>
+    
     <div class="post_content" data-title="{{ page.title }}" data-date="{% if page.date %}{{ page.date | date: '%B %-d, %Y' }}{% endif %}">
         {{ content }}
     </div>
   </main>
+  </div>
   {% include footer.html %}
 </body>
 </html>

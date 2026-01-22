@@ -3,5 +3,37 @@ layout: default
 title: Home
 ---
 
-<p>Welcome to IcingTomato's Archive. Explore posts, categories, and more.</p>
+<p>Welcome to IcingTomato's Archive. Here are the recent posts.</p>
+
+<div class="recent-posts">
+  {% for post in site.posts limit:3 %}
+    <div class="mb4">
+      {% assign image_src = nil %}
+      {% if post.content contains '<img src="' %}
+        {% assign image_src = post.content | split: '<img src="' | last | split: '"' | first %}
+      {% endif %}
+
+      <h2>{{ post.title }}</h2>
+      <hr class="mb3">
+      <div class="columns mb3">
+        <div class="column col-6 col-sm-12 col-md-12 mb3">
+          <p class="mb1">
+            <span class="text-gray">{{ post.date | date: "%B %-d, %Y" }}</span>
+          </p>
+          <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+          <p>
+            <a class="btn-classic white bg-dark-green" href="{{ post.url }}">Read more →</a>
+          </p>
+        </div>
+        <div class="column col-6 col-sm-12 col-md-12 mb3">
+          {% if image_src %}
+            <a href="{{ post.url }}">
+              <img class="img-card w100" src="{{ image_src }}" alt="{{ post.title }}"/>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
 

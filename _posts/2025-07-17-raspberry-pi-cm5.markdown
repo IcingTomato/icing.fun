@@ -4,7 +4,7 @@ title:  "【阅板无数】使用 OpenOCD 对 Raspberry Pi CM5 进行调试"
 tags: raspberrypi arm zh-cn
 ---
 
-<img src="http://icing.fun/img/post/2025/07/17/cm5.webp" alt="cm5" width="50%">
+<img src="../img/post/2025/07/17/cm5.webp" alt="cm5" width="50%">
 
 2024年11月27日，在距第一款商用 Raspberry Pi Model B（于 2012 年 2 月 29 日推出）发布整整12年之后，Raspberry Pi 基金会发布了 Raspberry Pi Compute Module 5（CM5）。这款产品的发布标志着 Raspberry Pi 进入了一个新的阶段，特别是在工业和嵌入式应用领域。
 
@@ -16,13 +16,13 @@ Raspberry Pi CM5 是一款基于 Raspberry Pi 4 的计算模块，采用了更�
 
 根据官方提供的[数据手册](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)，我们可以看到 CM5 的 JTAG 接口位于 Wi-Fi 模块背面的测试点位，具体位置参见文档第37页。
 
-<img src="http://icing.fun/img/post/2025/07/17/doc.png" alt="cm5" width="50%">
+<img src="../img/post/2025/07/17/doc.png" alt="cm5" width="50%">
 
 具体焊接点位如下，橙色线和黄色线是对应原版树莓派 Debug Probe 的线的颜色：
 
-<img src="http://icing.fun/img/post/2025/07/17/pin.png" alt="cm5" width="50%">
+<img src="../img/post/2025/07/17/pin.png" alt="cm5" width="50%">
 
-<img src="http://icing.fun/img/post/2025/07/17/the-probe.png" alt="cm5" width="50%">
+<img src="../img/post/2025/07/17/the-probe.png" alt="cm5" width="50%">
 
 - Orange
     TX/**SCLK** (Output from Probe)
@@ -63,7 +63,7 @@ earlycon=pl011,0x107d001000,115200n8 console=tty1 console=ttyAMA0,115200 root=PA
 
 本人自制了一个带 3V3 的调试器，使用了树莓派官方的 Debug Probe，焊接了 3V3、GND、SWD 和 SCLK 四个引脚。
 
-<img src="http://icing.fun/img/post/2025/07/17/debug-probe.png" alt="debug-probe" width="50%">
+<img src="../img/post/2025/07/17/debug-probe.png" alt="debug-probe" width="50%">
 
 ## OpenOCD 配置
 

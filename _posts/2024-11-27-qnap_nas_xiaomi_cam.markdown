@@ -9,7 +9,7 @@ published: true
 
 于是在米家APP中找到了视频存储时长设置选项，改成3个月：
 
-<img src="http://icing.fun/img/post/2024/11/27/1.jpg" alt="米家APP中视频存储时长设置选项">
+<img src="../img/post/2024/11/27/1.jpg" alt="米家APP中视频存储时长设置选项">
 <i>米家APP中视频存储时长设置选项</i>
 
 改了之后NAS上面数据一点没动，应该是不会删除NAS上面的视频数据，所以就想着让NAS怎么自动删除米家摄像头三个月前的视频文件。
@@ -18,7 +18,7 @@ published: true
 
 首先想到的是用`crontab`，但是QNAP的Linux系统是基于BusyBox的，`crontab -e` 这种命令有，但是不会运行成功，即便是加上 `sudo` ，也不能保存计划任务。
 
-<img src="http://icing.fun/img/post/2024/11/27/2.png" alt="crontab -e">
+<img src="../img/post/2024/11/27/2.png" alt="crontab -e">
 
 所以只能使用 `vi` 命令编辑计划任务文件，文件路径是 `/etc/config/crontab` ，在文件末尾加上：
 
@@ -26,7 +26,7 @@ published: true
 0 * * * * cd /share/MiCam/xiaomi_camera_videos && bash auto_del.sh
 ```
 
-<img src="http://icing.fun/img/post/2024/11/27/3.png" alt="vi /etc/config/crontab">
+<img src="../img/post/2024/11/27/3.png" alt="vi /etc/config/crontab">
 
 这个命令的意思是每小时执行一次 `auto_del.sh` 脚本，脚本内容如下：
 
@@ -62,8 +62,8 @@ done
 
 手动运行结果如下：
 
-<img src="http://icing.fun/img/post/2024/11/27/4.png" alt="Run script">
+<img src="../img/post/2024/11/27/4.png" alt="Run script">
 
 因为米家摄像头会在设置的文件夹下创建 `xiaomi_camera_videos` 文件夹，然后在这个文件夹下以设备序列号（？）创建的很像乱码的文件夹，每个乱码文件夹下面又以`年月日时`为名的文件夹，所以这个脚本的作用是删除 `xiaomi_camera_videos/??????????` 文件夹下三个月前的视频文件夹。所以脚本必须放在 `/目标文件夹/xiaomi_camera_videos`下：
 
-<img src="http://icing.fun/img/post/2024/11/27/5.png" alt="Script destination">
+<img src="../img/post/2024/11/27/5.png" alt="Script destination">

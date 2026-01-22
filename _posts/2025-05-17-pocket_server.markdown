@@ -17,11 +17,11 @@ published: true
 
 看了一下[官方文档](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#test-pad-locations)，发现他们预留了测试点位，里面有一个 `5V`、`GND`、`USB_DP`、`USB_DM` 的测试点位，直接焊接上去就可以了。这样就可以用 `USB` 供电了。
 
-<img src="http://icing.fun/img/post/2025/05/17/zero2-pad-diagram.png" alt="pin" width="50%">
+<img src="../img/post/2025/05/17/zero2-pad-diagram.png" alt="pin" width="50%">
 
 如果嫌自己焊的太捞了，可以直接去搜树莓派USB转接器，这种产品多的很。
 
-<img src="http://icing.fun/img/post/2025/05/17/pi-zero-usb-adapter-3.jpg" alt="pin" width="50%">
+<img src="../img/post/2025/05/17/pi-zero-usb-adapter-3.jpg" alt="pin" width="50%">
 
 买到手装好之后就该开始配置了。
 
@@ -39,7 +39,7 @@ enable_uart=1
 
 接下来我们需要从<s>烤箱</s>里面拿出来一个串口工具，连接到树莓派的 `UART` 接口上。树莓派 Zero 2 W 的 `UART` 接口在下面的图中可以看到（Pin1的焊盘是方形的）：
 
-<img src="http://icing.fun/img/post/2025/05/17/GPIO-Pinout-Diagram-2.png" alt="pin" width="50%">
+<img src="../img/post/2025/05/17/GPIO-Pinout-Diagram-2.png" alt="pin" width="50%">
 
 ## UART 连接
 

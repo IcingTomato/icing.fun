@@ -14,7 +14,7 @@ The foundations of networking: switches, routers, and wireless access points. Sw
 
 - 同轴电缆（Coaxial Cable）
 
-![](http://icing.fun/img/post/2021/01/30/coaxial_cable.jpg)
+![](../img/post/2021/01/30/coaxial_cable.jpg)
 
 > 同轴电缆是一种早期使用的传输介质，同轴电缆的标准分为两种，10BASE2和10BASE5。这两种标准都支持10Mbps的传输速率，最长传输距离分别为185米和500米。一般情况下，10Base2同轴电缆使用BNC接头，10Base5同轴电缆使用N型接头。
 
@@ -24,19 +24,19 @@ The foundations of networking: switches, routers, and wireless access points. Sw
 
 - 双绞线（Twisted Pair）
 
-![](http://icing.fun/img/post/2021/01/30/twisted_pair.jpg)
+![](../img/post/2021/01/30/twisted_pair.jpg)
 
 > 与同轴电缆相比双绞线（Twisted Pair）具有更低的制造和部署成本，因此在企业网络中被广泛应用。双绞线可分为屏蔽双绞线(Shielded Twisted Pair，STP)和非屏蔽双绞线(Unshielded Twisted Pair，UTP)。屏蔽双绞线在双绞线与外层绝缘封套之间有一个金属屏蔽层，可以屏蔽电磁干扰。双绞线有很多种类型，不同类型的双绞线所支持的传输速率一般也不相同。例如，3类双绞线支持10Mbps传输速率；5类双绞线支持100Mbps传输速率；超5类双绞线及更高级别的双绞线支持千兆以太网传输。双绞线使用RJ-45接头连接网络设备。为保证终端能够正确收发数据，RJ-45接头中的针脚必须按照一定的线序排列
 
 - 光纤（Optical Fiber）
 
-![](http://icing.fun/img/post/2021/01/30/optical_fiber.jpg)
+![](../img/post/2021/01/30/optical_fiber.jpg)
 
 > 双绞线和同轴电缆传输数据时使用的是电信号，而光纤传输数据时使用的是光信号。光纤支持的传输速率包括10Mbps，100Mbps，1Gbps，10Gbps，甚至更高。根据光纤传输光信号模式的不同，光纤又可分为单模光纤和多模光纤。单模光纤只能传输一种模式的光，不存在模间色散，因此适用于长距离高速传输。多模光纤允许不同模式的光在一根光纤上传输，由于模间色散较大而导致信号脉冲展宽严重，因此多模光纤主要用于局域网中的短距离传输。光纤连接器种类很多，常用的连接器包括ST，FC，SC，LC连接器。
 
 - 串口电缆（Serial Port Cable）
 
-![](http://icing.fun/img/post/2021/01/30/serialportcable.jpg)
+![](../img/post/2021/01/30/serialportcable.jpg)
 
 > 网络通信中常常会用到各种各样的串口电缆。常用的串口电缆标准为RS-232，同时也是推荐的标准。但是RS-232的传输速率有限，传输距离仅为6米。其他的串口电缆标准可以支持更长的传输距离，例如RS-422和RS-485的传输距离可达1200米。RS-422和RS-485串口电缆通常使用V.35接头，这种接头在上世纪80年代已经淘汰，但是现在仍在帧中继、ATM等传统网络上使用。V.24是RS-232标准的欧洲版。RS-232本身没有定义接头标准，常用的接头类型为DB-9和DB-25。现在，RS-232已逐渐被FireWire、USB等新标准取代，新产品和新设备已普遍使用USB标准。
 
@@ -54,7 +54,7 @@ The foundations of networking: switches, routers, and wireless access points. Sw
 
 两个终端，用一条能承载数据传输的物理介质（也称为传输介质）连接起来，就组成了一个最简单的网络。
 
-![](http://icing.fun/img/post/2021/01/30/simplenetwork.jpg)
+![](../img/post/2021/01/30/simplenetwork.jpg)
 
 ### 网络划分为
 
@@ -84,7 +84,7 @@ The foundations of networking: switches, routers, and wireless access points. Sw
 
 ## 冲突域（Collision Domain）
 
-![](http://icing.fun/img/post/2021/01/30/CollisionDomain.jpg)
+![](../img/post/2021/01/30/CollisionDomain.jpg)
 
 共享式网络中可能会出现信号冲突现象。
 
@@ -103,7 +103,7 @@ The foundations of networking: switches, routers, and wireless access points. Sw
 
 ## 双工模式（Duplex）
 
-![](http://icing.fun/img/post/2021/01/30/Duplex.jpg)
+![](../img/post/2021/01/30/Duplex.jpg)
 
 两种双工模式都支持双向数据传输。
 
@@ -118,13 +118,13 @@ The foundations of networking: switches, routers, and wireless access points. Sw
 
 # 以太网帧结构
 
-![](http://icing.fun/img/post/2021/01/30/networkframe.jpg)
+![](../img/post/2021/01/30/networkframe.jpg)
 
 网络中传输数据时需要定义并遵循一些标准，以太网是根据IEEE 802.3标准来管理和控制数据帧的。
 
 ## 网络通信协议
 
-![](http://icing.fun/img/post/2021/01/30/protocol.jpg)
+![](../img/post/2021/01/30/protocol.jpg)
 
 不同的协议栈用于定义和管理不同网络的数据转发规则。
 
@@ -134,7 +134,7 @@ The foundations of networking: switches, routers, and wireless access points. Sw
 
 ## 分层模型-OSI
 
-![](http://icing.fun/img/post/2021/01/30/osi.jpg)
+![](../img/post/2021/01/30/osi.jpg)
 
 > 国际标准化组织ISO于1984年提出了OSI RM（Open System Interconnection Reference Model，开放系统互连参考模型）。OSI参考模型很快成为了计算机网络通信的基础模型。
 
@@ -157,7 +157,7 @@ The foundations of networking: switches, routers, and wireless access points. Sw
 
 ## 分层模型-TCP/IP
 
-![](http://icing.fun/img/post/2021/01/30/tcpip.jpg)
+![](../img/post/2021/01/30/tcpip.jpg)
 
 > TCP/IP模型同样采用了分层结构，层与层相对独立但是相互之间也具备非常密切的协作关系。
 
@@ -165,13 +165,13 @@ The foundations of networking: switches, routers, and wireless access points. Sw
 
 ## 数据封装
 
-![](http://icing.fun/img/post/2021/01/30/package.jpg)
+![](../img/post/2021/01/30/package.jpg)
 
 > 应用数据需要经过TCP/IP每一层处理之后才能通过网络传输到目的端，每一层上都使用该层的协议数据单元PDU（Protocol Data Unit）彼此交换信息。不同层的PDU中包含有不同的信息，因此PDU在不同层被赋予了不同的名称。如上层数据在传输层添加TCP报头后得到的PDU被称为Segment（数据段）；数据段被传递给网络层，网络层添加IP报头得到的PDU被称为Packet（数据包）；数据包被传递到数据链路层，封装数据链路层报头得到的PDU被称为Frame（数据帧）；最后，帧被转换为比特，通过网络介质传输。这种协议栈逐层向下传递数据，并添加报头和报尾的过程称为封装。
 
 ## 终端之间的通信
 
-![](http://icing.fun/img/post/2021/01/30/communication.jpg)
+![](../img/post/2021/01/30/communication.jpg)
 
 数据链路层控制数据帧在物理链路上传输。
 
@@ -179,7 +179,7 @@ The foundations of networking: switches, routers, and wireless access points. Sw
 
 ## 帧格式
 
-![](http://icing.fun/img/post/2021/01/30/frame.jpg)
+![](../img/post/2021/01/30/frame.jpg)
 
 > 以太网上使用两种标准帧格式。第一种是上世纪80年代初提出的DIX v2格式，即Ethernet II帧格式。Ethernet II后来被IEEE 802标准接纳，并写进了IEEE 802.3x-1997的3.2.6节。第二种是1983年提出的IEEE 802.3格式。这两种格式的主要区别在于Ethernet II格式中包含一个Type字段，标识以太帧处理完成之后将被发送到哪个上层协议进行处理，IEEE 802.3格式中，同样的位置是长度字段。
 
@@ -189,7 +189,7 @@ The foundations of networking: switches, routers, and wireless access points. Sw
 
 ## Ethernet_II帧格式
 
-![](http://icing.fun/img/post/2021/01/30/ethernetii.jpg)
+![](../img/post/2021/01/30/ethernetii.jpg)
 
 Ethernet_II 帧类型值大于等于1536 (0x0600)，以太网数据帧的长度在64-1518字节之间。
 
@@ -206,7 +206,7 @@ Ethernet_II 帧类型值大于等于1536 (0x0600)，以太网数据帧的长度�
 
 ## IEEE802.3帧格式
 
-![](http://icing.fun/img/post/2021/01/30/ieee8023.jpg)
+![](../img/post/2021/01/30/ieee8023.jpg)
 
 IEEE802.3帧长度字段值小于等于1500 (0x05DC)。
 
@@ -223,7 +223,7 @@ IEEE802.3帧长度字段值小于等于1500 (0x05DC)。
 
 ## 数据帧传输
 
-![](http://icing.fun/img/post/2021/01/30/frametrans.jpg)
+![](../img/post/2021/01/30/frametrans.jpg)
 
 数据链路层基于MAC地址进行帧的传输。
 
@@ -231,7 +231,7 @@ IEEE802.3帧长度字段值小于等于1500 (0x05DC)。
 
 ## 以太网的MAC地址
 
-![](http://icing.fun/img/post/2021/01/30/mac.jpg)
+![](../img/post/2021/01/30/mac.jpg)
 
 MAC地址由两部分组成，分别是供应商代码和序列号。其中前24位代表该供应商代码，由IEEE管理和分配。剩下的24位序列号由厂商自己分配。
 
@@ -239,13 +239,13 @@ MAC地址由两部分组成，分别是供应商代码和序列号。其中前24
 
 ## 单播（Unicast）
 
-![](http://icing.fun/img/post/2021/01/30/unicast.jpg)
+![](../img/post/2021/01/30/unicast.jpg)
 
 > 局域网上的帧可以通过三种方式发送。第一种是单播，指从单一的源端发送到单一的目的端。每个主机接口由一个MAC地址唯一标识，MAC地址的OUI中，第一字节第8个比特表示地址类型。对于主机MAC地址，这个比特固定为0，表示目的MAC地址为此MAC地址的帧都是发送到某个唯一的目的端。在冲突域中，所有主机都能收到源主机发送的单播帧，但是其他主机发现目的地址与本地MAC地址不一致后会丢弃收到的帧，只有真正的目的主机才会接收并处理收到的帧。
 
 ## 广播（Broadcast）
 
-![](http://icing.fun/img/post/2021/01/30/broadcast.jpg)
+![](../img/post/2021/01/30/broadcast.jpg)
 
 > 第二种发送方式是广播，表示帧从单一的源发送到共享以太网上的所有主机。广播帧的目的MAC地址为十六进制的FF:FF:FF:FF:FF:FF，所有收到该广播帧的主机都要接收并处理这个帧。
 
@@ -255,7 +255,7 @@ MAC地址由两部分组成，分别是供应商代码和序列号。其中前24
 
 ## 组播（Multicast）
 
-![](http://icing.fun/img/post/2021/01/30/multicast.jpg)
+![](../img/post/2021/01/30/multicast.jpg)
 
 > 第三种发送方式为组播，组播比广播更加高效。组播转发可以理解为选择性的广播，主机侦听特定组播地址，接收并处理目的MAC地址为该组播MAC地址的帧。
 
@@ -265,7 +265,7 @@ MAC地址由两部分组成，分别是供应商代码和序列号。其中前24
 
 ## 数据帧的发送和接收
 
-![](http://icing.fun/img/post/2021/01/30/frametxrx.jpg)
+![](../img/post/2021/01/30/frametxrx.jpg)
 
 当主机接收到的数据帧所包含的目的MAC地址是自己时，会把以太网封装剥掉后送往上层协议。
 
@@ -277,7 +277,7 @@ MAC地址由两部分组成，分别是供应商代码和序列号。其中前24
 
 ## 上层协议地址
 
-![](http://icing.fun/img/post/2021/01/30/ipprotocol.jpg)
+![](../img/post/2021/01/30/ipprotocol.jpg)
 
 以太网帧中的Type字段值为0x0800，表示该帧的网络层协议为IP协议。
 
@@ -285,7 +285,7 @@ MAC地址由两部分组成，分别是供应商代码和序列号。其中前24
 
 ## IP报文头部
 
-![](http://icing.fun/img/post/2021/01/30/ipheader.jpg)
+![](../img/post/2021/01/30/ipheader.jpg)
 
 > IP报文头部信息用于指导网络设备对报文进行路由和分片。同一个网段内的数据转发通过链路层即可实现，而跨网段的数据转发需要使用网络设备的路由功能。分片是指数据包超过一定长度时，需要被划分成不同的片段使其能够在网络中传输。
 
@@ -295,7 +295,7 @@ MAC地址由两部分组成，分别是供应商代码和序列号。其中前24
 
 ## IP编址
 
-![](http://icing.fun/img/post/2021/01/30/ipaddress.jpg)
+![](../img/post/2021/01/30/ipaddress.jpg)
 
 IP地址分为网络部分和主机部分。
 
@@ -303,31 +303,31 @@ IP地址由32个二进制位组成，通常用点分十进制形式表示。
 
 > IPv4地址为32比特的二进制数，通常用点分十进制表示。IP地址用来标识网络中的设备，具有IP地址的设备可以在同一网段内或跨网段通信。IP地址包括两部分，第一部分是网络号，表示IP地址所属的网段，第二部分是主机号，用来唯一标识本网段上的某台网络设备。
 
-![](http://icing.fun/img/post/2021/01/30/ipaddress2.jpg)
+![](../img/post/2021/01/30/ipaddress2.jpg)
 
 > 每个网段上都有两个特殊地址不能分配给主机或网络设备。第一个是该网段的网络地址，该IP地址的主机位为全0，表示一个网段。第二个地址是该网段中的广播地址，目的地址为广播地址的报文会被该网段中的所有网络设备接收。广播地址的主机位为全1。除网络地址和广播地址以外的其他IP地址都可以作为网络设备的IP地址。
 
 ## 二进制、十进制和十六进制
 
-![](http://icing.fun/img/post/2021/01/30/dox.jpg)
+![](../img/post/2021/01/30/dox.jpg)
 
 在IP网络中，二进制和十六进制是常用的编码方式。
 
 > 网络中的数据可以采用二进制、十进制或十六进制来表示，了解这些进制对理解IP网络基础知识很有必要。每种进制使用不同的基值表示每一位的数值。二进制每一位只有0和1两个值，基值为2，二进制数的每一位都可以用2的x次幂来表示，x表示二进制数的位数。十六进制的每一位可以有16个数值，范围为0-F（即0-9和A-F），A对应十进制的10，F对应十进制的15（二进制的1111）。
 
-![](http://icing.fun/img/post/2021/01/30/dox2.jpg)
+![](../img/post/2021/01/30/dox2.jpg)
 
 > IP地址以字节为单位分为四段，每字节包含8个比特，可以表示0到255，共256个数值。从二进制到十进制转换表中可以看到每一位二进制数所代表的十进制数。上面的表格举例说明了8位二进制数转换为十进制数和十六进制数的情况。从表格中也可以看到全0和全1所对应的十进制数和十六进制数。
 
 ## 二进制和十进制转换
 
-![](http://icing.fun/img/post/2021/01/30/dox3.jpg)
+![](../img/post/2021/01/30/dox3.jpg)
 
 > 32位的IP地址分为4个字节，每个字节有256个取值。因此，理论上IPv4可以有4,294,967,296个IP地址，但实际上只有其中一部分地址可以分配给网络设备使用。本例中，IP地址的前三个字节表示网络号，最后一个字节表示该网络上网络设备可用的地址范围。将二进制格式的IP地址转换为十进制格式时，需要把二进制中每一位1所代表的值加在一起，得出IP地址的十进制值。
 
 ## IP地址分类
 
-![](http://icing.fun/img/post/2021/01/30/ipaddress3.jpg)
+![](../img/post/2021/01/30/ipaddress3.jpg)
 
 > IPv4地址被划分为A、B、C、D、E五类，每类地址的网络号包含不同的字节数。A类，B类和C类地址为可分配IP地址，每类地址支持的网络数和主机数不同。比如，A类地址可支持126个网络，每个网络支持224 （16,777,216 )个主机地址，另外每个网段中的网络地址和广播地址不能分配给主机。C类地址支持200多万个网络，每个网络支持256个主机地址，其中254个地址可以分配给主机使用。
 
@@ -349,31 +349,31 @@ IP地址由32个二进制位组成，通常用点分十进制形式表示。
 
 ## 网络通信
 
-![](http://icing.fun/img/post/2021/01/30/networkcommunication.jpg)
+![](../img/post/2021/01/30/networkcommunication.jpg)
 
 > 源主机必须要知道目的主机的IP地址后才能将数据发送到目的地。源主机向其他目的主机发送报文之前，需要检查目的IP地址和源IP地址是否属于同一个网段。如果是，则报文将被下发到底层协议进行以太网封装处理。如果目的地址和源地址属于不同网段，则主机需要获取下一跳路由器的IP地址，然后将报文下发到底层协议处理。
 
 ## 子网掩码（Mask）
 
-![](http://icing.fun/img/post/2021/01/30/mask.jpg)
+![](../img/post/2021/01/30/mask.jpg)
 
 > 子网掩码用于区分网络部分和主机部分。子网掩码与IP地址的表示方法相同。每个IP地址和子网掩码一起可以用来唯一的标识一个网段中的某台网络设备。子网掩码中的1表示网络位，0表示主机位。
 
 ## 默认子网掩码
 
-![](http://icing.fun/img/post/2021/01/30/default_mask.jpg)
+![](../img/post/2021/01/30/default_mask.jpg)
 
 > 每类IP地址有一个缺省子网掩码。A类地址的缺省子网掩码为8位，即第一个字节表示网络位，其他三个字节表示主机位。B类地址的缺省子网掩码为16位，因此B类地址支持更多的网络，但是主机数也相应减少。C类地址的缺省子网掩码为24位，支持的网络最多，同时也限制了单个网络中主机的数量。
 
 ## 地址规划
 
-![](http://icing.fun/img/post/2021/01/30/address.jpg)
+![](../img/post/2021/01/30/address.jpg)
 
 > 通过子网掩码可以判断主机所属的网段、网段上的广播地址以及网段上支持的主机数。图中这个例子，主机地址为192.168.1.7，子网掩码为24位（C类IP地址的缺省掩码），从中我们可以判断该主机位于192.168.1.0/24网段。将IP地址中的主机位全部置为1，并转换为十进制数，即可得到该网段的广播地址192.168.1.255。网段中支持的主机数为2n，n为主机位的个数。本例中n=8，28=256，减去本网段的网络地址和广播地址，可知该网段支持254个有效主机地址。
 
 ## 有类IP编址的缺陷
 
-![](http://icing.fun/img/post/2021/01/30/ipwaste.jpg)
+![](../img/post/2021/01/30/ipwaste.jpg)
 
 在设计网络时使用有类IP地址会造成地址的浪费。
 
@@ -381,13 +381,13 @@ IP地址由32个二进制位组成，通常用点分十进制形式表示。
 
 ## 变长子网掩码
 
-![](http://icing.fun/img/post/2021/01/30/VLSM.jpg)
+![](../img/post/2021/01/30/VLSM.jpg)
 
 > 采用可变长子网掩码可解决上述问题。缺省子网掩码可以进一步划分，成为变长子网掩码（VLSM）。通过改变子网掩码，可以将网络划分为多个子网。本例中的地址为C类地址，缺省子网掩码为24位。现借用一个主机位作为网络位，借用的主机位变成子网位。一个子网位有两个取值0和1，因此可划分两个子网。该比特位设置为0，则子网号为0，该比特位设置为1，则子网号为128。将剩余的主机位都设置为0，即可得到划分后的子网地址；将剩余的主机位都设置为1，即可得到子网的广播地址。每个子网中支持的主机数为27-2（减去子网地址和广播地址），即126个主机地址。
 
 ## 网关（Gateway）
 
-![](http://icing.fun/img/post/2021/01/30/gateway.jpg)
+![](../img/post/2021/01/30/gateway.jpg)
 
 网关用来转发来自不同网段之间的数据包。
 
@@ -397,7 +397,7 @@ IP地址由32个二进制位组成，通常用点分十进制形式表示。
 
 ## IP包分片
 
-![](http://icing.fun/img/post/2021/01/30/ippackage.jpg)
+![](../img/post/2021/01/30/ippackage.jpg)
 
 > 网络中转发的IP报文的长度可以不同，但如果报文长度超过了数据链路所支持的最大长度，则报文就需要分割成若干个较小的片段才能够在链路上传输。将报文分割成多个片段的过程叫做分片。
 
@@ -405,7 +405,7 @@ IP地址由32个二进制位组成，通常用点分十进制形式表示。
 
 ## 生存时间
 
-![](http://icing.fun/img/post/2021/01/30/livetime.jpg)
+![](../img/post/2021/01/30/livetime.jpg)
 
 > 报文在网段间转发时，如果网络设备上的路由规划不合理，就可能会出现环路，导致报文在网络中无限循环，无法到达目的端。环路发生后，所有发往这个目的地的报文都会被循环转发，随着这种报文逐渐增多，网络将会发生拥塞。
 
@@ -413,7 +413,7 @@ IP地址由32个二进制位组成，通常用点分十进制形式表示。
 
 ## 协议号
 
-![](http://icing.fun/img/post/2021/01/30/protocolnum.jpg)
+![](../img/post/2021/01/30/protocolnum.jpg)
 
 > 目的端的网络层在接收并处理报文以后，需要决定下一步对报文该做如何处理。IP报文头中的协议字段标识了将会继续处理报文的协议。与以太帧头中的Type字段类似，协议字段也是一个十六进制数。该字段可以标识网络层协议，如ICMP（Internet Control Message Protocol，因特网控制报文协议），也可以标识上层协议，如TCP（Transmission Control Protocol，传输控制协议，对应值0x06）、UDP（User Datagram Protocol，用户数据包协议，对应值0x11）。
 
@@ -601,7 +601,7 @@ IP地址由32个二进制位组成，通常用点分十进制形式表示。
 
 ## TCP
 
-![](http://icing.fun/img/post/2021/01/30/tcp.jpg)
+![](../img/post/2021/01/30/tcp.jpg)
 
 TCP是一种面向连接的传输层协议，可提供可靠的传输服务。
 
@@ -609,7 +609,7 @@ TCP是一种面向连接的传输层协议，可提供可靠的传输服务。
 
 ### TCP端口号
 
-![](http://icing.fun/img/post/2021/01/30/tcpport.jpg)
+![](../img/post/2021/01/30/tcpport.jpg)
 
 端口号用来区分不同的网络服务。
 
@@ -617,7 +617,7 @@ TCP是一种面向连接的传输层协议，可提供可靠的传输服务。
 
 ### TCP头部
 
-![](http://icing.fun/img/post/2021/01/30/tcpheader.jpg)
+![](../img/post/2021/01/30/tcpheader.jpg)
 
 > TCP通常使用IP作为网络层协议，这时TCP数据段被封装在IP数据包内。
 
@@ -641,7 +641,7 @@ TCP是一种面向连接的传输层协议，可提供可靠的传输服务。
 
 ### TCP建立连接的过程
 
-![](http://icing.fun/img/post/2021/01/30/tcpconnect.jpg)
+![](../img/post/2021/01/30/tcpconnect.jpg)
 
 > TCP通过三次握手建立可靠连接。
 
@@ -657,7 +657,7 @@ TCP是一种面向连接的传输层协议，可提供可靠的传输服务。
 
 ### TCP传输过程
 
-![](http://icing.fun/img/post/2021/01/30/tcptrans.jpg)
+![](../img/post/2021/01/30/tcptrans.jpg)
 
 > TCP的可靠传输还体现在TCP使用了确认技术来确保目的设备收到了从源设备发来的数据，并且是准确无误的。
 
@@ -668,7 +668,7 @@ TCP是一种面向连接的传输层协议，可提供可靠的传输服务。
 
 ### TCP流量控制
 
-![](http://icing.fun/img/post/2021/01/30/tcpstream.jpg)
+![](../img/post/2021/01/30/tcpstream.jpg)
 
 > TCP滑动窗口技术通过动态改变窗口大小来实现对端到端设备之间的数据传输进行流量控制。
 
@@ -678,7 +678,7 @@ TCP是一种面向连接的传输层协议，可提供可靠的传输服务。
 
 ### TCP关闭连接
 
-![](http://icing.fun/img/post/2021/01/30/tcpoff.jpg)
+![](../img/post/2021/01/30/tcpoff.jpg)
 
 主机在关闭连接之前，要确认收到来自对方的ACK。
 
@@ -699,7 +699,7 @@ TCP是一种面向连接的传输层协议，可提供可靠的传输服务。
 
 ## UDP
 
-![](http://icing.fun/img/post/2021/01/30/udp.jpg)
+![](../img/post/2021/01/30/udp.jpg)
 
 UDP是一种面向无连接的传输层协议，传输可靠性没有保证。
 
@@ -707,7 +707,7 @@ UDP是一种面向无连接的传输层协议，传输可靠性没有保证。
 
 ### UDP头部
 
-![](http://icing.fun/img/post/2021/01/30/udpheader.jpg)
+![](../img/post/2021/01/30/udpheader.jpg)
 
 UDP头部仅占8字节，传输数据时没有确认机制。
 
@@ -723,13 +723,13 @@ UDP头部仅占8字节，传输数据时没有确认机制。
 
 ### UDP传输过程
 
-![](http://icing.fun/img/post/2021/01/30/udptrans.jpg)
+![](../img/post/2021/01/30/udptrans.jpg)
 
 使用UDP传输数据时，由应用程序根据需要提供报文到达确认、排序、流量控制等功能。
 
 > 主机A发送数据包时，这些数据包是以有序的方式发送到网络中的，每个数据包独立地在网络中被发送，所以不同的数据包可能会通过不同的网络路径到达主机B。这样的情况下，先发送的数据包不一定先到达主机B。因为UDP数据包没有序号，主机B将无法通过UDP协议将数据包按照原来的顺序重新组合，所以此时需要应用程序提供报文的到达确认、排序和流量控制等功能。通常情况下，UDP采用实时传输机制和时间戳来传输语音和视频数据。
 
-![](http://icing.fun/img/post/2021/01/30/udptrans2.jpg)
+![](../img/post/2021/01/30/udptrans2.jpg)
 
 UDP不提供重传机制，占用资源小，处理效率高。
 
@@ -747,7 +747,7 @@ TCP/IP协议簇和底层协议配合，保证了数据能够实现端到端的�
 
 ## 数据转发过程概述
 
-![](http://icing.fun/img/post/2021/01/30/datatrans.jpg)
+![](../img/post/2021/01/30/datatrans.jpg)
 
 数据包在相同网段内或不同网段之间转发所依据的原理基本一致。
 
@@ -757,7 +757,7 @@ TCP/IP协议簇和底层协议配合，保证了数据能够实现端到端的�
 
 ## TCP封装
 
-![](http://icing.fun/img/post/2021/01/30/tcppack.jpg)
+![](../img/post/2021/01/30/tcppack.jpg)
 
 当主机建立了到达目的地的TCP连接后，便开始对应用层数据进行封装。
 
@@ -765,7 +765,7 @@ TCP/IP协议簇和底层协议配合，保证了数据能够实现端到端的�
 
 ## IP封装
 
-![](http://icing.fun/img/post/2021/01/30/ippack.jpg)
+![](../img/post/2021/01/30/ippack.jpg)
 
 > 主机A完成传输层封装后，一般会进行网络层数据封装，在使用IP进行封装时，需要明确IP报文的源和目的地址。如果IP报文的大小大于网络的最大传输单元（MTU），则该报文有可能在传输过程中被分片。
 
@@ -775,7 +775,7 @@ TCP/IP协议簇和底层协议配合，保证了数据能够实现端到端的�
 
 ## 查找路由
 
-![](http://icing.fun/img/post/2021/01/30/findroute.jpg)
+![](../img/post/2021/01/30/findroute.jpg)
 
 主机A必须要拥有到达目的地的路由。
 
@@ -783,7 +783,7 @@ TCP/IP协议簇和底层协议配合，保证了数据能够实现端到端的�
 
 ## ARP
 
-![](http://icing.fun/img/post/2021/01/30/arp.jpg)
+![](../img/post/2021/01/30/arp.jpg)
 
 通过ARP缓存表找到下一跳的MAC地址。
 
@@ -795,13 +795,13 @@ TCP/IP协议簇和底层协议配合，保证了数据能够实现端到端的�
 
 ## 以太网封装
 
-![](http://icing.fun/img/post/2021/01/30/ethpack.jpg)
+![](../img/post/2021/01/30/ethpack.jpg)
 
 > 主机A在链路层封装数据帧时，会遵循IEEE 802.3或Ethernet_II标准，Ethernet_II帧头中的类型字段填充为0x0800，以表示网络层使用的是IP协议。源MAC地址为主机A的MAC地址，目的MAC地址为网关路由器E0/0接口的MAC地址。
 
 ## 数据帧转发过程
 
-![](http://icing.fun/img/post/2021/01/30/frametranspath.jpg)
+![](../img/post/2021/01/30/frametranspath.jpg)
 
 主机工作在半双工状态下，所以会使用CSMA/CD来检测链路是否空闲。
 
@@ -809,7 +809,7 @@ TCP/IP协议簇和底层协议配合，保证了数据能够实现端到端的�
 
 > 主机A工作在半双工状态下，所以会使用CSMA/CD来检测链路是否空闲。如果链路空闲，主机A会将一个前导码（Preamble）和一个帧首定界符（SFD）附加到帧头然后进行传输。前导码的作用是使接收设备进行同步并做好接收数据帧的准备。前导码是包括了7个字节的二进制“1”、“0”交替的代码，即1010…10共56位。帧首定界符是长度为1个字节的10101011二进制序列，它的作用是使接收端对帧的第一位进行定位。
 
-![](http://icing.fun/img/post/2021/01/30/frametranspath2.jpg)
+![](../img/post/2021/01/30/frametranspath2.jpg)
 
 同一个冲突域里的设备都会接收到主机A发送的数据帧。
 
@@ -819,7 +819,7 @@ TCP/IP协议簇和底层协议配合，保证了数据能够实现端到端的�
 
 ## 数据包转发过程
 
-![](http://icing.fun/img/post/2021/01/30/packtrans.jpg)
+![](../img/post/2021/01/30/packtrans.jpg)
 
 网关检查是否具有到达目的网络的路由条目。
 
@@ -831,7 +831,7 @@ TCP/IP协议簇和底层协议配合，保证了数据能够实现端到端的�
 
 ## 数据帧解封装
 
-![](http://icing.fun/img/post/2021/01/30/frameunpack.jpg)
+![](../img/post/2021/01/30/frameunpack.jpg)
 
 RTB以服务器A的MAC地址作为目的MAC继续转发。
 
@@ -843,7 +843,7 @@ RTB以服务器A的MAC地址作为目的MAC继续转发。
 
 ## 数据包解封装
 
-![](http://icing.fun/img/post/2021/01/30/packunpack.jpg)
+![](../img/post/2021/01/30/packunpack.jpg)
 
 服务器A检查数据包的目的IP地址，发现目的IP与自己的IP地址相同。
 
@@ -857,7 +857,7 @@ RTB以服务器A的MAC地址作为目的MAC继续转发。
 
 ## 数据段解封装
 
-![](http://icing.fun/img/post/2021/01/30/dataunpack.jpg)
+![](../img/post/2021/01/30/dataunpack.jpg)
 
 服务器A检查TCP头部的目的端口，然后将数据段发送给应用层的HTTP协议进行处理。
 

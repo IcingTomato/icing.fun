@@ -9,5 +9,5 @@ published: false
 
 之前买的微雪的[CM5-DUAL-ETH-MINI](https://www.waveshare.com/wiki/CM5-DUAL-ETH-MINI)载板，双网口，一个网口是树莓派直出的，另一个是 RTL8111H 网卡。
 
-<img src="http://icing.fun/img/post/2025/08/19/1.png" alt="cm5" width="50%">
+<img src="../img/post/2025/08/19/1.png" alt="cm5" width="50%">
 

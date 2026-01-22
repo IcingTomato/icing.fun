@@ -10,19 +10,19 @@ published: true
 不过，USB 设备总觉得有点别扭，尤其是我这种经常出差的人，插拔总觉得不方便。
 
 <center>
-    <img src="http://icing.fun/img/post/2025/10/01/1.jpg" alt="Order" title="Order" width="50%" />
+    <img src="../img/post/2025/10/01/1.jpg" alt="Order" title="Order" width="50%" />
 </center>
 
 很久之前在淘宝上看到一款手搓的 5G CPE，叫 Airpi AP3000M，用的 MT7981  芯片，AX3000 的 Wi-Fi，1GB RAM + 16GB ROM，不带 5G 模块才 439。
 
 <center>
-    <img src="http://icing.fun/img/post/2025/10/01/1.png" alt="Order" title="Order" width="50%" />
+    <img src="../img/post/2025/10/01/1.png" alt="Order" title="Order" width="50%" />
 </center>
 
 样子还硬派的，于是果断下单。
 
 <center>
-    <img src="http://icing.fun/img/post/2025/10/01/2.png" alt="Order" title="Order" width="50%" />
+    <img src="../img/post/2025/10/01/2.png" alt="Order" title="Order" width="50%" />
 </center>
 
 拿到手之后是散件，需要自己动手装。（没拍装机过程，可以找店家要安装视频，本人比较头铁，自己安的）
@@ -30,7 +30,7 @@ published: true
 装好之后，插上电源，等 1 分钟左右，等到侧面的红色指示灯常亮之后，就可以用手机或者电脑连接 Wi-Fi 了。
 
 <center>
-    <img src="http://icing.fun/img/post/2025/10/01/3.png" alt="Order" title="Order" width="50%" />
+    <img src="../img/post/2025/10/01/3.png" alt="Order" title="Order" width="50%" />
 </center>
 
 （按理说是没有密码的，我这个是时候截图的时候被我设置了密码）
@@ -40,7 +40,7 @@ published: true
 打开浏览器，输入 `192.168.88.1`，就可以进入管理界面了。
 
 <center>
-    <img src="http://icing.fun/img/post/2025/10/01/4.png" alt="Order" title="Order" width="50%" />
+    <img src="../img/post/2025/10/01/4.png" alt="Order" title="Order" width="50%" />
 </center>
 
 默认用户名是 `root`，密码是 `admin`。
@@ -48,7 +48,7 @@ published: true
 进入管理界面之后，找到 `移动网络` -> `其他设定`，找到 `USB 设备信息 /lsusb`，可以看到识别出来的 5G 模块：`Bus 002 Device 002: ID 2c7c:0801 Quectel RM530N-GL`
 
 <center>
-    <img src="http://icing.fun/img/post/2025/10/01/5.png" alt="Order" title="Order" width="50%" />
+    <img src="../img/post/2025/10/01/5.png" alt="Order" title="Order" width="50%" />
 </center>
 
 然后找到 找到 `移动网络` -> `串口调试`，选择模组的 AT 口，发送以下命令：
@@ -64,13 +64,13 @@ AT+CFUN=1,1 # 重启模组
 然后可以进入 `网络选项` -> `接口配置`，添加一个新的移动网络接口，名字可以叫 `WWAN`，选择 `eth2` 作为接口。协议选择 `DHCP客户端`。（eth0 是 LAN 口，eth1 是 WAN 口，eth2 是 5G 模块）
 
 <center>
-    <img src="http://icing.fun/img/post/2025/10/01/6.png" alt="Order" title="Order" width="50%" />
+    <img src="../img/post/2025/10/01/6.png" alt="Order" title="Order" width="50%" />
 </center>
 
 也可以添加IPv6的DHCP客户端。
 
 <center>
-    <img src="http://icing.fun/img/post/2025/10/01/7.png" alt="Order" title="Order" width="50%" />
+    <img src="../img/post/2025/10/01/7.png" alt="Order" title="Order" width="50%" />
 </center>
 
 就可以上网了。
@@ -78,11 +78,11 @@ AT+CFUN=1,1 # 重启模组
 也可以[养小猫咪](https://github.com/vernesong/OpenClash)：
 
 <center>
-    <img src="http://icing.fun/img/post/2025/10/01/8.png" alt="Order" title="Order" width="20%" />
+    <img src="../img/post/2025/10/01/8.png" alt="Order" title="Order" width="20%" />
 </center>
 
 最后用[中科大测速](https://test.ustc.edu.cn/)：
 
 <center>
-    <img src="http://icing.fun/img/post/2025/10/01/9.png" alt="Order" title="Order" width="50%" />
+    <img src="../img/post/2025/10/01/9.png" alt="Order" title="Order" width="50%" />
 </center>   

@@ -12,7 +12,7 @@ published: true
 为了探究这个问题，我在 2023 年让我爸斥巨资买了个 Surface Pro 9 5G 版，来体验一下 5G 的快感。
 
 <center>
-    <img src="http://icing.fun/img/post/2023/11/29/order.jpg" alt="Order" title="Order" width="50%" />
+    <img src="../img/post/2023/11/29/order.jpg" alt="Order" title="Order" width="50%" />
 </center>
 
 随后在进入联想工作后，又弄了一台 ThinkPad X1 Carbon Gen 9，原装是 LTE 模块，上淘宝搜一下轻轻松松就搞到一个高通 X55 的 5G 模块，换上装 Fedora（过程还是比较麻烦的，下一期补上这个）。
@@ -31,7 +31,7 @@ published: true
 - [RM520N-GL Windows MBIM驱动](https://www.waveshare.net/w/upload/9/94/Quectel_Windows_USB_Driver%28Q%29_MBIM_V1.3.1.zip)
 
 <center>
-    <img src="http://icing.fun/img/post/2025/09/04/Capture.PNG" alt="Devices Manager" title="Devices Manager" width="50%" />
+    <img src="../img/post/2025/09/04/Capture.PNG" alt="Devices Manager" title="Devices Manager" width="50%" />
 </center>
 
 看到这样就成。然后下载 [QCOM](https://www.waveshare.net/w/upload/c/ca/QCOM_V1.6.zip)，用作为修改 IMEI 的工具。
@@ -41,7 +41,7 @@ published: true
 打开 QCOM，选择对应的 COM 口，波特率 115200，然后点击 `Open Port`；`Operation` 下勾选 `RTS` 和 `Send with Enter`：
 
 <center>
-    <img src="http://icing.fun/img/post/2025/09/04/Capture1.PNG" alt="QCOM setup" title="QCOM setup" width="50%" />
+    <img src="../img/post/2025/09/04/Capture1.PNG" alt="QCOM setup" title="QCOM setup" width="50%" />
 </center>
 
 输入 `ATE1`，回车，打开回显，看到 `OK` 说明串口通信正常。
@@ -57,7 +57,7 @@ published: true
 修改完 IMEI 之后，拔掉黑盒，插上 SIM 卡，就可以联网了。
 
 <center>
-    <img src="http://icing.fun/img/post/2025/09/04/IMG_4009.jpeg" alt="BlackBox" title="BlackBox" width="50%" />
+    <img src="../img/post/2025/09/04/IMG_4009.jpeg" alt="BlackBox" title="BlackBox" width="50%" />
 </center>
 
 如果要使用 MBIM 模式的话，使用以下 AT 指令：
@@ -76,7 +76,7 @@ AT+CFUN=1,1
 ```
 
 <center>
-    <img src="http://icing.fun/img/post/2025/09/04/Capture2.PNG" alt="BlackBox" title="BlackBox" width="50%" />
+    <img src="../img/post/2025/09/04/Capture2.PNG" alt="BlackBox" title="BlackBox" width="50%" />
 </center>
 
 <s>不觉得这很酷吗？作为一名理工男我觉得这太酷了，很符合我对未来生活的想象，科技并带着趣味。</s>

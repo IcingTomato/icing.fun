@@ -308,7 +308,7 @@ cd ..
 11月月初俺爹斥巨资给我换了个笔记本电脑
 
 <center>
-    <img src="http://icing.fun/img/post/2023/11/29/order.jpg" alt="Order" title="Order" width="50%" />
+    <img src="../img/post/2023/11/29/order.jpg" alt="Order" title="Order" width="50%" />
 </center>
 
 可能有人要“素质三连”了
@@ -318,7 +318,7 @@ cd ..
 首先就是全功能 `Type-C` 接口，两个接口可以提供视频，音频，数据传输，更重要的是可以充电。这不比原装的那个方便？带个小米67W就可以搞定手机和电脑的充电了。酷睿版就八行，只能拿那个笨笨的充电器充电。
 
 <center>
-    <img src="http://icing.fun/img/post/2023/11/29/type-c.png" alt="Type-C" title="Type-C" width="50%" />
+    <img src="../img/post/2023/11/29/type-c.png" alt="Type-C" title="Type-C" width="50%" />
 </center>
 
 5G 网络说实在真的很香，之前在学校办的移动的号，大流量卡，装这个上面，基本上是全天在线，很舒服。
@@ -328,19 +328,19 @@ cd ..
 随身WiFi稍微麻烦了点，比如我现在也在用华为的。
 
 <center>
-    <img src="http://icing.fun/img/post/2023/11/29/5g.png" alt="5G" title="5G" width="50%" />
+    <img src="../img/post/2023/11/29/5g.png" alt="5G" title="5G" width="50%" />
 </center>
 
 再来就是这个屏幕了，这个屏幕香不香我不知道，主要是能触屏，MacBook那么多年也不能触屏。（估计有人就要骂我，说苹果触控板好用，我只能说，我不喜欢，我喜欢触屏）
 
 <center>
-    <img src="http://icing.fun/img/post/2023/11/29/touch.png" alt="Touch" title="Touch" width="50%" />
+    <img src="../img/post/2023/11/29/touch.png" alt="Touch" title="Touch" width="50%" />
 </center>
 
 说它是个大号平板也不为过，我现在就是拿着它在写这篇文章，很舒服。安卓平板根本打不过，如果说我要用安卓应用，Windows还有安卓子系统。
 
 <center>
-    <img src="http://icing.fun/img/post/2023/11/29/android.png" alt="Android" title="Android" width="50%" />
+    <img src="../img/post/2023/11/29/android.png" alt="Android" title="Android" width="50%" />
 </center>
 
 8cx Gen 3 跑分啥的对我来说确实不重要，抛开实际体验的跑分都是耍流氓。

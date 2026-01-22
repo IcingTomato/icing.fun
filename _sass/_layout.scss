@@ -261,3 +261,11 @@ section { margin-bottom: 50px; }
     margin-top: 10px;
     width: 100%;
 }
+
+/* Post Content Images */
+.post_content img {
+    display: block !important;
+    margin: 1rem auto !important;
+    max-width: 50% !important;
+    height: auto !important;
+}

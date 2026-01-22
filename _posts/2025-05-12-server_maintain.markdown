@@ -15,7 +15,7 @@ published: true
 
 熟练地 `htop` 一下，结果……
 
-<img src="http://icing.fun/img/post/2025/05/12/1.png" alt="htop" width="50%">
+<img src="../img/post/2025/05/12/1.png" alt="htop" width="50%">
 *惊不惊喜？意不意外？*
 
 `/usr/local/share/assist-daemon/assist_daemon` 很扎眼，我就知道是阿里云干的事情。
@@ -44,14 +44,14 @@ rm -rf /usr/local/share/aliyun-assist
 
 跟前年hvv一样，阿里不知道从哪里找来一些野鸡选手，当时我的博客用的是<s>硬屎</s>极简风，用Jekyll生成的类似Apache/Nginx默认页面，具体看[这](https://web.archive.org/web/20231003163648/http://icing.fun/)。发短信告诉我80端口开了，都看到里面的文件了，很危险，需要我注意。
 
-<img src="http://icing.fun/img/post/2025/05/12/2.png" alt="?" width="50%">
+<img src="../img/post/2025/05/12/2.png" alt="?" width="50%">
 *我请问呢？*
 
 现在看来，他们很喜欢扫 `ssh` 端口。<s>抓不到漏洞急了吧？随便写一下就能输出报告？我那个时候高位端口都是开着的咋不扫一下？看ssh日志时候才发现有个IP是镇江的江苏科技大学的一直在扫我服务器，光扫5000以下的，有点难绷了兄弟。</s>
 
 使用 `cat /var/log/auth.log |grep Failed` 这个命令（文件可能是auth.log或者是auth.log.数字，可以进目录看看）看了一下登录失败的记录。
 
-<img src="http://icing.fun/img/post/2025/05/12/3.png" alt="ssh" width="50%">
+<img src="../img/post/2025/05/12/3.png" alt="ssh" width="50%">
 *ssh登录失败的记录*
 
 蔚为壮观……
@@ -129,12 +129,12 @@ echo "Done! Add: $added, Exist: $skipped"
 * * * * * /root/anti_attack.sh
 ```
 
-<img src="http://icing.fun/img/post/2025/05/12/4.png" alt="block_ip" width="50%">
+<img src="../img/post/2025/05/12/4.png" alt="block_ip" width="50%">
 *尝试运行，不错，确实在自动运行*
 
 自己尝试拿手机热点登录一下，获取一个IP地址，看看能不能被封。
 
-<img src="http://icing.fun/img/post/2025/05/12/5.png" alt="block_ip" width="50%">
+<img src="../img/post/2025/05/12/5.png" alt="block_ip" width="50%">
 *可以清晰看到第一次登录成功，加了deny之后封IP成功，ssh登录失败了*
 
 ## <span id="title3">定时清扫一下 buff/cache</span>
@@ -186,9 +186,9 @@ echo 3 > /proc/sys/vm/drop_caches
 
 我在阿里云上创建了这台1C512M的小水管。
 
-<img src="http://icing.fun/img/post/2025/05/12/6.png" alt="ECS" width="50%">
+<img src="../img/post/2025/05/12/6.png" alt="ECS" width="50%">
 *阿里云ECS*
-<img src="http://icing.fun/img/post/2025/05/12/7.png" alt="ECS" width="50%">
+<img src="../img/post/2025/05/12/7.png" alt="ECS" width="50%">
 *创建时间*
 
 于2025年5月16日 12:00:00，转移到 Cloudflare。

@@ -6,14 +6,14 @@ tags: intel x86 zh-cn
 
 *注：下文中 Intel Arduino/Genuino 101 简称为 Arduino 101*
 
-<img src="http://icing.fun/img/post/2024/01/20/1.jpg">
+<img src="../img/post/2024/01/20/1.jpg">
 *Arduino 101*
 
 # Arduino/Genuino 101 的由来
 
 2015年10月16日[<sup>1</sup>](#jump1)，距离世界上第一台商用可编程计算器 Olivetti Programma 101[<sup>2</sup>](#jump2) 问世过去了整整50年。为了致敬这个伟大的项目，英特尔和 Massimo Banzi[<sup>3</sup>](#jump3)（Arduino项目的联合创始人）在 Maker Faire 宣布推出一款新的开发板，名为Arduino/Genuino 101 —— 一款专为教育用途、创客世界和首次接触编程的人设计的开发板。
 
-<img src="http://icing.fun/img/post/2024/01/20/2.jpg">
+<img src="../img/post/2024/01/20/2.jpg">
 *Olivetti Programma 101*
 
 # Arduino/Genuino 101 的硬件和软件
@@ -232,13 +232,13 @@ void loop()
 }
 ```
 
-<img src="http://icing.fun/img/post/2024/01/20/3.gif" width="50%">
+<img src="../img/post/2024/01/20/3.gif" width="50%">
 
 # 后记
 
 Arduino 101 于 2016年 Q1 季度发布。仅仅过去一年有余，在英特尔宣布 Galileo，Edison 和 Joule 模块停产一个月后，也草草停产 Curie 模块（07/17/2017）[<sup>6</sup>](#jump6)，只能说是非常可惜，英特尔宏图壮志准备在 IoT 领域大展拳脚，但是却因为种种原因，最终只能黯然收场。也导致诸多使用 Curie 模块的企业被迫更换产品线，比如[小米智能跑鞋](https://www.cnx-software.com/2017/03/29/100-xiaomi-90-minutes-ultra-smart-running-shoes-are-equipped-with-intel-curie-module/)。
 
-<img src="http://icing.fun/img/post/2024/01/20/Intel-Curie-Arduino-101-Discontinued.webp">
+<img src="../img/post/2024/01/20/Intel-Curie-Arduino-101-Discontinued.webp">
 *图片源自[Intel Curie Module, Arduino 101 Board Are Being Discontinued (Too) - CNX Software](https://www.cnx-software.com/2017/07/26/intel-curie-module-arduino-101-boards-are-being-discontinued-too/)*
 
 《Arduino程序设计基础》 的作者 陈吕洲 先生对 Arduino 101 抱有极高的评价：Genuino 101是一个极具特色的Arduino开发板，它基于Intel Curie模组，不仅有着和Arduino UNO一样特性和外设，还集成了低功耗蓝牙（BLE）和六轴姿态传感器（IMU）功能，借助intel Curie模组上模式匹配引擎，甚至可以进行机器学习操作。因此使用Genuino 101，可以完成一些传统单片机或者Arduino难以胜任的工作，制作更为惊艳的作品。为此他本人还专门为 Arduino 101 著书 —— 《Arduino 101 开发入门》[<sup>7</sup>](#jump7)。

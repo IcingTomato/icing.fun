@@ -19,7 +19,7 @@ Most devices with Alexa allow users to activate the device using a wake-word (su
 Source Code is [here](https://github.com/IcingTomato/AlexaM5Core2)
 
 <center>
-    <img src="http://icing.fun/img/post/2022/08/15/amazon-alexa-logo-300x93.png" alt="Alexa Logo" title="Alexa Logo" width="50%" />
+    <img src="../img/post/2022/08/15/amazon-alexa-logo-300x93.png" alt="Alexa Logo" title="Alexa Logo" width="50%" />
 </center>
 
 [Amazon Alexa](https://developer.amazon.com/en-US/alexa) on [M5Core2](https://docs.m5stack.com/en/core/core2) and [M5Core2 for AWS](https://docs.m5stack.com/en/core/core2_for_aws)
@@ -82,32 +82,32 @@ Here are the steps to configure the M5Core2:
 *   Select the option *Add New Device*.
 
 <center>
-    <img src="http://icing.fun/img/post/2022/08/15/esp_alexa_app_home.png" alt="App Home" title="App Home" width="50%" />
+    <img src="../img/post/2022/08/15/esp_alexa_app_home.png" alt="App Home" title="App Home" width="50%" />
 </center>
 
 *   A list of devices that are in configuration mode is displayed. Note that the devices are discoverable over BLE (Bluetooth Low Energy). Please ensure that the phone app has the appropriate permissions to access Bluetooth (on Android the *Location* permission is also required for enabling Bluetooth).
 
 <center>
-    <img src="http://icing.fun/img/post/2022/08/15/esp_alexa_app_discover_devices.png" alt="App Discover Devices" title="App Discover Devices" width="50%" />
+    <img src="../img/post/2022/08/15/esp_alexa_app_discover_devices.png" alt="App Discover Devices" title="App Discover Devices" width="50%" />
 </center>
 
 *   Now you can sign-in to your Amazon Alexa account. If you have Amazon Shopping app installed on the same phone, app will automatically sign-in with the account the shopping app is signed in to. Otherwise it will open a login page on the phone's default browser. (It is recommended to install the Amazon Shopping app on your phone to avoid any other browser related errors.)
 
 <center>
-    <img src="http://icing.fun/img/post/2022/08/15/esp_alexa_app_sign_in.png" alt="App Sign-in" title="App Sign-in" width="50%" />
+    <img src="../img/post/2022/08/15/esp_alexa_app_sign_in.png" alt="App Sign-in" title="App Sign-in" width="50%" />
 </center>
 
 *   You can now select the Wi-Fi network that the M5Core2 should connect with, and enter the credentials for this Wi-Fi network.
 
 <center>
-    <img src="http://icing.fun/img/post/2022/08/15/esp_alexa_app_wifi_scan_list.png" alt="App Scna List" title="App Scan List" width="50%" />
-    <img src="http://icing.fun/img/post/2022/08/15/esp_alexa_app_wifi_password.png" alt="App Wi-Fi Password" title="App Wi-Fi Password" width="50%" />
+    <img src="../img/post/2022/08/15/esp_alexa_app_wifi_scan_list.png" alt="App Scna List" title="App Scan List" width="50%" />
+    <img src="../img/post/2022/08/15/esp_alexa_app_wifi_password.png" alt="App Wi-Fi Password" title="App Wi-Fi Password" width="50%" />
 </center>
 
 *   On successful Wi-Fi connection, you will see a list of few of the voice queries that you can try with the M5Core2.
 
 <center>
-    <img src="http://icing.fun/img/post/2022/08/15/esp_alexa_app_things_to_try.png" alt="App Things To Try" title="App Things To Try" width="50%" />
+    <img src="../img/post/2022/08/15/esp_alexa_app_things_to_try.png" alt="App Things To Try" title="App Things To Try" width="50%" />
 </center>
 
 *   You are now fully setup. You can now say "Alexa" followed by the query you wish to ask.

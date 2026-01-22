@@ -4,7 +4,7 @@ title:  "【阅板无数】（Intel x86 IoT系列）Intel Quark D2000 复活记"
 tags: intel x86 zh-cn
 ---
 
-<img src="http://icing.fun/img/post/2025/06/01/intel-quark-microcontroller-dev-kit-d2000-development-kit-with-intel-quark-d2000-microcontroller.png" alt="d2000" width="50%">
+<img src="../img/post/2025/06/01/intel-quark-microcontroller-dev-kit-d2000-development-kit-with-intel-quark-d2000-microcontroller.png" alt="d2000" width="50%">
 
 书接上回[【阅板无数】（Intel x86 IoT系列）Intel Arduino/Genuino 101 简单测评](https://icing.fun/2024/01/20/intel_genuino_101/)，我们讲到在2015年1月的时候，Intel “积极”拥抱开源硬件，推出了基于 Quark SoC 的 Arduino/Genuino 101 开发板。（其实英特尔在2013年就在英特尔论坛上推出了 Quark 系列的 32 位 x86 架构微控制器，很可惜在2019年1月英特尔宣布停止Quark系列产品的生产。）
 
@@ -37,7 +37,7 @@ tags: intel x86 zh-cn
 
 有意思的是，虽然写的是 Pentium ISA 兼容微控制器，但是它不支持 SIMD 或 x87 浮点。（玩过 8087 的都知道，8087 是 Intel 的第一个浮点协处理器。这玩意儿运行起来十分烫手，估计是因为功耗原因没加入 x87 浮点指令集。）
 
-<img src="http://icing.fun/img/post/2025/06/01/IntelQuarkD2000-Fig1.webp" alt="d2000 fig" width="50%">
+<img src="../img/post/2025/06/01/IntelQuarkD2000-Fig1.webp" alt="d2000 fig" width="50%">
 
 ## 结语
 
@@ -83,7 +83,7 @@ Quark D2000 Dev Platform的一些官方和三方链接我贴在此处：
 
 #### Pin Map 
 
-<img src="http://icing.fun/img/post/2025/06/01/d2000-pinmap-681526.png" alt="pinmap" width="50%">
+<img src="../img/post/2025/06/01/d2000-pinmap-681526.png" alt="pinmap" width="50%">
 
 #### Pin Name
 
@@ -136,13 +136,13 @@ Quark D2000 Dev Platform的一些官方和三方链接我贴在此处：
      qm_pmux_input_en(QM_PIN_ID_13, true);
 ```
 
-<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0006.jpg" alt="pinmap" width="50%">
-<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0007.jpg" alt="pinmap" width="50%">
-<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0008.jpg" alt="pinmap" width="50%">
-<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0009.jpg" alt="pinmap" width="50%">
-<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0010.jpg" alt="pinmap" width="50%">
-<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0011.jpg" alt="pinmap" width="50%">
-<img src="http://icing.fun/img/post/2025/06/01/quark-d2000-crb-schematics_page-0012.jpg" alt="pinmap" width="50%">
+<img src="../img/post/2025/06/01/quark-d2000-crb-schematics_page-0006.jpg" alt="pinmap" width="50%">
+<img src="../img/post/2025/06/01/quark-d2000-crb-schematics_page-0007.jpg" alt="pinmap" width="50%">
+<img src="../img/post/2025/06/01/quark-d2000-crb-schematics_page-0008.jpg" alt="pinmap" width="50%">
+<img src="../img/post/2025/06/01/quark-d2000-crb-schematics_page-0009.jpg" alt="pinmap" width="50%">
+<img src="../img/post/2025/06/01/quark-d2000-crb-schematics_page-0010.jpg" alt="pinmap" width="50%">
+<img src="../img/post/2025/06/01/quark-d2000-crb-schematics_page-0011.jpg" alt="pinmap" width="50%">
+<img src="../img/post/2025/06/01/quark-d2000-crb-schematics_page-0012.jpg" alt="pinmap" width="50%">
 
 那么你现在可能有疑问：IDE 都没有了，还有编译环境吗？有的，兄弟，有的。我们自己手动编译 IAMCU i586 的工具链。
 
@@ -361,7 +361,7 @@ gbd
 (gdb) monitor reset
 ```
 
-<img src="http://icing.fun/img/post/2025/06/01/quark_d2000.gif" alt="d2000" width="50%">
+<img src="../img/post/2025/06/01/quark_d2000.gif" alt="d2000" width="50%">
 
 ### 配置 Zephyr RTOS
 

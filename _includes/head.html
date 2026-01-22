@@ -1,58 +1,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
-  <title>U.S. Graphics Company - {{ page.title | default: "Office" }}</title>
+  <title>{{ site.name }} - {{ page.title | default: "Home" }}</title>
 
   <!-- Metadata -->
-  <meta name="application-name" content="U.S. Graphics Company"/>
-  <meta name="description" content="Engineering graphics for professionals. Monospaced typefaces for programming and technical visual systems."/>
-  <meta name="author" content="U.S. Graphics Company">
+  <meta name="application-name" content="{{ site.name }}"/>
+  <meta name="description" content="{{ site.description }}"/>
+  <meta name="author" content="{{ site.author.name }}"/>
   <meta name="format-detection" content="telephone=no">
   <meta name="referrer" content="no-referrer-when-downgrade"/>
   <meta name="robots" content="index, follow"/>
 
   <!-- Favicons -->
-  <link rel="canonical" href="https://usgraphics.com"/>
-  <link rel="icon" type="image/x-icon" href="https://usgraphics.com/static/core/favicon/favicon.94b3eee5335b.ico">
-  <link rel="icon" type="image/svg+xml" href="https://usgraphics.com/static/core/favicon/favicon.6f61ac02f2fa.svg">
-  <link rel="apple-touch-icon" href="https://usgraphics.com/static/core/apple-touch-icon.1cfd86b098a4.png"/>
-  <link rel="icon" type="image/png" href="https://usgraphics.com/static/core/favicon/favicon-196x196.533db169b920.png" sizes="196x196"/>
-  <link rel="icon" type="image/png" href="https://usgraphics.com/static/core/favicon/favicon-96x96.a8c44eb342d8.png" sizes="96x96"/>
-  <link rel="icon" type="image/png" href="https://usgraphics.com/static/core/favicon/favicon-32x32.b65dd5f735bc.png" sizes="32x32"/>
-  <link rel="icon" type="image/png" href="https://usgraphics.com/static/core/favicon/favicon-16x16.f5c2712f9980.png" sizes="16x16"/>
-  <link rel="icon" type="image/png" href="https://usgraphics.com/static/core/favicon/favicon-128.75f1689107ec.png" sizes="128x128"/>
-
-  <!-- Microsoft Tile -->
-  <meta name="msapplication-TileColor" content="#000000"/>
-  <meta name="msapplication-TileImage" content="/static/core/favicon/mstile-144x144.d989e6178c50.png"/>
-  <meta name="msapplication-square70x70logo" content="/static/core/favicon/mstile-70x70.75f1689107ec.png"/>
-  <meta name="msapplication-square150x150logo" content="/static/core/favicon/mstile-150x150.2e058abf3f4a.png"/>
-  <meta name="msapplication-wide310x150logo" content="/static/core/favicon/mstile-310x150.48c58445e7f1.png"/>
-  <meta name="msapplication-square310x310logo" content="/static/core/favicon/mstile-310x310.8bb9fc13ef4f.png"/>
-
-  <!-- Open Graph -->
-  <meta property="og:site_name" content="U.S. Graphics Company"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="U.S. Graphics Company"/>
-  <meta property="og:description" content="Engineering graphics for professionals. Monospaced typefaces for programming and technical visual systems."/>
-  <meta property="og:url" content="https://usgraphics.com"/>
-  <meta property="og:image" content="https://cdn.usgraphics.com/xcom/usgraphics-xcom-card.png"/>
-  <meta property="og:image:width" content="2400"/>
-  <meta property="og:image:height" content="1256"/>
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="U.S. Graphics Company"/>
-  <meta name="twitter:description" content="Engineering graphics for professionals. Monospaced typefaces for programming and technical visual systems."/>
-  <meta name="twitter:url" content="https://usgraphics.com"/>
-  <meta name="twitter:image" content="https://cdn.usgraphics.com/xcom/usgraphics-xcom-card.png"/>
-  <meta name="twitter:site" content="@usgraphics"/>
-  <meta name="twitter:creator" content="@usgraphics"/>
+  <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}"/>
 
   <!-- Styles -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preload" href="https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_55_roman.4020960013f9.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_65_bold.3e0bae4c4341.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/univers/univers_lt_pro_55_roman.4020960013f9.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/univers/univers_lt_pro_65_bold.3e0bae4c4341.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ '/assets/css/icons.css' | relative_url }}"/>
 
@@ -62,18 +27,4 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/htmx/2.0.4/htmx.min.js" integrity="sha512-2kIcAizYXhIn8TzUvqzEDZNuDZ+aW7yE/+f1HJHXFjQcGNfv1kqzJSTBRBSlOgp6B/KZsz1K0a3ZTqP9dnxioQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/6.3.7/tippy.umd.min.js" integrity="sha512-2TtfktSlvvPzopzBA49C+MX6sdc7ykHGbBQUTH8Vk78YpkXVD5r6vrNU+nOmhhl1MyTWdVfxXdZfyFsvBvOllw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- Analytics & Config -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0C4RZNQJX3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-0C4RZNQJX3');
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      tippy.setDefaultProps({theme: 'usgc-tippy-theme', followCursor: true, allowHTML: true, maxWidth: 350, boundary: 'viewport'});
-    });
-  </script>
 </head>

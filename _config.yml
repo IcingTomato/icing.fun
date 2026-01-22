@@ -1,5 +1,33 @@
-title: U.S. Graphics Company
-description: Engineering graphics for professionals.
-url: "https://usgraphics.com"
+name: IcingTomato's Archive
+description: 'Enjoy it while it lasts, because it never does.'
+url: https://icing.fun # 需要在添加SSL证书后修改为 https
+baseurl: ''
+permalink:           pretty
+github:              https://github.com/IcingTomato
+twitter:             https://twitter.com/IcingTomato
+rss:                 /rss/atom.xml
+deploy:              Cloudflare
+
+# About/contact
+author:
+  name:              IcingTomato
+  url:               https://twitter.com/IcingTomato
+  email:             blog@icing.fun
+
+
+# File management
+exclude: ["README.md", "LICENSE", ".gitignore"]
+
+# Markdown
 markdown: kramdown
-theme: null
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: coderay
+  syntax_highlighter_opts:
+    default_lang: text
+    css: style
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false

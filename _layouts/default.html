@@ -4,7 +4,9 @@
 <body class="measure-60 responsive-30-phone p-centered">
   {% include header.html %}
   <main>
-    {{ content }}
+    <div class="post_content" data-title="{{ page.title }}" data-date="{% if page.date %}{{ page.date | date: '%B %-d, %Y' }}{% endif %}">
+        {{ content }}
+    </div>
   </main>
   {% include footer.html %}
 </body>

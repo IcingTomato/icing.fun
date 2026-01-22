@@ -3,11 +3,11 @@
       <div class="column col-12 col-md-12 col-sm-12 mt1 logo">
         <div class="logo-logotype">
           <a class="black" href="/">
-            <h1 class="text-condensed mb1">U.S. Graphics Company</h1>
+            <h1 class="text-condensed mb1">{{ site.name }}</h1>
           </a>
         </div>
         <div class="logo-colorscale">
-          <img src="https://usgraphics.com/static/core/logo/colorscale/usgraphics-colorscale.955194642d2e.svg" alt="U.S. Graphics Company Logo"/>
+          <img src="../assets/images/usgraphics-colorscale.955194642d2e.svg" alt="U.S. Graphics Company Logo"/>
         </div>
       </div>
     </div>
@@ -17,27 +17,27 @@
       <ul class="columns mt0 mb0 pt0 pb0">
         <li class="column col-2 col-sm-4 col-md-4 p-centered mb1">
           <a class="btn-nav black bg-white w100" href="/">
-          {% if page.url == "/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Office</a>
+          {% if page.url == "/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Home</a>
         </li>
         <li class="column col-2 col-sm-4 col-md-4 p-centered mb1">
-          <a class="btn-nav black bg-white w100" href="/products">
-          {% if page.url contains "/products/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Products</a>
+          <a class="btn-nav black bg-white w100" href="/posts">
+          {% if page.url contains "/posts/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Posts</a>
         </li>
         <li class="column col-2 col-sm-4 col-md-4 p-centered mb1">
-          <a class="btn-nav black bg-white w100" href="/catalog">
-          {% if page.url contains "/catalog/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Catalog</a>
+          <a class="btn-nav black bg-white w100" href="/categories">
+          {% if page.url contains "/categories/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Categories</a>
         </li>
         <li class="column col-2 col-sm-4 col-md-4 p-centered mb1">
-          <a class="btn-nav black bg-white w100" href="/extras">
-          {% if page.url contains "/extras/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Extras!</a>
+          <a class="btn-nav black bg-white w100" href="/about">
+          {% if page.url contains "/about/" %}<i class="nav-active-icon mr-2"></i>{% endif %}About</a>
         </li>
         <li class="column col-2 col-sm-4 col-md-4 p-centered mb1">
-          <a class="btn-nav black bg-white w100" href="/sitemap">
-          {% if page.url contains "/sitemap/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Sitemap</a>
+          <a class="btn-nav black bg-white w100" href="/rss/atom.xml">
+          {% if page.url contains "/rss/atom.xml" %}<i class="nav-active-icon mr-2"></i>{% endif %}RSS</a>
         </li>
         <li class="column col-2 col-sm-4 col-md-4 p-centered mb1">
-          <a class="btn-nav black bg-white w100" href="/auth/login">
-          {% if page.url contains "/auth/login/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Login</a>
+          <a class="btn-nav black bg-white w100" href="/login">
+          {% if page.url contains "/login/" %}<i class="nav-active-icon mr-2"></i>{% endif %}Login</a>
         </li>
       </ul>
     </nav>

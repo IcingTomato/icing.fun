@@ -13,3 +13,8 @@
     max-width: 50% !important;
     height: auto !important;
 }
+
+/* Friends List Spacing */
+.container ul li {
+    margin-bottom: 10px;
+}

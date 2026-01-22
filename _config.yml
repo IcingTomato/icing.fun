@@ -23,11 +23,4 @@ markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
-  syntax_highlighter: coderay
-  syntax_highlighter_opts:
-    default_lang: text
-    css: style
-    span:
-      line_numbers: false
-    block:
-      line_numbers: false
+  syntax_highlighter: rouge

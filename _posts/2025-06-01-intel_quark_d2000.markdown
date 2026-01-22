@@ -470,6 +470,10 @@ west build -b quark_d2000_crb .
 
 至此，我们在失去官方工具链的情况下成功复活了这个板子。
 
+## 补记 （2026-01-22 更新）
+
+回顾一个我经常浏览的网站[司徒的教學網站 - MCU - Intel Quark D2000](https://steward-fu.github.io/website/mcu.htm#d2000)，发现了司徒大佬早在2024年就发布了一个 Intel Quark D2000 的[开发包](https://github.com/steward-fu/website/releases/tag/d2000)，里面包含了编译所需工具。可以直接下载使用，省去了我们手动编译工具链的麻烦。
+
 ## 引用
 
 1. <span id="jump1"><a href="https://www.intel.com/content/www/us/en/products/sku/91947/intel-quark-microcontroller-d2000/specifications.html">Intel® Quark™ Microcontroller D2000 - Intel</a></span>

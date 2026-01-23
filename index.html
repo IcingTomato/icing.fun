@@ -27,11 +27,43 @@ title: Home
         </div>
         <div class="column col-6 col-sm-12 col-md-12 mb3">
           {% if image_src %}
-            <img class="img-card w100" src="{{ image_src }}" alt="{{ post.title }}"/>
+            <img class="img-card" src="{{ image_src }}" alt="{{ post.title }}" style="width: 85%; display: block; margin: 0 auto; height: auto; border: 2px solid #000; box-shadow: 4px 4px #bbb;"/>
+          {% else %}
+            <div class="poetry-card h-100 flex-center text-center p3" style="min-height: 200px; width: 85%; margin: 0 auto; border: 2px solid #000; box-shadow: 4px 4px #bbb; background-color: #fff; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+               <div class="poetry-content" style="font-family: serif; font-size: 1.2em; font-style: italic; margin-bottom: 10px;">{{ site.description }}</div>
+               <div class="poetry-author" style="font-size: 0.9em; color: #666;"></div>
+            </div>
           {% endif %}
         </div>
       </div>
     </div>
   {% endfor %}
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const poetryCards = document.querySelectorAll('.poetry-card');
+    
+    poetryCards.forEach(card => {
+      fetch('https://v1.jinrishici.com/all.json')
+        .then(response => response.json())
+        .then(data => {
+          const contentEl = card.querySelector('.poetry-content');
+          const authorEl = card.querySelector('.poetry-author');
+          
+          if (contentEl && data.content) {
+            contentEl.textContent = "“" + data.content + "”";
+          }
+          if (authorEl && data.author) {
+            authorEl.textContent = "— " + data.author + "《" + data.origin + "》";
+          }
+        })
+        .catch(err => {
+          console.error('Failed to fetch poetry', err);
+          const contentEl = card.querySelector('.poetry-content');
+          if (contentEl) contentEl.textContent = "{{ site.description }}";
+        });
+    });
+  });
+</script>
 

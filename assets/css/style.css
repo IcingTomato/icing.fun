@@ -2,7 +2,7 @@
 .post_content img {
     display: block !important;
     margin: 1rem auto !important;
-    max-width: 50% !important;
+    max-width: 80% !important;
     height: auto !important;
     border: .1rem solid #000 !important;
     box-shadow: 2px 2px #bbb !important;

@@ -18,7 +18,7 @@ title: Home
       <div class="columns mb3">
         <div class="column col-6 col-sm-12 col-md-12 mb3">
           <p class="mb1">
-            <span class="text-gray">{{ post.date | date: "%B %-d, %Y" }}</span>
+            <i><span class="moon-gray ml2">{{ post.date | date: "%B %-d, %Y" }}</span></i>
           </p>
           <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
           <p>

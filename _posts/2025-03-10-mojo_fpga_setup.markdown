@@ -11,7 +11,6 @@ published: true
 这老物件，生产它的公司 [Embedded Micro](https://twitter.com/embeddedmicro)已经无了（貌似是转生成[Alchitry](https://alchitry.com/)了，有机会把板子买过来试试），官网也无了，这些资料也只能在[Internet Archive](https://archive.org/)上找到，还是很感谢这个网站的存在，已经捐了10刀作为感谢，希望这个网站能继续运营下去。
 
 <img src="../img/post/2025/03/10/1.png" alt="捐赠照片">
-<i>捐赠照片</i>
 
 对我来说，FPGA（现场可编程逻辑门阵列）一直是电气工程设计中排行老二的领域（老大是制造芯片，那个我还远远做不到），在高中的时候就开始接触，直到大学的时候第一次去Seeed Studio实习，跟同事们聊起FPGA时，我们一致认为FPGA是一个很有意思的领域，但是门槛太高，学习成本太高：
 
@@ -114,7 +113,6 @@ sudo ln -s /opt/mojo-loader-1.3.0-linux64/mojo-loader /usr/bin/mojo-loader
 打开终端，输入 `mojo-loader`，然后选择你的 FPGA 开发板，然后选择你的比特流文件，然后点击 `Erase`，等待擦除完成后即可点击 `Load` 将bin文件加载到Flash。
 
 <img src="../img/post/2025/03/10/2.png" alt="Mojo Loader">
-<i>Mojo Loader</i>
 
 ## Mojo IDE 使用
 
@@ -135,7 +133,6 @@ sudo chmod +x /opt/start_mojo_ide.sh
 ```
 
 <img src="../img/post/2025/03/10/3.png" alt="Mojo IDE">
-<i>Mojo IDE</i>
 
 ## 补充记录
 
@@ -257,4 +254,3 @@ Categories=Development;
 这样就可以在开始菜单中找到 Mojo Loader 了。
 
 <img src="../img/post/2025/03/10/4.png" alt="Desktop Shortcut">
-<i>Desktop Shortcut</i>

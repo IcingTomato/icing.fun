@@ -20,7 +20,7 @@ title: Home
           <p class="mb1">
             <i><span class="moon-gray ml2">{{ post.date | date: "%B %-d, %Y" }}</span></i>
           </p>
-          <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+          <p>{{ post.content | strip_html | truncate: 200 }}</p>
           <p>
             <a class="btn-classic black bg-gold" href="{{ post.url }}">Read more →</a>
           </p>

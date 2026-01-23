@@ -6,7 +6,7 @@ title: Home
 <p>Welcome to IcingTomato's Archive. Here are the recent posts.</p>
 
 <div class="recent-posts">
-  {% for post in site.posts limit:3 %}
+  {% for post in site.posts limit:5 %}
     <div class="mb4">
       {% assign image_src = nil %}
       {% if post.content contains '<img src="' %}

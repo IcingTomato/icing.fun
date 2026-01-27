@@ -1,5 +1,5 @@
 name: IcingTomato's Archive
-description: 'Enjoy it while it lasts, because it never does.'
+description: 'Standing on the shoulders of giants.'
 url: https://icing.fun # 需要在添加SSL证书后修改为 https
 baseurl: ''
 permalink:           posts/:title.html

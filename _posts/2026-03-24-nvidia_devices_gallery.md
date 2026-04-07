@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "【NVIDIA】英伟达设备大赏（1）"
+title:  "【NVIDIA】英伟达设备鉴赏（1）"
 tags: nvidia infiniband zh-cn
 published: true
 ---
